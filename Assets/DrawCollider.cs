@@ -7,19 +7,7 @@ public class DrawCollider : MonoBehaviour
     public Shader shader;
     public Color color;
     public float height, width, prevHeight, prevWidth;
-    bool changed;
     void Start()
-    {
-        StartCoroutine(draw());
-        changed = true;
-    }
-
-    void Update()
-    {
-
-    }
-
-    IEnumerator draw()
     {
         LineRenderer r = new GameObject().AddComponent<LineRenderer>();
         r.transform.SetParent(transform);
@@ -30,8 +18,18 @@ public class DrawCollider : MonoBehaviour
 
         List<Vector3> positions = new List<Vector3>();
         //while (true)
-        StartCoroutine(draw2(r,positions));
-        yield return new WaitForSeconds(0);
+        StartCoroutine(draw2(r, positions));
+    }
+
+    void Update()
+    {
+
+    }
+
+    //IEnumerator draw()
+    //{
+
+        //yield return new WaitForSeconds(0);
         //r.useWorldSpace = false;
         //List<Vector2> positions2 = new List<Vector2>();
         //for (int i = 0; i < positions.Count; i++)
@@ -42,7 +40,7 @@ public class DrawCollider : MonoBehaviour
         //col.gameObject.GetComponent<PolygonCollider2D>().points = positions2.ToArray();
         //col.gameObject.AddComponent<Rigidbody2D>();
         //col.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
-    }
+    //}
     IEnumerator draw2(LineRenderer r, List<Vector3> positions)
     {
         Camera cam = Camera.main;
