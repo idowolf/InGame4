@@ -21,8 +21,9 @@ public class Teleport : MonoBehaviour {
 
   public Material inactiveMaterial;
   public Material gazedAtMaterial;
+  public float height, width;
 
-  void Start() {
+    void Start() {
     startingPosition = transform.localPosition;
     SetGazedAt(false);
   }
@@ -47,5 +48,19 @@ public class Teleport : MonoBehaviour {
         direction.y = Mathf.Clamp(direction.y, 0.5f, 1f);
         float distance = 2 * Random.value + 1.5f;
         transform.localPosition = direction * distance;
+    }
+
+    public void TeleportUp()
+    {
+#if UNITY_EDITOR
+        width = Screen.width / 2;
+        height = Screen.height / 2;
+#else
+        width = UnityEngine.VR.VRSettings.eyeTextureWidth / 2;
+        height = UnityEngine.VR.VRSettings.eyeTextureHeight / 2;
+
+#endif
+        Vector3 direction = Camera.main.ScreenToWorldPoint(new Vector3(width + 0.2f, height + 0.1f, 2f));
+        transform.localPosition = direction;
     }
 }

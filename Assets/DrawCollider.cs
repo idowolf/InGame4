@@ -6,9 +6,11 @@ public class DrawCollider : MonoBehaviour
 {
     public Shader shader;
     public Color color;
-    public float height, width, prevHeight, prevWidth;
+    Camera main;
+    public float height, width, camX, camY, prevCamY, prevCamX;
     void Start()
     {
+        main = Camera.main;
         LineRenderer r = new GameObject().AddComponent<LineRenderer>();
         r.transform.SetParent(transform);
         r.material = new Material(shader);
@@ -52,9 +54,30 @@ public class DrawCollider : MonoBehaviour
         height = UnityEngine.VR.VRSettings.eyeTextureHeight / 2;
 
 #endif
-        positions.Add(Camera.main.ScreenToWorldPoint(new Vector3(width, height, 8f)));
-        r.positionCount = positions.Count;
-        r.SetPositions(positions.ToArray());
+        //camX = main.transform.rotation.x;
+        //camY = main.transform.rotation.y;
+        //bool flg1 = Mathf.Abs(camX - prevCamX) > 0.01f;
+        //bool flg2 = Mathf.Abs(camY - prevCamY) > 0.01f;
+        //Debug.Log(Mathf.Abs(camX - prevCamX));
+        //bool flg;
+        //if(positions.Count > 5) {
+        //    List<Vector3> posTest = positions.GetRange(positions.Count - 2, 2);
+        //    Debug.Log(Mathf.Abs(posTest[0].x - posTest[1].x));
+        //    if (Mathf.Abs(posTest[0].x - posTest[1].x) > 0.01f || 
+        //        Mathf.Abs(posTest[0].y - posTest[1].y) > 0.01f)
+        //        flg = true;
+        //    else
+        //        flg = false;
+        //}
+        //else
+        //{
+        //    flg = true;
+        //}
+        //if (flg) {
+            positions.Add(Camera.main.ScreenToWorldPoint(new Vector3(width, height, 8f)));
+            r.positionCount = positions.Count;
+            r.SetPositions(positions.ToArray());
+        //}
         yield return new WaitForSeconds(0.01f);
         StartCoroutine(draw2(r, positions));
     }
