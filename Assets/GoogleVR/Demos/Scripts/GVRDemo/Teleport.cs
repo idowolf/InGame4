@@ -17,11 +17,13 @@ using System.Collections;
 
 [RequireComponent(typeof(Collider))]
 public class Teleport : MonoBehaviour {
-  private Vector3 startingPosition;
-
-  public Material inactiveMaterial;
-  public Material gazedAtMaterial;
-
+    private Vector3 startingPosition;
+    
+    public Material inactiveMaterial;
+    public Material gazedAtMaterial;
+    public GameObject timer;
+    float timeFactor;
+    public float timeBonus;
   void Start() {
     startingPosition = transform.localPosition;
     SetGazedAt(false);
@@ -34,7 +36,11 @@ public class Teleport : MonoBehaviour {
             GetComponent<Renderer>().material = gazedAt ? gazedAtMaterial : inactiveMaterial;
             return;
         }
-        GetComponent<Renderer>().material.color = gazedAt ? Color.green : Color.red;
+        GetComponent<Renderer>().material.color = gazedAt ? Color.green : Color.red;      
+        timer.GetComponent<Timer>().timeLeft += gazedAt?  timeBonus : 0f ;
+        
+
+
     }
 
     public void Reset() {
