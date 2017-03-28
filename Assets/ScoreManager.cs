@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour {
 
-    //public GameObject obj;
+    public GameObject obj;
     public int multiFactor;
     public int score;
     float altAtStart;
@@ -15,13 +15,14 @@ public class ScoreManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
         score = 0;
-        startingPosition = transform.localPosition;
+        startingPosition = transform.position;
         altAtStart = startingPosition.y;
     }
 
     // Update is called once per frame
     void Update () {
-        //score += (int)(transform.obj.y - altAtStart);
+        
+        score += (int)(Mathf.Abs(obj.transform.position.y - altAtStart));
 		scoreText.text = "Score: " + Mathf.Round(score);
     }
 }

@@ -36,9 +36,7 @@ public class Teleport : MonoBehaviour {
             GetComponent<Renderer>().material = gazedAt ? gazedAtMaterial : inactiveMaterial;
             return;
         }
-        GetComponent<Renderer>().material.color = gazedAt ? Color.green : Color.red;      
-        timer.GetComponent<Timer>().timeLeft += gazedAt?  timeBonus : 0f ;
-        
+        GetComponent<Renderer>().material.color = gazedAt ? Color.green : Color.red;          
 
 
     }
