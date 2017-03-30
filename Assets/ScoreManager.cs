@@ -30,7 +30,7 @@ public class ScoreManager : MonoBehaviour {
     void Update () {
         
         score += (int)(Mathf.Abs(scoreObj.transform.position.y - altAtStart));
-        //scoreText.text = "Score: " + Mathf.Round(score);
+        
 #if UNITY_EDITOR
         width = Screen.width ;
         height = Screen.height ;
@@ -48,7 +48,9 @@ public class ScoreManager : MonoBehaviour {
         {
             //GAMEOVER!!!
             //SceneManager.LoadScene(gameOverScene);
-        } else
+            //scoreText.text = "Score: " + Mathf.Round(score);
+        }
+        else
         {
             printLives();
         }
