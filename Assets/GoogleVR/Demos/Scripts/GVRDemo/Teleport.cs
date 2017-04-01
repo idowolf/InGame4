@@ -14,18 +14,32 @@
 
 using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
 [RequireComponent(typeof(Collider))]
-public class Teleport : MonoBehaviour {
-  private Vector3 startingPosition;
-
-  public Material inactiveMaterial;
-  public Material gazedAtMaterial;
-
-  void Start() {
-    startingPosition = transform.localPosition;
-    SetGazedAt(false);
-  }
+public class Teleport : MonoBehaviour
+{
+    private Vector3 startingPosition;
+    private LinkedList<Vector3> positions;
+    LinkedListNode<Vector3> current;
+    public Material inactiveMaterial;
+    public Material gazedAtMaterial;
+    public float height, width;
+    void Start()
+    {
+        startingPosition = transform.localPosition;
+        positions = new LinkedList<Vector3>();
+        positions.AddFirst(new Vector3(0, 0, -18));
+        positions.AddLast(new Vector3(1.4f, 0, -18.77f));
+        positions.AddLast(new Vector3(2.8f, 0, -20.85f));
+        positions.AddLast(new Vector3(1.4f, 0, -23.73f));
+        positions.AddLast(new Vector3(0, 0, -23.5f));
+        positions.AddLast(new Vector3(-1.4f, 0, -23.73f));
+        positions.AddLast(new Vector3(-2.8f, 0, -20.85f));
+        positions.AddLast(new Vector3(-1.4f, 0, -18.77f));
+        current = positions.First;
+        transform.localPosition = current.Value;
+        SetGazedAt(false);
+    }
 
     public void SetGazedAt(bool gazedAt)
     {
@@ -37,15 +51,18 @@ public class Teleport : MonoBehaviour {
         GetComponent<Renderer>().material.color = gazedAt ? Color.green : Color.red;
     }
 
-    public void Reset() {
-    transform.localPosition = startingPosition;
-  }
+    public void Reset()
+    {
+        transform.localPosition = startingPosition;
+    }
 
     public void TeleportRandomly()
     {
-        Vector3 direction = Random.onUnitSphere;
-        direction.y = Mathf.Clamp(direction.y, 0.5f, 1f);
-        float distance = 2 * Random.value + 1.5f;
-        transform.localPosition = direction * distance;
+        current = current.Next ?? current.List.First;
+        transform.localPosition = current.Value;
+        Vector3 pos = transform.localPosition;
+        pos.y = GameObject.FindGameObjectWithTag("Player").transform.localPosition.y;
+        transform.localPosition = pos;
+        
     }
 }
