@@ -78,7 +78,7 @@ public class StereoController : MonoBehaviour {
   [Tooltip("When enabled, UpdateStereoValues() is called every frame to keep the stereo cameras " +
            "completely synchronized with both the mono camera and the device profile. It is " +
            "better for performance to leave this option disabled whenever possible.")]
-  public bool keepStereoUpdated = true;
+  public bool keepStereoUpdated = false;
 
   /// Adjusts the level of stereopsis for this stereo rig.
   /// @note This parameter is not the virtual size of the head -- use a scale
@@ -87,7 +87,7 @@ public class StereoController : MonoBehaviour {
   /// off stereo in this rig independently of any others.
   [Tooltip("Set the stereo level for this camera.")]
   [Range(0,1)]
-  public float stereoMultiplier = 0.5f;
+  public float stereoMultiplier = 1.0f;
 
   /// The stereo cameras by default use the actual optical FOV of the VR device,
   /// because otherwise the match between head motion and scene motion is broken, which
@@ -108,7 +108,7 @@ public class StereoController : MonoBehaviour {
   /// non-VR mode.
   [Tooltip("How much to adjust the stereo field of view to match this camera.")]
   [Range(0,1)]
-  public float matchMonoFOV = 0.5f;
+  public float matchMonoFOV = 0;
 
   /// Determines the method by which the stereo cameras' FOVs are matched to the mono
   /// camera's FOV (assuming #matchMonoFOV is not 0).  The default is to move the stereo
@@ -150,7 +150,7 @@ public class StereoController : MonoBehaviour {
   /// compensate.  If the COI has a radius, then the near side is checked.  COI must
   /// be non-null for this setting to have any effect.
   [Tooltip("Adjust stereo level when COI gets too close or too far.")]
-  public bool checkStereoComfort = false;
+  public bool checkStereoComfort = true;
 
   /// Smoothes the changes to the stereo camera FOV and position based on #centerOfInterest
   /// and #checkStereoComfort.

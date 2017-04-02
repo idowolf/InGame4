@@ -41,6 +41,9 @@ public class Teleport : MonoBehaviour {
         positions.AddLast(new Vector3(-1.4f, 0, -18.77f));
         current = positions.First;
         transform.localPosition = current.Value;
+        Vector3 pos = transform.localPosition;
+        pos.y = GameObject.FindGameObjectWithTag("Player").transform.localPosition.y + 0.5f;
+        transform.localPosition = pos;
         SetGazedAt(false);
     }
 
@@ -66,7 +69,7 @@ public class Teleport : MonoBehaviour {
         current = current.Next ?? current.List.First;
         transform.localPosition = current.Value;
         Vector3 pos = transform.localPosition;
-        pos.y = GameObject.FindGameObjectWithTag("Player").transform.localPosition.y;
+        pos.y = GameObject.FindGameObjectWithTag("Player").transform.localPosition.y + 0.5f;
         transform.localPosition = pos;
         
     }

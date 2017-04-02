@@ -10,12 +10,13 @@ public class ScoreManager : MonoBehaviour {
     public GameObject scoreObj, square, m_Lives;
     public Transform ui_root;
     public int multiFactor;
-    public int score, lives;
+    public int lives;
+    public static int score;
     float altAtStart;
     private Vector3 startingPosition;
     public Text scoreText;
     float height, width, partialHeight;
-
+    bool lifeDecreased;
 
     // Use this for initialization
     void Start () {
@@ -30,32 +31,38 @@ public class ScoreManager : MonoBehaviour {
     void Update () {
         
         score += (int)(Mathf.Abs(scoreObj.transform.position.y - altAtStart));
-        
-#if UNITY_EDITOR
-        width = Screen.width ;
-        height = Screen.height ;
-#else
-        width = UnityEngine.VR.VRSettings.eyeTextureWidth ;
-        height = UnityEngine.VR.VRSettings.eyeTextureHeight ;
-
-#endif
-        partialHeight = (height * 60 / 100);
+        height = scoreObj.transform.position.y;
+        partialHeight = (height * 90 / 100);
         if (square.transform.position.y <= partialHeight)
         {
-            lives--;
-        }
-        if (lives == 0 )
-        {
-            //GAMEOVER!!!
-            //SceneManager.LoadScene(gameOverScene);
-            //scoreText.text = "Score: " + Mathf.Round(score);
-        }
-        else
-        {
-            printLives();
+            if (!lifeDecreased)
+            {
+                lifeDecreased = true;
+                lives--;
+                removeLives();
+                printLives();
+                if (lives == 0)
+                {
+                    //GAMEOVER!!!
+                    SceneManager.LoadScene("gameOverScene");
+                    //scoreText.text = "Score: " + Mathf.Round(score);
+                }
+            }
         }
     }
 
+    public void ResetLifeDecreased()
+    {
+        lifeDecreased = false;
+    }
+    void removeLives()
+    {
+        ui_root.transform.localScale = Vector3.one;
+        foreach (Transform child in ui_root.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+    }
     void printLives()
     {
         for (int i = 0; i < lives; i++)
@@ -65,5 +72,6 @@ public class ScoreManager : MonoBehaviour {
             life.transform.localPosition = new Vector3(i * 2, 0f, 0f);
 
         }
+        ui_root.transform.localScale = Vector3.one * 0.2f;
     }
 }

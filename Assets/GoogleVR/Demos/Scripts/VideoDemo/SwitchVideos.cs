@@ -32,8 +32,6 @@ public class SwitchVideos : MonoBehaviour {
     videoSamples[1] = dashVideoSample;
     videoSamples[2] = panoVideoSample;
 
-    string NATIVE_LIBS_MISSING_MESSAGE = "Video Support libraries not found or could not be loaded!\n" +
-          "Please add the <b>GVRVideoPlayer.unitypackage</b>\n to this project";
 
     if (missingLibText != null) {
       try {
@@ -42,15 +40,16 @@ public class SwitchVideos : MonoBehaviour {
           GvrVideoPlayerTexture.DestroyVideoPlayer(ptr);
           missingLibText.enabled = false;
         } else {
-          missingLibText.text = NATIVE_LIBS_MISSING_MESSAGE;
           missingLibText.enabled = true;
         }
       } catch (Exception e) {
         Debug.LogError(e);
-        missingLibText.text = NATIVE_LIBS_MISSING_MESSAGE;
         missingLibText.enabled = true;
       }
     }
+
+        missingLibText.text = "Game Over!\nScore: " + ScoreManager.score;
+        ScoreManager.score = 0;
   }
 
   public void ShowMainMenu() {
