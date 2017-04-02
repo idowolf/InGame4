@@ -16,7 +16,6 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 [RequireComponent(typeof(Collider))]
-<<<<<<< HEAD
 public class Teleport : MonoBehaviour {
     private Vector3 startingPosition;
     
@@ -25,18 +24,8 @@ public class Teleport : MonoBehaviour {
     public GameObject timer;
     float timeFactor;
     public float timeBonus;
-  void Start() {
-    startingPosition = transform.localPosition;
-    SetGazedAt(false);
-  }
-=======
-public class Teleport : MonoBehaviour
-{
-    private Vector3 startingPosition;
     private LinkedList<Vector3> positions;
     LinkedListNode<Vector3> current;
-    public Material inactiveMaterial;
-    public Material gazedAtMaterial;
     public float height, width;
     void Start()
     {
@@ -54,7 +43,6 @@ public class Teleport : MonoBehaviour
         transform.localPosition = current.Value;
         SetGazedAt(false);
     }
->>>>>>> refs/remotes/origin/cube-rotation
 
     public void SetGazedAt(bool gazedAt)
     {
