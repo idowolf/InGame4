@@ -1251,6 +1251,8 @@ MonoBehaviour:
   gazedAtMaterial: {fileID: 2100000, guid: daad62324deb0cf448e5c805c8459bff, type: 2}
   timer: {fileID: 0}
   timeBonus: 0
+  height: 0
+  width: 0
 --- !u!114 &1597393201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1707,6 +1709,8 @@ MonoBehaviour:
   gazedAtMaterial: {fileID: 2100000, guid: daad62324deb0cf448e5c805c8459bff, type: 2}
   timer: {fileID: 0}
   timeBonus: 0
+  height: 0
+  width: 0
 --- !u!114 &1879533881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1925,6 +1929,8 @@ MonoBehaviour:
   gazedAtMaterial: {fileID: 2100000, guid: daad62324deb0cf448e5c805c8459bff, type: 2}
   timer: {fileID: 0}
   timeBonus: 0
+  height: 0
+  width: 0
 --- !u!114 &1903047111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2143,6 +2149,8 @@ MonoBehaviour:
   gazedAtMaterial: {fileID: 2100000, guid: daad62324deb0cf448e5c805c8459bff, type: 2}
   timer: {fileID: 0}
   timeBonus: 0
+  height: 0
+  width: 0
 --- !u!114 &1967412909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2496,6 +2504,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddd25f1308577456cbaa207901961126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllerMain: {fileID: 0}
+  controllerPointer: {fileID: 0}
+  reticlePointer: {fileID: 0}
+  messageCanvas: {fileID: 0}
+  messageText: {fileID: 0}
+  gvrEmulatedPlatformType: 0
 --- !u!4 &2118232930
 Transform:
   m_ObjectHideFlags: 0
