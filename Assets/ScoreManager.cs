@@ -33,6 +33,7 @@ public class ScoreManager : MonoBehaviour {
         score += (int)(Mathf.Abs(scoreObj.transform.position.y - altAtStart));
         height = scoreObj.transform.position.y;
         partialHeight = (height * 90 / 100);
+        scoreText.text = "SCORE: " + Mathf.Round(score);
         if (square.transform.position.y <= partialHeight)
         {
             if (!lifeDecreased)
