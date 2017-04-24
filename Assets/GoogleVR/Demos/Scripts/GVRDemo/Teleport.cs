@@ -73,4 +73,8 @@ public class Teleport : MonoBehaviour {
         transform.localPosition = pos;
         
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("FuckNimrod2000");
+    }
 }
