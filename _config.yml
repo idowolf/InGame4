@@ -1,3 +1,4 @@
 baseurl: /InGame4
 name: Spinner VR Dev Blog
 markdown: kramdown
+permalink: /InGame4/blog/:year/:month/:day/:title
