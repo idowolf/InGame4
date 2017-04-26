@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+	<title>Spinner VR Dev Blog</title>
+	<link href="http://idowolf.github.io/blog/atom.xml" rel="self"/>
+	<link href="http://idowolf.github.io/blog"/>
+	<updated>2017-04-26T14:20:35+03:00</updated>
+	<id>http://idowolf.github.io/blog</id>
+	<author>
+		<name>Ido Wolf</name>
+		<email>idowolf@gmail.com</email>
+	</author>
+
+	
+		<entry>
+			<title>Spinner VR Website Launched</title>
+			<link href="http://idowolf.github.io/InGame4/blog/2017/04/26/spinner-vr-site-launched"/>
+			<updated>2017-04-26T00:00:00+03:00</updated>
+			<id>http://hankquinlan.github.io/blog/2017/04/26/spinner-vr-site-launched</id>
+			<content type="html">&lt;p&gt;This is the first post for our new blog where I, &lt;em&gt;Ido Wolf&lt;/em&gt; (nice to meet ya!), will be covering fun and significant hallmarks during our progress developing the game.&lt;/p&gt;
+
+&lt;p&gt;For those interested, the website and our blog are hosted on GitHub Pages as a branch of our project (/gh-pages). It is a static blog powered by &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;, which is perfect for blogs powered by static hosting. Check out &lt;a href=&quot;http://jmcglone.com/guides/github-pages/&quot;&gt;the wonderful guide by Jonathan McGlone&lt;/a&gt; if you’d like to start your own static-hosted blog :)&lt;/p&gt;
+
+</content>
+		</entry>
+	
+
+</feed>
+
