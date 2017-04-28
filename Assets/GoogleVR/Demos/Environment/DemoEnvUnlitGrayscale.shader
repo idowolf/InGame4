@@ -22,8 +22,6 @@ Shader "GoogleVR/Demos/Unlit/Env Unlit Grayscale" {
 
     Pass {
       CGPROGRAM
-// Upgrade NOTE: excluded shader from DX11; has structs without semantics (struct appdata members vertex)
-#pragma exclude_renderers d3d11
       #pragma vertex vert
       #pragma fragment frag
       #pragma target 2.0
@@ -32,9 +30,7 @@ Shader "GoogleVR/Demos/Unlit/Env Unlit Grayscale" {
       #include "../../Shaders/GvrUnityCompatibility.cginc"
 
       struct appdata {
-        float4 vertex : 
-		
-		;
+        float4 vertex : POSITION;
         float2 uv : TEXCOORD0;
       };
 
