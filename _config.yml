@@ -1,8 +1,8 @@
 # Site settings
 title: Spinner VR Dev Blog
 description: "A blog about lorem ipsum ..."
-baseurl: /InGame4 # for test: remove string '/space-jekyll-templa' to ''
-url: "http://idowolf.github.io/InGame4/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.githu.io'
+baseurl: "" # for test: remove string '/space-jekyll-templa' to ''
+url: "http://spinnervr.com/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.githu.io'
 # User settings
 username: Team Pinenut
 user_title: Spinner VR Dev Blog
