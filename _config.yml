@@ -1,4 +1,47 @@
-baseurl: /InGame4
-name: Spinner VR Dev Blog
+# Site settings
+title: Spinner VR Dev Blog
+description: "A blog about lorem ipsum ..."
+baseurl: /InGame4 # for test: remove string '/space-jekyll-templa' to ''
+url: "http://victorvoid.github.io/space-jekyll-template/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.githu.io'
+# User settings
+username: Team Pinenut
+user_title: Spinner VR Dev Blog
+email: teampinenut@gmail.com
+twitter_username: TeamPinenut
+github_username:  idowolf
+gplus_username:  "110862548936569787078"
+disqus_username: spinner-vr-dev-blog
+
+# Build settings
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
+highlighter: rouge
+permalink: /:title/
+
+
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+# Links to include in menu navigation
+links:
+  - title: home
+    url: /
+  - title: my posts
+    url: /posts
+  - title: series
+    url: /series
+  - title: tags
+    url: /tags
+  - title: about me
+    url: /about
+# projects in header index
+projects:
+  - name: ColorKiller
+    url: https://github.com/idowolf/colorkiller
+  - name: HackIDC 2017 VR Project
+    url: https://github.com/idowolf/hackidc2017
+# exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules']
