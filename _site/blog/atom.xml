@@ -4,7 +4,7 @@
 	<title>Spinner VR Dev Blog</title>
 	<link href="http://idowolf.github.io/blog/atom.xml" rel="self"/>
 	<link href="http://idowolf.github.io/blog"/>
-	<updated>2017-04-30T00:29:30+03:00</updated>
+	<updated>2017-04-30T01:06:43+03:00</updated>
 	<id>http://idowolf.github.io/blog</id>
 	<author>
 		<name>Ido Wolf</name>
@@ -21,6 +21,66 @@
 
 &lt;p&gt;For those interested, the website and our blog are hosted on GitHub Pages as a branch of our project (/gh-pages). It is a static blog powered by &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;, which is perfect for blogs powered by static hosting. Check out &lt;a href=&quot;http://jmcglone.com/guides/github-pages/&quot;&gt;the wonderful guide by Jonathan McGlone&lt;/a&gt; if you’d like to start your own static-hosted blog :)&lt;/p&gt;
 
+</content>
+		</entry>
+	
+		<entry>
+			<title>Sharding in MongoDB</title>
+			<link href="http://idowolf.github.io/InGame4/sharding/"/>
+			<updated>2016-09-12T03:06:31+03:00</updated>
+			<id>http://hankquinlan.github.io/sharding</id>
+			<content type="html">&lt;p class=&quot;music-read&quot;&gt;&lt;a href=&quot;spotify:track:4DAZ8UYNpWVIV46aLkN2Qp&quot;&gt;Music for reading(spotify)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2016/02/raw.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;sharding--why-&quot;&gt;Sharding ? why ?&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quas, esse laudantium quis ipsa consequuntur iure atque! Necessitatibus quam quidem illum, corrupti molestiae, maxime neque, consequuntur quia alias, modi commodi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem ducimus dolores repellat itaque perferendis corporis ex dicta doloremque optio harum excepturi, ut, praesentium asperiores! Voluptatum amet perspiciatis iusto, fugiat!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, libero quia placeat necessitatibus culpa mollitia, illum, quam sed ratione ad eaque suscipit consectetur itaque quasi aperiam. Quaerat, nihil voluptas tenetur?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos unde quam autem fugit, aliquam perspiciatis, accusamus numquam, pariatur impedit excepturi debitis repellendus consectetur laboriosam voluptatem temporibus sunt illo magnam! Voluptates.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam repudiandae quidem, fuga eaque, deserunt eius. Aperiam, maxime fuga alias ad vel amet et facere soluta asperiores quasi. A, aperiam, ipsam.&lt;/p&gt;
+
+&lt;figure class=&quot;foto-legenda&quot;&gt;
+	&lt;img src=&quot;/assets/img/sharding-gerenciamento-usuarios/ajudando-carregar.jpg&quot; alt=&quot;&quot; /&gt;
+	&lt;figcaption&gt; &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat architecto minus sed dolorum debitis iste quae harum, fuga commodi libero voluptatum voluptates nemo, assumenda itaque. Placeat neque voluptatem, veritatis quae.&lt;/p&gt;
+	&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, illo eaque incidunt voluptatibus minus repudiandae eius consectetur tempore enim quisquam, quia veniam fuga autem, labore quas voluptate suscipit. Omnis, rem!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, veritatis modi libero unde! Sapiente tempora eius cum doloribus, non, provident, veniam placeat veritatis quos possimus asperiores ipsam animi aliquam vel!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://octodex.github.com/images/codercat.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;lorem-ipsum-dolor-alias&quot;&gt;Lorem ipsum dolor, alias.?&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo minima veritatis est, unde nesciunt optio debitis. Soluta eos temporibus harum esse eveniet, alias praesentium, sapiente ipsa excepturi reprehenderit ullam ea.&lt;/p&gt;
+
+&lt;h3 id=&quot;warning&quot;&gt;Warning!&lt;/h3&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque corporis, fuga sequi cumque in quos excepturi placeat iste! Eaque voluptatum laudantium, recusandae optio! Rem impedit laborum enim minima aliquid, repellendus.&lt;br /&gt;
+` scalability` Lorem ipsum dolor sit amet, consebus tempora!:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://dba.stackexchange.com/questions/4508/what-does-horizontal-scaling-mean&quot; target=&quot;_blank&quot;&gt;What does horizontal scaling mean?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.openshift.com/best-practices-for-horizontal-application-scaling/&quot; target=&quot;_blank&quot;&gt;Best Practices For Horizontal Application Scaling&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.infoq.com/articles/ebay-scalability-best-practices&quot; target=&quot;_blank&quot;&gt;Scalability Best Practices: Lessons from eBay&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/5401992/what-does-scale-horizontally-and-scale-vertically-mean&quot; target=&quot;_blank&quot;&gt;What does scale horizontally and scale vertically mean?&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;lorem-ipsum-dolor-sit-ametres&quot;&gt;Lorem ipsum dolor sit amet,res.&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;admin&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createUser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;bonitao&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;pwd&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;2016bonitao&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;roles&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;role&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;userAdminAnyDatabase&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;admin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque asperiores quam fuga tempora nisi consequatur, sequi cum voluptate deleniti quis, perspiciatis commodi beatae modi, iusto ab deserunt corrupti libero doloribus.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;updateUser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bonitao&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;na&quot;&gt;pwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;2016bonitao&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;na&quot;&gt;roles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;role&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;read&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;assets&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni assumenda perferendis, iure atque. Tempore qui blanditiis autem necessitatibus natus soluta voluptas saepe totam animi voluptatum recusandae, nihil maiores et cumque.&lt;/p&gt;
 </content>
 		</entry>
 	
