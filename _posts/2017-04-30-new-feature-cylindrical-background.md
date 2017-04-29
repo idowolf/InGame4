@@ -1,13 +1,15 @@
 ---
 layout: post
-title:  "Sharding in MongoDB"
+title:  "New Feature: Cylindrical Background"
 image: ''
-date:   2016-09-12 00:06:31
+date:   2017-04-30 00:06:31
 tags:
-- mongodb
+- art-design
+- 3d-graphics
+- blender
 description: ''
 categories:
-- Learn Jekyll 
+- Art
 ---
 
 <p class="music-read"><a href="spotify:track:4DAZ8UYNpWVIV46aLkN2Qp">Music for reading(spotify)</a></p>

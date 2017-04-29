@@ -1,7 +1,13 @@
 ---
 layout: post
-title: "Spinner VR Website Launched"
-date: 2017-04-26
+title:  "Spinner VR Website Launched"
+image: ''
+date:   2017-04-26 00:06:31
+tags:
+- website-related
+description: ''
+categories:
+- Website 
 ---
 
 This is the first post for our new blog where I, Ido Wolf, will be covering fun and significant hallmarks during our progress developing the game.
