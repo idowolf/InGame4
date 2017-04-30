@@ -60,7 +60,7 @@ public class ScoreManager : MonoBehaviour {
         for (int i = 0; i < lives; i++)
         {
             GameObject life = GameObject.Instantiate<GameObject>(m_Lives, ui_root, false);
-            life.transform.localPosition = new Vector3(30 + i * 10, 65, 0f);
+            life.transform.localPosition = new Vector3(30 + i * 20, 65, 0f);
 
         }
         ui_root.transform.localScale = Vector3.one * 0.2f;
