@@ -19,9 +19,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4651379767189654}
-  - component: {fileID: 114034459482346950}
+  - component: {fileID: 114186963620994040}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: LineDrawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,14 +33,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1532395567295134}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114034459482346950
+--- !u!114 &114186963620994040
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -48,8 +48,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1532395567295134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c7018f27e65bef418033d6e41b2fcc0, type: 3}
+  m_Script: {fileID: 11500000, guid: 14b486734e1524e44aebfabecb85dcbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shader: {fileID: 10755, guid: 0000000000000000f000000000000000, type: 3}
-  color: {r: 0, g: 0, b: 0, a: 0}
+  shader: {fileID: 10755, guid: 0000000000000000f000000000000000, type: 0}
+  color: {r: 1, g: 0, b: 0, a: 0}
+  height: 0
+  width: 0
+  prevHeight: 0
+  prevWidth: 0
