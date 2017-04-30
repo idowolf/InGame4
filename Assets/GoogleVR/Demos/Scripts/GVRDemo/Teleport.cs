@@ -18,11 +18,15 @@ using System.Collections.Generic;
 [RequireComponent(typeof(Collider))]
 public class Teleport : MonoBehaviour {
     private Vector3 startingPosition;
+    
     public Material inactiveMaterial;
     public Material gazedAtMaterial;
-    public ScoreManager levelScoreManager;
+    public GameObject timer;
+    float timeFactor;
+    public float timeBonus;
     private LinkedList<Vector3> positions;
     LinkedListNode<Vector3> current;
+    public float height, width;
     void Start()
     {
         startingPosition = transform.localPosition;
@@ -69,9 +73,8 @@ public class Teleport : MonoBehaviour {
         transform.localPosition = pos;
         
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        TeleportRandomly();
-        levelScoreManager.DecreaseLives();
+        Debug.Log("FuckNimrod2000");
     }
 }
