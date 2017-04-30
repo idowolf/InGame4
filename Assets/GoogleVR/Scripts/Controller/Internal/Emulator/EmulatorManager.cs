@@ -31,7 +31,7 @@ namespace Gvr.Internal {
           var gameObject = new GameObject("PhoneRemote");
           instance = gameObject.AddComponent<EmulatorManager>();
           // This object should survive all scene transitions.
-          GameObject.DontDestroyOnLoad(instance);
+          //GameObject.DontDestroyOnLoad(instance); //***IDO WAS HERE***
         }
         return instance;
       }
