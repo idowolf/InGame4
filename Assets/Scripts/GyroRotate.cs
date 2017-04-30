@@ -21,7 +21,8 @@ using UnityEngine;
      void Update () 
      {
          GameObject player = GameObject.FindGameObjectWithTag ("Player");
-         player.transform.Rotate (-Input.gyro.rotationRateUnbiased.x, -Input.gyro.rotationRateUnbiased.y, 0);
+        if(gyro != null)
+            player.transform.Rotate (-Input.gyro.rotationRateUnbiased.x, -Input.gyro.rotationRateUnbiased.y, 0);
      }
  
      void OnGUI()
