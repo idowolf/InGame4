@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour {
 
-    public GameObject scoreObj, m_Lives;
+    public GameObject scoreObj, square, m_Lives;
     public Transform ui_root;
     public int multiFactor;
     public int lives;
@@ -15,7 +15,8 @@ public class ScoreManager : MonoBehaviour {
     float altAtStart;
     private Vector3 startingPosition;
     public Text scoreText;
-    float height, width;
+    float height, width, partialHeight;
+    bool lifeDecreased;
 
     // Use this for initialization
     void Start () {
@@ -31,21 +32,29 @@ public class ScoreManager : MonoBehaviour {
         
         score += (int)(Mathf.Abs(scoreObj.transform.position.y - altAtStart));
         height = scoreObj.transform.position.y;
-        scoreText.text = "HEIGHT: " + Mathf.Round(score);
+        partialHeight = (height * 90 / 100);
+        scoreText.text = "SCORE: " + Mathf.Round(score);
+        if (square.transform.position.y <= partialHeight)
+        {
+            if (!lifeDecreased)
+            {
+                lifeDecreased = true;
+                lives--;
+                removeLives();
+                printLives();
+                if (lives == 0)
+                {
+                    //GAMEOVER!!!
+                    SceneManager.LoadScene("gameOverScene");
+                    //scoreText.text = "Score: " + Mathf.Round(score);
+                }
+            }
+        }
     }
 
-
-    public void DecreaseLives()
+    public void ResetLifeDecreased()
     {
-        lives--;
-        removeLives();
-        printLives();
-        if (lives == 0)
-        {
-            //GAMEOVER!!!
-            SceneManager.LoadScene("gameOverScene");
-            //scoreText.text = "Score: " + Mathf.Round(score);
-        }
+        lifeDecreased = false;
     }
     void removeLives()
     {
@@ -61,7 +70,7 @@ public class ScoreManager : MonoBehaviour {
         {
             GameObject life = GameObject.Instantiate(m_Lives);
             life.transform.parent = ui_root;
-            life.transform.localPosition = new Vector3(30 + i * 10, 65, 0f);
+            life.transform.localPosition = new Vector3(i * 2, 0f, 0f);
 
         }
         ui_root.transform.localScale = Vector3.one * 0.2f;
