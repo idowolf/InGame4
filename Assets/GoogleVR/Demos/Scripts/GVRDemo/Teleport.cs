@@ -24,7 +24,9 @@ public class Teleport : MonoBehaviour {
     private LinkedList<Vector3> positions;
     LinkedListNode<Vector3> current;
     static int TotalCubesCreated;
-    private int CubeID;
+    public int CubeID;
+    public GameObject ComboManager;
+    
     void Start()
     {
         startingPosition = transform.localPosition;
@@ -52,7 +54,7 @@ public class Teleport : MonoBehaviour {
         {
             GetComponent<Renderer>().material = gazedAt ? gazedAtMaterial : inactiveMaterial;
             return;
-        }
+        }  
         GetComponent<Renderer>().material.color = gazedAt ? Color.green : Color.red;          
 
 
@@ -71,13 +73,15 @@ public class Teleport : MonoBehaviour {
         pos.y = GameObject.FindGameObjectWithTag("Player").transform.localPosition.y + 0.5f;
         transform.localPosition = pos;
         TotalCubesCreated++;
-        CubeID++;
+        this.CubeID = TotalCubesCreated ;
+        ComboManager.GetComponent<ComboManager>().MangaeTheCombo(this.CubeID);
+        
         
     }
     private void OnTriggerEnter(Collider other)
     {
         TeleportRandomly();
         levelScoreManager.DecreaseLives();
-        //TotalCubesCreated++;
+        ComboManager.GetComponent<ComboManager>().NullifyComboSize(this.CubeID);
     }
 }
