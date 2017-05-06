@@ -23,6 +23,8 @@ public class Teleport : MonoBehaviour {
     public ScoreManager levelScoreManager;
     private LinkedList<Vector3> positions;
     LinkedListNode<Vector3> current;
+    static int TotalCubesCreated;
+    private int CubeID;
     void Start()
     {
         startingPosition = transform.localPosition;
@@ -41,6 +43,7 @@ public class Teleport : MonoBehaviour {
         pos.y = GameObject.FindGameObjectWithTag("Player").transform.localPosition.y + 0.5f;
         transform.localPosition = pos;
         SetGazedAt(false);
+        CubeID = 0;
     }
 
     public void SetGazedAt(bool gazedAt)
@@ -67,11 +70,14 @@ public class Teleport : MonoBehaviour {
         Vector3 pos = transform.localPosition;
         pos.y = GameObject.FindGameObjectWithTag("Player").transform.localPosition.y + 0.5f;
         transform.localPosition = pos;
+        TotalCubesCreated++;
+        CubeID++;
         
     }
     private void OnTriggerEnter(Collider other)
     {
         TeleportRandomly();
         levelScoreManager.DecreaseLives();
+        //TotalCubesCreated++;
     }
 }
