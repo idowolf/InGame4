@@ -82,6 +82,6 @@ public class Teleport : MonoBehaviour {
     {
         TeleportRandomly();
         levelScoreManager.DecreaseLives();
-        ComboManager.GetComponent<ComboManager>().NullifyComboSize(this.CubeID);
+        ComboManager.GetComponent<ComboManager>().MangaeTheCombo(this.CubeID);
     }
 }
