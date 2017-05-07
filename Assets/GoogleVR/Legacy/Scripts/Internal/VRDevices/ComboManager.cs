@@ -9,35 +9,19 @@ public class ComboManager : MonoBehaviour {
 	public static int ComboLength;
     public Text ComboText;
     public GameObject player;
+    public float velocityFactor;
+    public float baseVelocity;
     // Use this for initialization
-	void Start () {
+    void Start () {
         LastInCombo = 0;
+        baseVelocity = player.GetComponent<MoveUpwards>().velocity;
+        velocityFactor = 1;
         NullifyComboSize(-1);
 	}
 	
 	
     // Update is called once per frame
 	void Update () {
-        float velocityFactor = 1;
-        ComboText.text = "TOBIS-2005";
-        if ((ComboLength >= 5) &&(ComboLength < 15))
-        {
-            velocityFactor = 1.25f;
-            ComboText.text = "Niceee";
-        }else 
-            if ((ComboLength >= 15) && (ComboLength < 30))
-        {
-            velocityFactor = 1.50f;
-            ComboText.text = "Awesomeee";
-        }
-        else 
-            if (ComboLength >= 30)
-        {
-            velocityFactor = 2.0f;
-            ComboText.text = "Killing Spree!!";
-        }
-        //if combo is long enough - player velocity multiply by factor.
-        player.GetComponent<MoveUpwards>().velocity *= velocityFactor;
     }
 
     public void MangaeTheCombo (int ID)
@@ -47,6 +31,31 @@ public class ComboManager : MonoBehaviour {
             ComboLength += ID - LastInCombo;
             LastInCombo = ID;
         }
+
+        ComboText.text = "TOBIS-2005";
+        if ((ComboLength >= 5) && (ComboLength < 15))
+        {
+            velocityFactor = 1.25f;
+            ComboText.text = "Niceee";
+        }
+        else if ((ComboLength >= 15) && (ComboLength < 30))
+        {
+            velocityFactor = 1.50f;
+            ComboText.text = "Awesomeee";
+        }
+        else if (ComboLength >= 30)
+        {
+            velocityFactor = 2.0f;
+            ComboText.text = "Killing Spree!!";
+        }
+        else
+        {
+            velocityFactor = 1.0f;
+            ComboText.text = "";
+        }
+        //if combo is long enough - player velocity multiply by factor.
+        player.GetComponent<MoveUpwards>().velocity = baseVelocity * velocityFactor;
+
     }
 
     public void NullifyComboSize(int ID)
