@@ -66,7 +66,7 @@ public class Teleport : MonoBehaviour {
         transform.localPosition = startingPosition;
     }
 
-    public void TeleportRandomly()
+    private void TeleportRandomly()
     {
         current = current.Next ?? current.List.First;
         transform.localPosition = current.Value;
@@ -76,14 +76,26 @@ public class Teleport : MonoBehaviour {
         TotalCubesCreated++;
         this.CubeID = TotalCubesCreated ;
         ComboManager.GetComponent<ComboManager>().MangaeTheCombo(this.CubeID);
+    }
+
+    /*** This is called when the object touches the plane ***/
+    public void TouchedThePlane()
+    {
+        TeleportRandomly();
+        Timer.GetComponent<Timer>().addTimer(-10f);
+        ComboManager.GetComponent<ComboManager>().MangaeTheCombo(this.CubeID);
+        //levelScoreManager.DecreaseLives();
+
+    }
+
+    /*** This is called when the player looks at the object ***/
+    public void PlayerGazedAtMe()
+    {
         Timer.GetComponent<Timer>().addTimer(0.5f);
-        
-        
+        TeleportRandomly();
     }
     private void OnTriggerEnter(Collider other)
     {
-        TeleportRandomly();
-        ComboManager.GetComponent<ComboManager>().MangaeTheCombo(this.CubeID);
-        //levelScoreManager.DecreaseLives();
+        TouchedThePlane();
     }
 }
