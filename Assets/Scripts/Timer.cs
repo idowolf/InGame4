@@ -15,7 +15,8 @@ public class Timer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         timeLeft -= Time.deltaTime;
-        timerText.text = "Time Left:" + Mathf.Round(timeLeft);
+        string minSec = string.Format("{0}:{1:00}", (int)timeLeft / 60, (int)timeLeft % 60);
+        timerText.text = minSec;
         
         if (timeLeft < 0f)
         {
