@@ -26,6 +26,7 @@ public class Teleport : MonoBehaviour {
     static int TotalCubesCreated;
     public int CubeID;
     public GameObject ComboManager;
+    public GameObject Timer;
     
     void Start()
     {
@@ -75,13 +76,14 @@ public class Teleport : MonoBehaviour {
         TotalCubesCreated++;
         this.CubeID = TotalCubesCreated ;
         ComboManager.GetComponent<ComboManager>().MangaeTheCombo(this.CubeID);
+        Timer.GetComponent<Timer>().addTimer(0.5f);
         
         
     }
     private void OnTriggerEnter(Collider other)
     {
         TeleportRandomly();
-        levelScoreManager.DecreaseLives();
         ComboManager.GetComponent<ComboManager>().MangaeTheCombo(this.CubeID);
+        //levelScoreManager.DecreaseLives();
     }
 }
