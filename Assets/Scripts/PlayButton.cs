@@ -39,6 +39,6 @@ public class PlayButton : MonoBehaviour {
     }
     public void PointerDownExit()
     {
-        Application.Quit();
+        //Application.Quit();
     }
 }
