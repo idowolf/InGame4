@@ -76,7 +76,7 @@ public class Teleport : MonoBehaviour {
         TotalCubesCreated++;
         this.CubeID = TotalCubesCreated ;
         ComboManager.GetComponent<ComboManager>().MangaeTheCombo(this.CubeID);
-        Timer.GetComponent<Timer>().addTimer(1.0f);
+        Timer.GetComponent<Timer>().addTimer(0.5f);
         
         
     }
