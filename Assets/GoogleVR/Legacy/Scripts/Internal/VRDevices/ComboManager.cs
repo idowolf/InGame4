@@ -12,16 +12,26 @@ public class ComboManager : MonoBehaviour {
     public float velocityFactor, baseVelocity, timeElapsed;
     private bool scaleTextSize;
     private int initTextSize;
+    public AudioSource GoodSound;
+    public AudioSource GreatSound;
+    public AudioSource AwesomeSound;
+    public AudioSource OutstadingSound;
+    public AudioSource AmaizingSound;
     // Use this for initialization
     void Start () {
         baseVelocity = player.GetComponent<MoveUpwards>().velocity;
+        GoodSound = GameObject.Find("Good").GetComponent<AudioSource>();
+        GreatSound = GameObject.Find("Great").GetComponent<AudioSource>();
+        AwesomeSound = GameObject.Find("Awesome").GetComponent<AudioSource>();
+        OutstadingSound = GameObject.Find("Outstanding").GetComponent<AudioSource>();
+        AmaizingSound = GameObject.Find("Amaizing").GetComponent<AudioSource>();
         velocityFactor = 1;
         initTextSize = ComboText.fontSize;
 	}
-	
-	
+
+
     // Update is called once per frame
-	private void LateUpdate() { 
+    private void LateUpdate() { 
         if (scaleTextSize)
         {
             timeElapsed += Time.deltaTime;
@@ -58,28 +68,94 @@ public class ComboManager : MonoBehaviour {
             velocityFactor = 1.25f;
             SetComboText(0);
         }
-        else if (ComboLength == 15)
+        else if (ComboLength == 10)
         {
             velocityFactor = 1.50f;
             SetComboText(1);
         }
-        else if (ComboLength == 30)
+        else if (ComboLength == 15)
         {
             velocityFactor = 2.0f;
             SetComboText(2);
         }
+        else if (ComboLength == 20)
+        {
+            velocityFactor = 2.5f;
+            SetComboText(3);
+        }
+        else if (ComboLength == 25)
+        {
+            velocityFactor = 3f;
+            SetComboText(4);
+        }
+ 
+
+
+
+
         //if combo is long enough - player velocity multiply by factor.
-        player.GetComponent<MoveUpwards>().velocity = baseVelocity * velocityFactor;
+        //player.GetComponent<MoveUpwards>().velocity = baseVelocity * velocityFactor;
     }
 
     private void SetComboText(int streakID)
     {
         if (streakID == 0)
-            ComboText.text = "Nice!";
+        {
+            ComboText.text = "Good!";
+            playSoundGood();
+        }
+
         else if (streakID == 1)
-            ComboText.text = "Awesome!!";
-        else
-            ComboText.text = "KILLING STREAK!!!";
-        scaleTextSize = true;
+        {
+            ComboText.text = "Great!!";
+            playSoundGreat();
+        }
+
+        else if (streakID == 2)
+        {
+            ComboText.text = "Awesome!";
+            playSoundAwesome();
+        }
+
+        else if (streakID == 3)
+        {
+            ComboText.text = "Outstanding";
+            playSoundOutstanding();
+        }
+        else if (streakID == 4)
+        {
+            ComboText.text = "Amaizing";
+            playSoundAmaizing();
+        }
+
     }
+
+
+
+    void playSoundGood()
+    {
+        GoodSound.Play();
+    }
+    void playSoundGreat()
+    {
+        GreatSound.Play();
+    }
+    void playSoundAwesome()
+    {
+        AwesomeSound.Play();
+    }
+    void playSoundOutstanding()
+    {
+        OutstadingSound.Play();
+    }
+    void playSoundAmaizing()
+    {
+        AmaizingSound.Play();
+    }
+
+
+
+
+
+
 }

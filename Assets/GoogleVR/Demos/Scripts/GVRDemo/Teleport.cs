@@ -93,6 +93,8 @@ public class Teleport : MonoBehaviour {
     {
         Timer.GetComponent<Timer>().addTimer(0.5f);
         TeleportRandomly();
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Play();
     }
     private void OnTriggerEnter(Collider other)
     {
