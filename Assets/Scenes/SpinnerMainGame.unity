@@ -1776,6 +1776,11 @@ MonoBehaviour:
   lastRotationTime: 0
   cameraYPosAtStart: 0
   cameraYpos: 0
+  maxRotationTime: 0
+  tempRotationTime: 0
+  speed: 0
+  maxSpeed: 0
+  maxCombo: 0
 --- !u!1 &1116813129 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 555767533, guid: 34c21f523e72f45509a4e37ed0293c3b,
@@ -2447,8 +2452,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeFromStart: 0
-  timeLeft: 60
+  timeLeft: 10
   timerText: {fileID: 2012707435}
+  statsManager: {fileID: 1107820929}
 --- !u!1001 &1757441698
 Prefab:
   m_ObjectHideFlags: 0

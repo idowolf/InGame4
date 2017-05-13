@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour {
     public float timeFromStart, timeLeft = 20.0f;
     public Text timerText;
+    public StatsManager statsManager;
 
 
 	// Use this for initialization
@@ -25,6 +26,11 @@ public class Timer : MonoBehaviour {
         
         if (timeLeft < 0f)
         {
+            //update all records and stats
+            statsManager.updateRecordTable();
+            //print table for check
+            statsManager.printRecordTable();
+
             SceneManager.LoadScene("gameOverScene");
         }
     }

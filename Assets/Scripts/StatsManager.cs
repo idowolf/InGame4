@@ -5,6 +5,57 @@ using UnityEngine;
 
 
 public class StatsManager : MonoBehaviour {
+
+    public class StatsNode : IComparable
+    {
+        public float value ;
+        public DateTime date = new DateTime();
+        public String name ;
+
+        /*
+         *adding the record to the records list.
+         * flag - if 1, the smaller the better
+         * else - the greater the better!!!
+         * 
+         */
+        
+
+        public StatsNode()
+        {
+            value = 0;
+            date = DateTime.Now;
+            name = "name";
+        }
+
+        public int CompareTo(StatsNode obj)
+        {
+            if (obj == null) return 0;
+            if (this.value > obj.value)
+            {
+                return 1;
+            }
+            if (this.value < obj.value)
+            {
+                return -1;
+            }
+            else return 0;
+        }
+
+        public int CompareTo(object obj)
+        {
+            return CompareTo((StatsNode)obj);
+        }
+
+        public String ToString()
+        {
+
+            return ("value : " + value + " date: "  + date);
+        }
+
+    }
+
+    
+
     public float timeFromStart , lastRotationTime;
     public int cameraYPosAtStart, cameraYpos;
     public float maxRotationTime, tempRotationTime;
@@ -14,8 +65,20 @@ public class StatsManager : MonoBehaviour {
     Vector3 lastPosition;
 
     public int maxCombo;
-	// Use this for initialization
-	void Start () {
+
+    public static int chartSize = 3;
+    public static List<StatsNode> fastRotList = new List<StatsNode>();
+    public static List<StatsNode> maxSpeedList = new List<StatsNode>();
+    public static List<StatsNode> maxComboList = new List<StatsNode>();
+
+    StatsNode speedRecord;
+    StatsNode comboRecord;
+    StatsNode rpmRecord;
+
+    
+
+    // Use this for initialization
+    void Start () {
         maxRotationTime = float.MaxValue;
         timeFromStart = 0f;
         lastRotationTime = 0f;
@@ -23,7 +86,16 @@ public class StatsManager : MonoBehaviour {
         rotationFinished = false;
         
         lastPosition = GetComponent<Transform>().position;
-	}
+
+        
+
+        speedRecord = new StatsNode();
+        comboRecord = new StatsNode();
+        rpmRecord = new StatsNode();
+        rpmRecord.value = float.MaxValue;
+
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -48,11 +120,11 @@ public class StatsManager : MonoBehaviour {
             {
                 tempRotationTime = timeFromStart - lastRotationTime;
                 lastRotationTime = timeFromStart;
-                Debug.Log("last rotation" + tempRotationTime);
+                
                 if (tempRotationTime < maxRotationTime)
                 {
                     maxRotationTime = tempRotationTime;
-                    Debug.Log("max rotation" + maxRotationTime);
+                    rpmRecord.value = maxRotationTime;
                 }
                 rotationFinished = false;
             }
@@ -66,6 +138,7 @@ public class StatsManager : MonoBehaviour {
     private void updateMaxCombo()
     {
         maxCombo = maxCombo < ComboManager.ComboLength ? ComboManager.ComboLength : maxCombo;
+        comboRecord.value = maxCombo;
     }
 
     private void updateMaxSpeed()
@@ -74,7 +147,33 @@ public class StatsManager : MonoBehaviour {
         if (speed > maxSpeed)
         {
             maxSpeed = speed;
-            //Debug.Log("s[eed: " + speed);
+            speedRecord.value = maxSpeed;
+            //Debug.Log("speed: " + speed);
         }
     }
+
+    /*
+     *update record tables, use when GAME is OVER 
+     */
+    public void updateRecordTable() {
+        
+        maxSpeedList.Add(speedRecord);
+        maxComboList.Add(comboRecord);
+        fastRotList.Add(rpmRecord);
+        maxComboList.Sort();
+        maxSpeedList.Sort();
+        fastRotList.Sort();
+        fastRotList.Reverse();
+           
+    }
+
+    public void printRecordTable()
+    {
+        StatsNode temp;
+        Debug.Log(maxSpeedList.Count);
+        int num = Math.Min(3, maxSpeedList.Count);
+        Debug.Log(maxSpeedList);
+    }
+
+   
 }
