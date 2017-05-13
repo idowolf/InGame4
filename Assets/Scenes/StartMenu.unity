@@ -1524,11 +1524,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 501318328}
+  pathRotation: 0
   speed: 5
   loop: 0
   faceAway: 1
   current: 0
-  startingPoint: 0
+  goBackwardsOnPath: 0
 --- !u!1 &1116813129 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 555767533, guid: 34c21f523e72f45509a4e37ed0293c3b,
@@ -2108,11 +2109,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 147694666}
+  pathRotation: 0
   speed: 5
   loop: 0
   faceAway: 0
   current: 0
-  startingPoint: 0
+  goBackwardsOnPath: 0
 --- !u!212 &1486622688
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2344,6 +2346,52 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87c35d808850c410ca0e398a8da84e68, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1694378916
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4582096050337656, guid: f044bb0101438b447bb115c581f3c854, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582096050337656, guid: f044bb0101438b447bb115c581f3c854, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582096050337656, guid: f044bb0101438b447bb115c581f3c854, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582096050337656, guid: f044bb0101438b447bb115c581f3c854, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582096050337656, guid: f044bb0101438b447bb115c581f3c854, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582096050337656, guid: f044bb0101438b447bb115c581f3c854, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582096050337656, guid: f044bb0101438b447bb115c581f3c854, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582096050337656, guid: f044bb0101438b447bb115c581f3c854, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317298978675416, guid: f044bb0101438b447bb115c581f3c854, type: 2}
+      propertyPath: m_Name
+      value: Birds Audio
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f044bb0101438b447bb115c581f3c854, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1757441698
 Prefab:

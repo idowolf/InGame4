@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4344249790333222}
   - component: {fileID: 82511360247219564}
   m_Layer: 0
-  m_Name: ObjSound (1)
+  m_Name: CubeDead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
