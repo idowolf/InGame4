@@ -101,6 +101,8 @@ public class Teleport : MonoBehaviour {
         //TeleportRandomly();
         ComboManager.GetComponent<ComboManager>().MangaeTheCombo(this.cubeID);
         EnemyManager.childIsMarked(transform);
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Play();
     }
     //private void OnTriggerEnter(Collider other)
     //{

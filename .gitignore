@@ -42,3 +42,5 @@ _site
 .sass-cache
 node_modules
 _drafts
+*.unity
+*.unity
