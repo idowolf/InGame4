@@ -5,8 +5,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour {
     public int totalCubesCreated = 0;
     private Transform nextInCombo;
-    public List<Transform> displayedChildren;
-    private List<Transform> enemies;
+    public List<Transform> enemies;
     public bool waveMode;
     public int objectsOnScreen;
     private int waveRemaining;
@@ -14,15 +13,12 @@ public class EnemyManager : MonoBehaviour {
     public Timer timer;
     // Use this for initialization
     void Start () {
-        displayedChildren = new List<Transform>();
         enemies = new List<Transform>();
         foreach (Transform child in transform)
         {
             enemies.Add(child);
             child.gameObject.GetComponent<Teleport>().SetID(totalCubesCreated);
-            if (totalCubesCreated < objectsOnScreen)
-                displayedChildren.Add(child);
-            else
+            if (totalCubesCreated >= objectsOnScreen)
                 child.gameObject.SetActive(false);
             totalCubesCreated++;
         }
@@ -32,10 +28,10 @@ public class EnemyManager : MonoBehaviour {
     }
     private void setNextInCombo()
     {
-        if (displayedChildren.Count != 0)
+        if (enemies.Count != 0)
         {
-            displayedChildren[0].GetComponent<SpriteRenderer>().color = Color.red;
-            nextInCombo = displayedChildren[0];
+            enemies[0].GetComponent<SpriteRenderer>().color = Color.red;
+            nextInCombo = enemies[0];
         }
         else
             timer.LoadGameOver();
@@ -53,27 +49,49 @@ public class EnemyManager : MonoBehaviour {
             comboManager.MangaeTheCombo(true);
         else
             comboManager.MangaeTheCombo(false);
-        Transform lastDisplayed = displayedChildren[displayedChildren.Count - 1];
 
-        if (enemies.IndexOf(lastDisplayed) != enemies.Count - 1)
+
+        enemies.Remove(t);
+        if (enemies.Count != 0)
         {
-            Transform subsequent = enemies[enemies.IndexOf(lastDisplayed) + 1];
-            displayedChildren.Add(subsequent);
-            if (!waveMode)
-                subsequent.gameObject.SetActive(true);
-            else
-                waveRemaining--;
-        }
-        displayedChildren.Remove(t);
-        t.gameObject.SetActive(false);
-        if(waveMode && waveRemaining == 0 && displayedChildren.Count != 0)
-        {
-            waveRemaining = objectsOnScreen;
-            foreach (Transform child in displayedChildren)
+            t.gameObject.SetActive(false);
+            if (waveMode)
             {
-                child.gameObject.SetActive(true);
+                waveRemaining--;
+                if (waveRemaining == 0)
+                {
+                    waveRemaining = objectsOnScreen;
+                    for(int i = 0; i <objectsOnScreen && i < enemies.Count; i++)
+                    {
+                        enemies[i].gameObject.SetActive(true);
+                    }
+                }
+            }
+            else
+            {
+                if(FirstUndisplayedChild())
+                    FirstUndisplayedChild().gameObject.SetActive(true);
             }
         }
         setNextInCombo();
+    }
+    private Transform FirstUndisplayedChild()
+    {
+        foreach (Transform t in enemies)
+        {
+            if (!t.gameObject.activeSelf)
+                return t;
+        }
+        return null;
+    }
+    private List<Transform> GetDisplayedChildren()
+    {
+        List<Transform> lst = new List<Transform>();
+        foreach (Transform t in enemies)
+        {
+            if (t.gameObject.activeSelf)
+                lst.Add(t);
+        }
+        return lst;
     }
 }

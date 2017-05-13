@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ComboManager : MonoBehaviour {
-	public static int ComboLength;
+	public int ComboLength;
     public Text ComboText;
     public GameObject player;
     public float velocityFactor, baseVelocity, timeElapsed;

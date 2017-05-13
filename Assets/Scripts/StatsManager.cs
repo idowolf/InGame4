@@ -46,10 +46,10 @@ public class StatsManager : MonoBehaviour {
             return CompareTo((StatsNode)obj);
         }
 
-        public String ToString()
+        public override String ToString()
         {
 
-            return ("value : " + value + " date: "  + date);
+            return (value + " - "  + date.ToShortTimeString());
         }
 
     }
@@ -60,6 +60,7 @@ public class StatsManager : MonoBehaviour {
     public int cameraYPosAtStart, cameraYpos;
     public float maxRotationTime, tempRotationTime;
     bool rotationFinished ;
+    public ComboManager ComboManager;
 
     public float currentSpeed, maxSpeed;
     Vector3 lastPosition;
@@ -143,7 +144,6 @@ public class StatsManager : MonoBehaviour {
 
     private void updateMaxSpeed()
     {
-        Debug.Log("hi!");
         currentSpeed = (GetComponent<Transform>().position - lastPosition).magnitude / Time.deltaTime;
         if (currentSpeed > maxSpeed)
         {
@@ -172,7 +172,7 @@ public class StatsManager : MonoBehaviour {
     {
         //StatsNode temp;
         //Debug.Log(maxSpeedList.Count);
-        foreach (StatsNode item in maxSpeedList)
+        foreach (StatsNode item in fastRotList)
         {
             Debug.Log(item.value);
         }
