@@ -2413,8 +2413,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551fe6af163b8fc4cab3578cea7f178b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeFromStart: 0
   timeLeft: 60
   timerText: {fileID: 2012707435}
+  statsManager: {fileID: 0}
 --- !u!1001 &1757441698
 Prefab:
   m_ObjectHideFlags: 0
@@ -2798,10 +2800,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6d9412aff759420192d8dcf33f969bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inactiveMaterial: {fileID: 2100000, guid: 0edec395166a3244592f3532c7ce794c, type: 2}
-  gazedAtMaterial: {fileID: 2100000, guid: daad62324deb0cf448e5c805c8459bff, type: 2}
   levelScoreManager: {fileID: 414280750}
-  CubeID: 0
+  cubeID: 0
+  EnemyManager: {fileID: 0}
   ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &1879533881
