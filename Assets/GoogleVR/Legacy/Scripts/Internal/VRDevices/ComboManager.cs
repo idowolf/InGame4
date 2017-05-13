@@ -14,7 +14,7 @@ public class ComboManager : MonoBehaviour {
     private int initTextSize;
     // Use this for initialization
     void Start () {
-        baseVelocity = player.GetComponent<MoveUpwards>().velocity;
+        //baseVelocity = player.GetComponent<MoveUpwards>().velocity;
         velocityFactor = 1;
         initTextSize = ComboText.fontSize;
 	}
@@ -69,7 +69,7 @@ public class ComboManager : MonoBehaviour {
             SetComboText(2);
         }
         //if combo is long enough - player velocity multiply by factor.
-        player.GetComponent<MoveUpwards>().velocity = baseVelocity * velocityFactor;
+        //player.GetComponent<MoveUpwards>().velocity = baseVelocity * velocityFactor;
     }
 
     private void SetComboText(int streakID)
