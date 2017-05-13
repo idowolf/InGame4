@@ -36,6 +36,7 @@ public class EnemyManager : MonoBehaviour {
 
     public void childIsMarked(Transform t)
     {
+        GetComponent<AudioSource>().Play();
         Transform lastDisplayed = displayedChildren[displayedChildren.Count - 1];
 
         if (enemies.IndexOf(lastDisplayed) != enemies.Count - 1)
