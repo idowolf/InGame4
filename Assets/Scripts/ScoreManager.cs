@@ -14,7 +14,7 @@ public class ScoreManager : MonoBehaviour {
     public static int score;
     float altAtStart;
     private Vector3 startingPosition;
-    public Text scoreText;
+    //public Text scoreText;
     float height, width;
 
     // Use this for initialization
@@ -31,7 +31,7 @@ public class ScoreManager : MonoBehaviour {
         
         score += (int)(Mathf.Abs(scoreObj.transform.position.y - altAtStart));
         height = scoreObj.transform.position.y;
-        scoreText.text = "HEIGHT: " + Mathf.Round(score);
+        //scoreText.text = "HEIGHT: " + Mathf.Round(score);
     }
 
 
