@@ -367,7 +367,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &14864198
 MonoBehaviour:
@@ -620,8 +619,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalCubesCreated: 0
+  displayedChildren: []
   waveMode: 1
   objectsOnScreen: 5
+  comboManager: {fileID: 2142975632}
+  timer: {fileID: 1702728003}
 --- !u!82 &33035144
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1290,7 +1292,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &93892160
 MonoBehaviour:
@@ -1835,7 +1836,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &142613130
 MonoBehaviour:
@@ -2208,7 +2208,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &155027555
 MonoBehaviour:
@@ -2839,7 +2838,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &199932485
 MonoBehaviour:
@@ -3728,7 +3726,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &310661729
 MonoBehaviour:
@@ -4804,7 +4801,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &411080184
 MonoBehaviour:
@@ -6271,7 +6267,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &567335240
 MonoBehaviour:
@@ -6548,7 +6543,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &572880161
 MonoBehaviour:
@@ -7727,7 +7721,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &713552611
 MonoBehaviour:
@@ -8587,7 +8580,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &850407277
 MonoBehaviour:
@@ -9544,6 +9536,7 @@ Transform:
   - {fileID: 661905478}
   - {fileID: 1631225241}
   - {fileID: 1024743411}
+  - {fileID: 1129897122}
   m_Father: {fileID: 907292808}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10736,6 +10729,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1566637387}
   m_RootOrder: 38
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1129897120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1129897122}
+  - component: {fileID: 1129897121}
+  m_Layer: 0
+  m_Name: StatsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1129897121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1129897120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5699edf8567b2b47bcf836361323263, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeFromStart: 0
+  lastRotationTime: 0
+  cameraYPosAtStart: 0
+  cameraYpos: 0
+  maxRotationTime: 0
+  tempRotationTime: 0
+  currentSpeed: 0
+  maxSpeed: 0
+  maxCombo: 0
+--- !u!4 &1129897122
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1129897120}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 959308593}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1140255054
 GameObject:
@@ -12589,7 +12631,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &1421128405
 MonoBehaviour:
@@ -12922,7 +12963,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &1443539012
 MonoBehaviour:
@@ -13516,7 +13556,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &1471837277
 MonoBehaviour:
@@ -14308,7 +14347,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &1520613777
 MonoBehaviour:
@@ -15101,7 +15139,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &1623156985
 MonoBehaviour:
@@ -15622,7 +15659,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &1653462303
 MonoBehaviour:
@@ -16039,7 +16075,7 @@ MonoBehaviour:
   timeFromStart: 0
   timeLeft: 60
   timerText: {fileID: 462005012}
-  statsManager: {fileID: 0}
+  statsManager: {fileID: 1129897121}
 --- !u!1 &1707346686
 GameObject:
   m_ObjectHideFlags: 0
@@ -16591,7 +16627,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &1753084643
 MonoBehaviour:
@@ -16942,7 +16977,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &1770109405
 MonoBehaviour:
@@ -18243,7 +18277,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &1879533881
 MonoBehaviour:
@@ -18748,7 +18781,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &1901856385
 MonoBehaviour:
@@ -19387,7 +19419,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &1968290075
 MonoBehaviour:
@@ -20040,7 +20071,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &2021596497
 MonoBehaviour:
@@ -20512,7 +20542,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &2038452178
 MonoBehaviour:
@@ -21055,7 +21084,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  ComboManager: {fileID: 2142975630}
   Timer: {fileID: 1702728001}
 --- !u!114 &2121050575
 MonoBehaviour:

@@ -26,7 +26,6 @@ public class Teleport : MonoBehaviour {
     //static int TotalCubesCreated;
     public int cubeID;
     public EnemyManager EnemyManager;
-    public GameObject ComboManager;
     public GameObject Timer;
     
 
@@ -81,7 +80,7 @@ public class Teleport : MonoBehaviour {
         //transform.localPosition = pos;
         //TotalCubesCreated++;
         //this.CubeID = TotalCubesCreated ;
-        ComboManager.GetComponent<ComboManager>().MangaeTheCombo(this.cubeID);
+        //ComboManager.GetComponent<ComboManager>().MangaeTheCombo(this.cubeID);
     }
 
     /*** This is called when the object touches the plane ***/
@@ -99,7 +98,6 @@ public class Teleport : MonoBehaviour {
     {
         Timer.GetComponent<Timer>().addTimer(0.5f);
         //TeleportRandomly();
-        ComboManager.GetComponent<ComboManager>().MangaeTheCombo(this.cubeID);
         EnemyManager.childIsMarked(transform);
 
     }

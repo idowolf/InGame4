@@ -26,12 +26,7 @@ public class Timer : MonoBehaviour {
         
         if (timeLeft < 0f)
         {
-            //update all records and stats
-            statsManager.updateRecordTable();
-            //print table for check
-            statsManager.printRecordTable();
-
-            SceneManager.LoadScene("gameOverScene");
+            LoadGameOver();
         }
     }
 
@@ -40,4 +35,14 @@ public class Timer : MonoBehaviour {
         timeLeft += x;
     }
     
+    public void LoadGameOver()
+    {
+        //update all records and stats
+        statsManager.updateRecordTable();
+        //print table for check
+        statsManager.printRecordTable();
+
+        SceneManager.LoadScene("gameOverScene");
+
+    }
 }

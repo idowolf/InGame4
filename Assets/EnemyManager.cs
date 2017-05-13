@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
     public int totalCubesCreated = 0;
-    private List<Transform> displayedChildren;
+    private Transform nextInCombo;
+    public List<Transform> displayedChildren;
     private List<Transform> enemies;
     public bool waveMode;
     public int objectsOnScreen;
     private int waveRemaining;
-	// Use this for initialization
-	void Start () {
+    public ComboManager comboManager;
+    public Timer timer;
+    // Use this for initialization
+    void Start () {
         displayedChildren = new List<Transform>();
         enemies = new List<Transform>();
         foreach (Transform child in transform)
@@ -24,11 +27,20 @@ public class EnemyManager : MonoBehaviour {
             totalCubesCreated++;
         }
         waveRemaining = objectsOnScreen;
-        if (displayedChildren.Count != 0)
-            displayedChildren[0].GetComponent<SpriteRenderer>().color = Color.red;
+        setNextInCombo();
 
     }
+    private void setNextInCombo()
+    {
+        if (displayedChildren.Count != 0)
+        {
+            displayedChildren[0].GetComponent<SpriteRenderer>().color = Color.red;
+            nextInCombo = displayedChildren[0];
+        }
+        else
+            timer.LoadGameOver();
 
+    }
     // Update is called once per frame
     void Update () {
 		
@@ -37,6 +49,10 @@ public class EnemyManager : MonoBehaviour {
     public void childIsMarked(Transform t)
     {
         GetComponent<AudioSource>().Play();
+        if (t == nextInCombo)
+            comboManager.MangaeTheCombo(true);
+        else
+            comboManager.MangaeTheCombo(false);
         Transform lastDisplayed = displayedChildren[displayedChildren.Count - 1];
 
         if (enemies.IndexOf(lastDisplayed) != enemies.Count - 1)
@@ -58,8 +74,6 @@ public class EnemyManager : MonoBehaviour {
                 child.gameObject.SetActive(true);
             }
         }
-        if(displayedChildren.Count != 0)
-            displayedChildren[0].GetComponent<SpriteRenderer>().color = Color.red;
-
+        setNextInCombo();
     }
 }

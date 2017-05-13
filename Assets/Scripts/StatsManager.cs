@@ -61,7 +61,7 @@ public class StatsManager : MonoBehaviour {
     public float maxRotationTime, tempRotationTime;
     bool rotationFinished ;
 
-    public float speed, maxSpeed;
+    public float currentSpeed, maxSpeed;
     Vector3 lastPosition;
 
     public int maxCombo;
@@ -106,7 +106,7 @@ public class StatsManager : MonoBehaviour {
         updateMaxCombo();
         updateMaxSpeed();
         lastPosition = GetComponent<Transform>().position;
-        maxSpeed = 0f;
+        currentSpeed = 0f;
 
     }
     
@@ -143,12 +143,13 @@ public class StatsManager : MonoBehaviour {
 
     private void updateMaxSpeed()
     {
-        speed = (GetComponent<Transform>().position - lastPosition).magnitude / Time.deltaTime;
-        if (speed > maxSpeed)
+        Debug.Log("hi!");
+        currentSpeed = (GetComponent<Transform>().position - lastPosition).magnitude / Time.deltaTime;
+        if (currentSpeed > maxSpeed)
         {
-            maxSpeed = speed;
+            maxSpeed = currentSpeed;
             speedRecord.value = maxSpeed;
-            //Debug.Log("speed: " + speed);
+            Debug.Log("speed: " + currentSpeed);
         }
     }
 
@@ -169,10 +170,14 @@ public class StatsManager : MonoBehaviour {
 
     public void printRecordTable()
     {
-        StatsNode temp;
-        Debug.Log(maxSpeedList.Count);
-        int num = Math.Min(3, maxSpeedList.Count);
-        Debug.Log(maxSpeedList);
+        //StatsNode temp;
+        //Debug.Log(maxSpeedList.Count);
+        foreach (StatsNode item in maxSpeedList)
+        {
+            Debug.Log(item.value);
+        }
+        //int num = Math.Min(3, maxSpeedList.Count);
+        //Debug.Log(maxSpeedList);
     }
 
    

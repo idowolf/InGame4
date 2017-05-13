@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ComboManager : MonoBehaviour {
-
-    public static int LastInCombo;
 	public static int ComboLength;
     public Text ComboText;
     public GameObject player;
@@ -48,10 +46,10 @@ public class ComboManager : MonoBehaviour {
         }
     }
 
-    public void MangaeTheCombo (int ID)
+    public void MangaeTheCombo (bool keepCombo)
     {
         // if current ID is the next consecutive collectible after the last one
-        if (ID - LastInCombo == 1)
+        if (keepCombo)
         {
             ComboLength ++;
         }
@@ -61,7 +59,6 @@ public class ComboManager : MonoBehaviour {
             ComboLength = 0;
             velocityFactor = 1.0f;
         }
-        LastInCombo = ID;
         if (ComboLength == 5)
         {
             velocityFactor = 1.25f;
