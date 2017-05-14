@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4349473470586292}
   - component: {fileID: 212541397726655750}
   - component: {fileID: 95587142302206978}
+  - component: {fileID: 114372791474967924}
   m_Layer: 0
   m_Name: Amazing!
   m_TagString: Untagged
@@ -58,6 +59,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114372791474967924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1481724884088820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b21745d6ad53849a346ef9535fb29c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
 --- !u!212 &212541397726655750
 SpriteRenderer:
   m_ObjectHideFlags: 1
