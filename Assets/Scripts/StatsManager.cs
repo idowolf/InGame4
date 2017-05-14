@@ -71,10 +71,14 @@ public class StatsManager : MonoBehaviour {
     public static List<StatsNode> fastRotList = new List<StatsNode>();
     public static List<StatsNode> maxSpeedList = new List<StatsNode>();
     public static List<StatsNode> maxComboList = new List<StatsNode>();
+    public static List<StatsNode> maxCTimeLeftList = new List<StatsNode>();
+    public static List<StatsNode> playerRecords;
 
     StatsNode speedRecord;
     StatsNode comboRecord;
     StatsNode rpmRecord;
+    StatsNode timeLeftNode;
+
 
     
 
@@ -88,12 +92,13 @@ public class StatsManager : MonoBehaviour {
         
         lastPosition = GetComponent<Transform>().position;
 
-        
+        playerRecords = new List<StatsNode>;
 
         speedRecord = new StatsNode();
         comboRecord = new StatsNode();
         rpmRecord = new StatsNode();
         rpmRecord.value = float.MaxValue;
+        timeLeftNode = new StatsNode();
 
         
     }
@@ -156,7 +161,7 @@ public class StatsManager : MonoBehaviour {
     /*
      *update record tables, use when GAME is OVER 
      */
-    public void updateRecordTable() {
+    public void updateRecordTable(float timeLeft) {
         
         maxSpeedList.Add(speedRecord);
         maxComboList.Add(comboRecord);
@@ -165,6 +170,15 @@ public class StatsManager : MonoBehaviour {
         maxSpeedList.Sort();
         fastRotList.Sort();
         fastRotList.Reverse();
+
+        timeLeftNode.value = timeLeft;
+        maxCTimeLeftList.Add(timeLeftNode);
+        maxCTimeLeftList.Sort();
+
+        playerRecords.Add(comboRecord);
+        playerRecords.Add(rpmRecord);
+        playerRecords.Add(timeLeftNode);
+        //playerRecords.Add(speedRecord);
            
     }
 
