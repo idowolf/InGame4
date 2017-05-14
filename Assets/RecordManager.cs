@@ -22,7 +22,7 @@ public class RecordManager : MonoBehaviour {
                 break;
             case (2):
                 s += "Best Times:";
-                stats = StatsManager.maxSpeedList;
+                stats = StatsManager.maxCTimeLeftList;
                 break;
         }
         s += Environment.NewLine;

@@ -46,12 +46,16 @@ public class StatsManager : MonoBehaviour {
             return CompareTo((StatsNode)obj);
         }
 
+        public String ToStringNoTime()
+        {
+
+            return (value.ToString());
+        }
         public override String ToString()
         {
 
-            return (value + " - "  + date.ToShortTimeString());
+            return (value + " - " + date.ToShortTimeString());
         }
-
     }
 
     
@@ -92,7 +96,7 @@ public class StatsManager : MonoBehaviour {
         
         lastPosition = GetComponent<Transform>().position;
 
-        playerRecords = new List<StatsNode>;
+        playerRecords = new List<StatsNode>();
 
         speedRecord = new StatsNode();
         comboRecord = new StatsNode();
