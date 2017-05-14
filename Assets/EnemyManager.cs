@@ -10,6 +10,7 @@ public class EnemyManager : MonoBehaviour {
     public bool waveMode;
     public int objectsOnScreen;
     private int waveRemaining;
+    public Sprite comboFairy;
     public ComboManager comboManager;
     public Timer timer;
     // Use this for initialization
@@ -31,7 +32,7 @@ public class EnemyManager : MonoBehaviour {
     {
         if (enemies.Count != 0)
         {
-            enemies[0].GetComponent<SpriteRenderer>().color = Color.green;
+            enemies[0].GetComponent<SpriteRenderer>().sprite = comboFairy;
             nextInCombo = enemies[0];
         }
         else
@@ -45,7 +46,7 @@ public class EnemyManager : MonoBehaviour {
 
     public void childIsMarked(Transform t)
     {
-        timer.addTimer(1f);
+        timer.addTimer(0.5f);
         GameObject.Instantiate(ExplosionPrefab, t.position, t.rotation);
         GetComponent<AudioSource>().Play();
         if (t == nextInCombo)

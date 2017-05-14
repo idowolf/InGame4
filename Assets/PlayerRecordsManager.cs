@@ -11,7 +11,10 @@ public class PlayerRecordsManager : MonoBehaviour
     {
         if (StatsManager.playerRecords.Count >= 3)
         {
-            string s = "Longest Combo: " + StatsManager.playerRecords[0].ToStringNoTime() + Environment.NewLine;
+            string s = "";
+            s += (StatsManager.playerRecords[2].value > float.Epsilon ? "WELL DONE!" : "GAME OVER!") + Environment.NewLine
+                + Environment.NewLine;
+            s += "Longest Combo: " + StatsManager.playerRecords[0].ToStringNoTime() + Environment.NewLine;
             s += "Fastest Spin: " + StatsManager.playerRecords[1].ToStringNoTime() + Environment.NewLine;
             s += "Time Left: " + StatsManager.playerRecords[2].ToStringNoTime();
             GetComponent<Text>().text = s;

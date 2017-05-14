@@ -17,6 +17,7 @@ public class ComboManager : MonoBehaviour {
     public AudioSource AwesomeSound;
     public AudioSource OutstadingSound;
     public AudioSource AmaizingSound;
+    public AudioSource AwwSound;
     // Use this for initialization
     void Start () {
         GoodSound = GameObject.Find("Good").GetComponent<AudioSource>();
@@ -59,6 +60,7 @@ public class ComboManager : MonoBehaviour {
         else
         {
             ComboLength = 0;
+            AwwSound.Play();
             //velocityFactor = 1.0f;
         }
         if (ComboLength == 5)
