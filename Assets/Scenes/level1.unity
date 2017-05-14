@@ -395,7 +395,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &14864198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,6 +709,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10eb807554aa6124e9969ea6841b783a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ExplosionPrefab: {fileID: 1339868499800462, guid: 19c4931a99dc0a447bb6bfa22dc93642,
+    type: 2}
   totalCubesCreated: 0
   enemies: []
   waveMode: 1
@@ -1443,7 +1444,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &93892160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2043,7 +2043,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &142613130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2415,7 +2414,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &155027555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2905,7 +2903,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &170039896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3321,7 +3318,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &199932485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4405,7 +4401,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &310661729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5058,6 +5053,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 374283588}
+  - component: {fileID: 374283589}
   m_Layer: 0
   m_Name: LightContainer
   m_TagString: Untagged
@@ -5078,10 +5074,26 @@ Transform:
   - {fileID: 662562777}
   - {fileID: 36065057}
   - {fileID: 2025726033}
-  - {fileID: 1787536287}
   m_Father: {fileID: 1901365660}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &374283589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 374283587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beabadb25c8129a4a9b9bed5b8c29fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 1702728003}
+  startTime: 0
+  currentTimeLeft: 0
+  lightOne: {fileID: 662562778}
+  lightTwo: {fileID: 36065058}
+  lightThree: {fileID: 2025726034}
 --- !u!1 &382385756
 GameObject:
   m_ObjectHideFlags: 0
@@ -5661,7 +5673,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &411080184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6068,7 +6079,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 80
+    m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -6092,16 +6103,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 462005011}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 284997682}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 60, y: -70}
+  m_AnchoredPosition: {x: 60, y: -200}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &467806636
@@ -7434,7 +7445,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &567335240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7710,7 +7720,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &572880161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9028,7 +9037,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &713552611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10179,7 +10187,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &850407277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12875,7 +12882,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &1102843390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13212,7 +13218,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &1120789364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13930,7 +13935,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &1178949129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14346,7 +14350,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &1199922004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16029,7 +16032,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &1407562042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16396,7 +16398,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &1421128405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16784,7 +16785,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &1443539012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17461,7 +17461,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &1471837277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18364,7 +18363,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &1520613777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18724,7 +18722,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &1538032696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19460,7 +19457,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &1599272037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19848,7 +19844,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &1623156985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20396,7 +20391,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &1653462303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20764,7 +20758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeFromStart: 0
-  timeLeft: 60
+  timeLeft: 30
   timerText: {fileID: 462005012}
   statsManager: {fileID: 1129897121}
 --- !u!1 &1706771678
@@ -21374,7 +21368,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &1753084643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21752,7 +21745,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &1770109405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21881,52 +21873,6 @@ Transform:
   m_Father: {fileID: 1226297637}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1787536286
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1787536287}
-  - component: {fileID: 1787536288}
-  m_Layer: 0
-  m_Name: RideTheLightning
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1787536287
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1787536286}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 374283588}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1787536288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1787536286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beabadb25c8129a4a9b9bed5b8c29fac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: {fileID: 1702728003}
-  startTime: 0
-  currentTimeLeft: 0
-  lightOne: {fileID: 662562778}
-  lightTwo: {fileID: 36065058}
-  lightThree: {fileID: 2025726034}
 --- !u!1 &1789455813
 GameObject:
   m_ObjectHideFlags: 0
@@ -23266,7 +23212,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &1879533881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23798,7 +23743,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &1901856385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24576,7 +24520,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &1968290075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25340,7 +25283,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &2021596497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25811,7 +25753,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &2038452178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26521,7 +26462,6 @@ MonoBehaviour:
   levelScoreManager: {fileID: 414280750}
   cubeID: 0
   EnemyManager: {fileID: 33035143}
-  Timer: {fileID: 1702728001}
 --- !u!114 &2121050575
 MonoBehaviour:
   m_ObjectHideFlags: 0

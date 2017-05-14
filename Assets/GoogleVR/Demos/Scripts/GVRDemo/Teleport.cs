@@ -26,7 +26,6 @@ public class Teleport : MonoBehaviour {
     //static int TotalCubesCreated;
     public int cubeID;
     public EnemyManager EnemyManager;
-    public GameObject Timer;
     
 
     public void SetID(int ID)
@@ -96,7 +95,6 @@ public class Teleport : MonoBehaviour {
     /*** This is called when the player looks at the object ***/
     public void PlayerGazedAtMe()
     {
-        Timer.GetComponent<Timer>().addTimer(0.5f);
         //TeleportRandomly();
         EnemyManager.childIsMarked(transform);
 

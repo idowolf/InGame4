@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
+    public GameObject ExplosionPrefab;
     public int totalCubesCreated = 0;
     private Transform nextInCombo;
     public List<Transform> enemies;
@@ -30,7 +31,7 @@ public class EnemyManager : MonoBehaviour {
     {
         if (enemies.Count != 0)
         {
-            enemies[0].GetComponent<SpriteRenderer>().color = Color.red;
+            enemies[0].GetComponent<SpriteRenderer>().color = Color.green;
             nextInCombo = enemies[0];
         }
         else
@@ -44,6 +45,8 @@ public class EnemyManager : MonoBehaviour {
 
     public void childIsMarked(Transform t)
     {
+        timer.addTimer(1f);
+        GameObject.Instantiate(ExplosionPrefab, t.position, t.rotation);
         GetComponent<AudioSource>().Play();
         if (t == nextInCombo)
             comboManager.MangaeTheCombo(true);
