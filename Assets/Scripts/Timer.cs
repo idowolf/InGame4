@@ -38,7 +38,7 @@ public class Timer : MonoBehaviour {
     public void LoadGameOver()
     {
         //update all records and stats
-        statsManager.updateRecordTable(timeLeft);
+        statsManager.updateRecordTable(this.timeLeft);
         //print table for check
         statsManager.printRecordTable();
 
