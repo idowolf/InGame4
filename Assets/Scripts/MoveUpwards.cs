@@ -6,7 +6,6 @@ public class MoveUpwards : MonoBehaviour {
     public float velocity = 0.1f;
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
