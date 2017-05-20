@@ -26,6 +26,9 @@ public class Teleport : MonoBehaviour {
     //static int TotalCubesCreated;
     public int cubeID;
     public EnemyManager EnemyManager;
+
+    
+    private SizeController sizeController = new SizeController();
     
 
     public void SetID(int ID)
@@ -34,73 +37,25 @@ public class Teleport : MonoBehaviour {
     } 
     void Start()
     {
-        //startingPosition = transform.localPosition;
-        //positions = new LinkedList<Vector3>();
-        //positions.AddFirst(new Vector3(0, 0, -18));
-        //positions.AddLast(new Vector3(1.4f, 0, -18.77f));
-        //positions.AddLast(new Vector3(2.8f, 0, -20.85f));
-        //positions.AddLast(new Vector3(1.4f, 0, -23.73f));
-        //positions.AddLast(new Vector3(0, 0, -23.5f));
-        //positions.AddLast(new Vector3(-1.4f, 0, -23.73f));
-        //positions.AddLast(new Vector3(-2.8f, 0, -20.85f));
-        //positions.AddLast(new Vector3(-1.4f, 0, -18.77f));
-        //current = positions.First;
-        //transform.localPosition = current.Value;
-        //Vector3 pos = transform.localPosition;
-        //pos.y = GameObject.FindGameObjectWithTag("Player").transform.localPosition.y + 0.5f;
-        //transform.localPosition = pos;
-        //SetGazedAt(false);
-        //cubeID = 0;
+        sizeController.isTouched = false;
+        sizeController = GetComponent<SizeController>();
     }
 
-    //public void SetGazedAt(bool gazedAt)
-    //{
-    //    if (inactiveMaterial != null && gazedAtMaterial != null)
-    //    {
-    //        GetComponent<Renderer>().material = gazedAt ? gazedAtMaterial : inactiveMaterial;
-    //        return;
-    //    }  
-    //    GetComponent<Renderer>().material.color = gazedAt ? Color.green : Color.red;          
-
-
-    //}
-
-    //public void Reset()
-    //{
-    //    transform.localPosition = startingPosition;
-    //}
-
+    
     private void TeleportRandomly()
     {
-        //current = current.Next ?? current.List.First;
-        //transform.localPosition = current.Value;
-        //Vector3 pos = transform.localPosition;
-        //pos.y = GameObject.FindGameObjectWithTag("Player").transform.localPosition.y + 0.5f;
-        //transform.localPosition = pos;
-        //TotalCubesCreated++;
-        //this.CubeID = TotalCubesCreated ;
-        //ComboManager.GetComponent<ComboManager>().MangaeTheCombo(this.cubeID);
+        
     }
 
-    /*** This is called when the object touches the plane ***/
-    //public void TouchedThePlane()
-    //{
-    //    TeleportRandomly();
-    //    Timer.GetComponent<Timer>().addTimer(-10f);
-    //    ComboManager.GetComponent<ComboManager>().MangaeTheCombo(this.CubeID);
-    //    //levelScoreManager.DecreaseLives();
-
-    //}
-
-    /*** This is called when the player looks at the object ***/
+   
     public void PlayerGazedAtMe()
     {
-        //TeleportRandomly();
-        EnemyManager.childIsMarked(transform);
-
+        sizeController.isTouched = true;
     }
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    TouchedThePlane();
-    //}
+
+    public void PlayerStopGazedAtMe()
+    {
+        sizeController.isTouched = false;
+    }
+    
 }
