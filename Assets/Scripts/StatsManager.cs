@@ -92,7 +92,7 @@ public class StatsManager : MonoBehaviour {
         
         lastPosition = GetComponent<Transform>().position;
 
-        playerRecords = new List<StatsNode>;
+        playerRecords = new List<StatsNode>();
 
         speedRecord = new StatsNode();
         comboRecord = new StatsNode();
