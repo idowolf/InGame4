@@ -12,7 +12,7 @@ public class StartGameButton : MonoBehaviour {
 	
     public void GazedAt()
     {
-        SceneManager.LoadScene("level2");
+        SceneManager.LoadScene("level1");
     }
 	// Update is called once per frame
 	void Update () {
