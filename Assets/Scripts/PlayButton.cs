@@ -40,7 +40,7 @@ public class PlayButton : MonoBehaviour {
     }
     public void PointerDown()
     {
-        SceneManager.LoadScene("level1");
+        SceneManager.LoadScene("level2");
     }
     public void PointerDownExit()
     {
