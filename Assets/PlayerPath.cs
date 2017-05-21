@@ -4,8 +4,10 @@ using UnityEngine;
 using System;
 
 
-class EnemyPath : MonoBehaviour
+public class PlayerPath : MonoBehaviour
 {
+    public int currentTarget;
+    public int pathObjectsCreated;
     public Transform path;
     public int pathRotation;
     private List<Transform> targets;
@@ -14,24 +16,29 @@ class EnemyPath : MonoBehaviour
     public bool faceAway;
     public int current;
     public bool goBackwardsOnPath;
+    public static bool allowMovement;
+    public LineRenderer lineRenderer;
     private void Start()
     {
         targets = new List<Transform>();
         //current + startingPoint = startingPoint;
         foreach (Transform child in path)
+        { 
             targets.Add(child);
+            child.gameObject.GetComponent<PathObjectScript>().pathObjectId = pathObjectsCreated;
+            pathObjectsCreated++;
+        }
         if (goBackwardsOnPath)
             targets.Reverse();
         GameObject newLine = new GameObject("Line");
-        LineRenderer lineRenderer = newLine.AddComponent<LineRenderer>();
         lineRenderer.startWidth = 0.5f;
         lineRenderer.endWidth = 0.5f;
         lineRenderer.positionCount = targets.Count + 1;
-        lineRenderer.material.color = Color.blue;
+        lineRenderer.material.color = Color.red;
 
         for (int i = 0; targets != null && i < targets.Count; ++i)
         {
-                lineRenderer.SetPosition(i, new Vector3(targets[i].transform.position.x, targets[i].transform.position.y, targets[i].transform.position.z));
+            lineRenderer.SetPosition(i, new Vector3(targets[i].transform.position.x, targets[i].transform.position.y, targets[i].transform.position.z));
         }
         lineRenderer.SetPosition(targets.Count, new Vector3(targets[0].transform.position.x, targets[0].transform.position.y, targets[0].transform.position.z));
     }
@@ -53,7 +60,7 @@ class EnemyPath : MonoBehaviour
 
     private void Update()
     {
-        if (current < targets.Count && transform.position != targets[current].position)
+        if (current != currentTarget && transform.position != targets[current].position)
         {
             Vector3 pos = Vector3.MoveTowards(transform.position, targets[current].position, speed * Time.deltaTime);
             if (faceAway)
@@ -65,9 +72,17 @@ class EnemyPath : MonoBehaviour
         }
         else
         {
-            current++;
-            if(loop)
-                current %= targets.Count;
+            float myAbs = Mathf.Abs(current - currentTarget);
+            int amount = targets.Count;
+            bool clockwards = Mathf.Abs(current - currentTarget) < amount / 2 ^ currentTarget < current;
+            if (clockwards)
+                current++;
+            else
+                current--;
+            if (current < 0)
+                current += amount;
+            else if (current >= amount)
+                current -= amount;
         }
     }
 

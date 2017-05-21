@@ -12,7 +12,7 @@ public class EnemyManager : MonoBehaviour {
     private int waveRemaining;
     public Sprite comboFairy;
     public ComboManager comboManager;
-    public Timer timer;
+    //public Timer timer;
     // Use this for initialization
     void Start () {
         enemies = new List<Transform>();
@@ -35,8 +35,8 @@ public class EnemyManager : MonoBehaviour {
             enemies[0].GetComponent<SpriteRenderer>().sprite = comboFairy;
             nextInCombo = enemies[0];
         }
-        else
-            timer.LoadGameOver();
+        //else
+            //timer.LoadGameOver();
 
     }
     // Update is called once per frame
@@ -46,7 +46,7 @@ public class EnemyManager : MonoBehaviour {
 
     public void childIsMarked(Transform t)
     {
-        timer.addTimer(0.5f);
+        //timer.addTimer(0.5f);
         GameObject.Instantiate(ExplosionPrefab, t.position, t.rotation);
         GetComponent<AudioSource>().Play();
         if (t == nextInCombo)

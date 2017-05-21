@@ -127,7 +127,7 @@ public class ComboManager : MonoBehaviour {
             //ComboText.text = "Amaizing";
             playSoundAmaizing();
         }
-        GameObject.Instantiate(animations[streakID], ComboText.transform.position, ComboText.transform.rotation);
+        //GameObject.Instantiate(animations[streakID], ComboText.transform.position, ComboText.transform.rotation);
     }
 
 
