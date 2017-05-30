@@ -26,10 +26,12 @@ public class Teleport : MonoBehaviour {
     //static int TotalCubesCreated;
     public int cubeID;
     public EnemyManager EnemyManager;
+    public GameObject playerCamera;
+    public Transform enemyUI;
 
     
     private SizeController sizeController = new SizeController();
-    
+    private bool isGazed = false;
 
     public void SetID(int ID)
     {
@@ -41,7 +43,13 @@ public class Teleport : MonoBehaviour {
         sizeController = GetComponent<SizeController>();
     }
 
-    
+    private void Update()
+    {
+        if (isGazed)
+        {
+            SetPathHeight();
+        }
+    }
     private void TeleportRandomly()
     {
         
@@ -51,11 +59,42 @@ public class Teleport : MonoBehaviour {
     public void PlayerGazedAtMe()
     {
         sizeController.isTouched = true;
+        GetComponent<EnemyPath>().speed = 4;
+        isGazed = true;
     }
 
     public void PlayerStopGazedAtMe()
     {
         sizeController.isTouched = false;
+        GetComponent<EnemyPath>().speed = 0;
+        isGazed = false;
+
     }
-    
+
+    public void SetPathHeight()
+    {
+        float camRotX = playerCamera.GetComponent<Transform>().rotation.x;
+        Vector3 newPosition = new Vector3();
+        newPosition = enemyUI.transform.localPosition;
+        Debug.Log("camRotX is : " + camRotX);
+        if (camRotX < -30 && camRotX >= -85)
+        {
+            newPosition.y = -0.3f;
+            enemyUI.transform.localPosition = newPosition ;
+
+            return;
+        }
+        if (camRotX >= -1 && camRotX <90 )
+        {
+            newPosition.y = 0.3f;
+            enemyUI.transform.localPosition = newPosition;
+
+            return;
+        }
+        newPosition.y = 0.0f;
+        enemyUI.transform.localPosition = newPosition;
+
+        return;
+    }
+
 }
