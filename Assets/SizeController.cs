@@ -2,6 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/*
+ * THIS CLASS IS NOW CHANGING THE ENEMY SPEED, WE NEED 
+ * WE HAVE TO CHANGE ITS NAME ASAP
+ * ASAP!!!!
+ * A-S-A-P-!-!-!
+ * */
+ 
 public class SizeController : MonoBehaviour {
 
     public float unGazedTime, gazedTime;
