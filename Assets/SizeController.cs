@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SizeController : MonoBehaviour {
 
-    public float twoSecondsTimer;
+    public float unGazedTime, gazedTime;
     private Vector3 sizeVector = new Vector3();
     public bool isTouched;
     public GameObject ExplosionPrefab;
@@ -15,31 +15,38 @@ public class SizeController : MonoBehaviour {
     void Start()
     {
         scalseAtStart = transform.localScale.x;
-        twoSecondsTimer = 0;
+        unGazedTime = 0;
+        gazedTime = 0;
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (twoSecondsTimer >= 2f)
-        {
-            Debug.Log("bigger than 2");
-            GameObject.Instantiate(ExplosionPrefab, transform.position, transform.rotation);
-        }
+        
         if (isTouched)
         {
-            if (twoSecondsTimer > 0) { twoSecondsTimer -= Time.deltaTime; }
+            gazedTime += Time.deltaTime;
+            unGazedTime = 0;
+            GetComponent<EnemyPath>().speed += 0.005f;
+            
         }else
         {
-            twoSecondsTimer += Time.deltaTime;
+            unGazedTime += Time.deltaTime;
+            gazedTime = 0;
+            if (GetComponent<EnemyPath>().speed <= 0) { GetComponent<EnemyPath>().speed = 0; }
+            else
+            {
+                GetComponent<EnemyPath>().speed -= 0.05f;
+            }
         }
-        setScale();
+        //setScale();
 	}
 
     void setScale()
     {
-        scaleFactor = 1 + (twoSecondsTimer / 2);
-        transform.localScale = scalseAtStart * new Vector3(scaleFactor,scaleFactor,scaleFactor);
+        //scaleFactor = 1 + (twoSecondsTimer / 2);
+        //transform.localScale = scalseAtStart * new Vector3(scaleFactor,scaleFactor,scaleFactor);
+        GetComponent<EnemyPath>().speed += scaleFactor/100;
     }
     
 }

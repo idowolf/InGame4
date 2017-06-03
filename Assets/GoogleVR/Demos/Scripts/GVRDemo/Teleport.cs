@@ -60,14 +60,14 @@ public class Teleport : MonoBehaviour {
     public void PlayerGazedAtMe()
     {
         sizeController.isTouched = true;
-        GetComponent<EnemyPath>().speed = 4;
+        GetComponent<EnemyPath>().speed = 2.5f;
         isGazed = true;
     }
 
     public void PlayerStopGazedAtMe()
     {
         sizeController.isTouched = false;
-        GetComponent<EnemyPath>().speed = 0;
+        //GetComponent<EnemyPath>().speed = 0;
         isGazed = false;
 
     }
