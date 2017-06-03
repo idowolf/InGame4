@@ -49,6 +49,7 @@ public class Teleport : MonoBehaviour {
         {
             SetPathHeight();
         }
+        Debug.Log( playerCamera.GetComponent<Transform>().eulerAngles.x);
     }
     private void TeleportRandomly()
     {
@@ -73,20 +74,20 @@ public class Teleport : MonoBehaviour {
 
     public void SetPathHeight()
     {
-        float camRotX = playerCamera.GetComponent<Transform>().rotation.x;
+        float camRotX = playerCamera.GetComponent<Transform>().eulerAngles.x;
         Vector3 newPosition = new Vector3();
         newPosition = enemyUI.transform.localPosition;
-        Debug.Log("camRotX is : " + camRotX);
-        if (camRotX < -30 && camRotX >= -85)
+        //Debug.Log("camRotX is : " + camRotX);
+        if (camRotX < 330 && camRotX >= 275)
         {
-            newPosition.y = -0.3f;
+            newPosition.y = -0.35f;
             enemyUI.transform.localPosition = newPosition ;
 
             return;
         }
-        if (camRotX >= -1 && camRotX <90 )
+        if (camRotX >= -1 && camRotX <85 )
         {
-            newPosition.y = 0.3f;
+            newPosition.y = 0.35f;
             enemyUI.transform.localPosition = newPosition;
 
             return;
