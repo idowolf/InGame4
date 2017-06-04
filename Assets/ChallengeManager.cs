@@ -35,11 +35,6 @@ public class ChallengeManager : MonoBehaviour
                 else
                 {
                     // succeeded all challenges
-                    foreach (Text text in texts)
-                    {
-                        text.text = "";
-                    }
-                    texts[0].text = "Great job!";
                 }
             }
             else
