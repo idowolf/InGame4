@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 public class PlayButton : MonoBehaviour {
+    public string nextLevel;
     public float gazeTime = 1f;
     private float timer;
     private bool gazedAt;
@@ -40,7 +41,7 @@ public class PlayButton : MonoBehaviour {
     }
     public void PointerDown()
     {
-        SceneManager.LoadScene("level2");
+        SceneManager.LoadScene(nextLevel);
     }
     public void PointerDownExit()
     {
