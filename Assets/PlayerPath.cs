@@ -15,65 +15,33 @@ public class PlayerPath : MonoBehaviour
 {
     public float distance;
     private Dir dir;
+    private float rotationStartTime;
     public int currentTarget;
     public bool[] circlePoints;
-    public int pathObjectsCreated;
-    public Transform path;
+    public PathManager path;
     public int pathRotation;
-    private List<Transform> targets;
     public float speed;
     public bool loop;
     public bool faceAway;
     public int current;
     public bool goBackwardsOnPath;
     public static bool allowMovement;
-    public LineRenderer lineRenderer;
     public int roundCount;
     public string tagToSearch;
     public Text text;
     public StatsManager statsManager;
-    
+    private List<Transform> targets;
+
     private void Start()
     {
+        targets = path.GetTargetsList();
+        rotationStartTime = Time.time;
         roundCount = 0;
-        targets = new List<Transform>();
-        //current + startingPoint = startingPoint;
-        foreach (Transform child in path)
-        { 
-            targets.Add(child);
-            child.gameObject.GetComponent<PathObjectScript>().pathObjectId = pathObjectsCreated;
-            pathObjectsCreated++;
-        }
         if (goBackwardsOnPath)
             targets.Reverse();
-        GameObject newLine = new GameObject("Line");
-        lineRenderer.startWidth = 0.5f;
-        lineRenderer.endWidth = 0.5f;
-        lineRenderer.positionCount = targets.Count + 1;
-        lineRenderer.material.color = Color.red;
-
-        for (int i = 0; targets != null && i < targets.Count; ++i)
-        {
-            lineRenderer.SetPosition(i, new Vector3(targets[i].transform.position.x, targets[i].transform.position.y, targets[i].transform.position.z));
-        }
-        lineRenderer.SetPosition(targets.Count, new Vector3(targets[0].transform.position.x, targets[0].transform.position.y, targets[0].transform.position.z));
         circlePoints = new bool[targets.Count];
     }
-    public void OnDrawGizmos()
-    {
-        //Start();
-        //if (!Application.isPlaying)
-        //{
-        //    transform.position = targets[0].position;
-        //}
-        //Gizmos.color = Color.green;
 
-        //for (int i = 1; targets != null && i < targets.Count; ++i)
-        //{
-        //    Gizmos.DrawLine(targets[i - 1].position, targets[i].position);
-        //}
-
-    }
 
     private void Update()
     {
@@ -103,6 +71,8 @@ public class PlayerPath : MonoBehaviour
 
     public void Shout(int newTarget)
     {
+        //text.text = dir == Dir.clockwards ? "right" : "left";
+
         int amount = targets.Count;
         Dir newDir = (Mathf.Abs(currentTarget - newTarget) < amount / 2 ^ newTarget < currentTarget) ? Dir.clockwards : Dir.counter;
         if(dir != newDir)
@@ -111,7 +81,7 @@ public class PlayerPath : MonoBehaviour
             dir = newDir;
         }
         currentTarget = newTarget;
-        if (circlePoints[newTarget])
+        if (circlePoints[currentTarget])
         {
             if(circlePoints.Count(c => c) >= 0.75f * circlePoints.Length)
             { 
@@ -140,5 +110,10 @@ public class PlayerPath : MonoBehaviour
 
         SceneManager.LoadScene("gameOverScene");
 
+    }
+
+    public Dir GetCurrentDirection()
+    {
+        return dir;
     }
 }
