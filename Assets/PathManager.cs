@@ -12,11 +12,11 @@ public class PathManager : MonoBehaviour {
         populateList();
         if (lineVisible)
         {
-            drawLineOnGameStart();
+            drawLine();
         }
     }
 
-    private void drawLineOnGameStart()
+    public void drawLine()
     {
         GameObject newLine = new GameObject("Line");
         LineRenderer lineRenderer = newLine.AddComponent<LineRenderer>();
