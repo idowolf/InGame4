@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
+using UnityEngine.UI;
+using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class PlayerPath : MonoBehaviour
 {
+    public float distance;
     public int currentTarget;
+    public bool[] circlePoints;
     public int pathObjectsCreated;
     public Transform path;
     public int pathRotation;
@@ -18,8 +22,14 @@ public class PlayerPath : MonoBehaviour
     public bool goBackwardsOnPath;
     public static bool allowMovement;
     public LineRenderer lineRenderer;
+    public int roundCount;
+    public string tagToSearch;
+    public Text text;
+    public StatsManager statsManager;
+    
     private void Start()
     {
+        roundCount = 0;
         targets = new List<Transform>();
         //current + startingPoint = startingPoint;
         foreach (Transform child in path)
@@ -41,6 +51,7 @@ public class PlayerPath : MonoBehaviour
             lineRenderer.SetPosition(i, new Vector3(targets[i].transform.position.x, targets[i].transform.position.y, targets[i].transform.position.z));
         }
         lineRenderer.SetPosition(targets.Count, new Vector3(targets[0].transform.position.x, targets[0].transform.position.y, targets[0].transform.position.z));
+        circlePoints = new bool[targets.Count];
     }
     public void OnDrawGizmos()
     {
@@ -60,15 +71,14 @@ public class PlayerPath : MonoBehaviour
 
     private void Update()
     {
+        transform.position = Camera.main.transform.position + Camera.main.transform.forward * distance;
+        transform.rotation = Quaternion.LookRotation((Camera.main.transform.position - transform.position) * (faceAway ? 1 : -1));
+
         if (current != currentTarget && transform.position != targets[current].position)
         {
-            Vector3 pos = Vector3.MoveTowards(transform.position, targets[current].position, speed * Time.deltaTime);
-            if (faceAway)
-                transform.rotation = Quaternion.LookRotation(Camera.main.transform.position - transform.position);
-            else
-                transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
+            //Vector3 pos = Vector3.MoveTowards(transform.position, targets[current].position, speed * Time.deltaTime);
 
-            GetComponent<Rigidbody>().MovePosition(pos);
+            //GetComponent<Rigidbody>().MovePosition(pos);
         }
         else
         {
@@ -86,4 +96,32 @@ public class PlayerPath : MonoBehaviour
         }
     }
 
+    public void Shout(int i)
+    {
+        currentTarget = i;
+        if (circlePoints[i])
+        {
+            if(circlePoints.Count(c => c) >= 0.75f * circlePoints.Length)
+            { 
+                roundCount++;
+                circlePoints = new bool[circlePoints.Length];
+            }
+            text.text = roundCount.ToString();
+            if (roundCount >= 20)
+                    LoadGameOver(true);
+        }
+        else
+            circlePoints[i] = true;
+    }
+
+    public void LoadGameOver(bool yay)
+    {
+        //update all records and stats
+        statsManager.updateRecordTable(yay ? 1 : -1);
+        //print table for check
+        statsManager.printRecordTable();
+
+        SceneManager.LoadScene("gameOverScene");
+
+    }
 }

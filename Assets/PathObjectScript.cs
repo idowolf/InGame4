@@ -11,7 +11,7 @@ public class PathObjectScript : MonoBehaviour {
         EventTrigger trigger = GetComponentInParent<EventTrigger>();
         EventTrigger.Entry entry = new EventTrigger.Entry();
         entry.eventID = EventTriggerType.PointerEnter;
-        entry.callback.AddListener((eventData) => { Shout(); });
+        entry.callback.AddListener((eventData) => { playerPath.Shout(pathObjectId); });
         trigger.triggers.Add(entry);
 
     }
@@ -20,8 +20,4 @@ public class PathObjectScript : MonoBehaviour {
     void Update () {
 		
 	}
-    public void Shout()
-    {
-        playerPath.currentTarget = pathObjectId;
-    }
 }

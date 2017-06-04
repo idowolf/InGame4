@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PlayerFinishLine : MonoBehaviour {
+public class EnemyFinishLine : MonoBehaviour {
     public int roundCount;
     public string tagToSearch;
     public Text text;
