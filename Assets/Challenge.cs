@@ -10,34 +10,6 @@ public class Challenge : MonoBehaviour
     public int goalRotations;
     private List<Rotation> rotations;
 
-    public bool Started
-    {
-        get
-        {
-            return started;
-        }
-    }
-
-    public bool Ended
-    {
-        get
-        {
-            return ended;
-        }
-    }
-
-    public bool Succeeded
-    {
-        get
-        {
-            return succeeded;
-        }
-    }
-
-    public void StartChallenge()
-    {
-        started = true;
-    }
     // Use this for initialization
     public virtual void Start()
     {
@@ -58,7 +30,7 @@ public class Challenge : MonoBehaviour
                 succeeded = true;
         }
     }
-
+    
     public void challengeFailure()
     {
         ended = true;
@@ -80,10 +52,5 @@ public class Challenge : MonoBehaviour
     {
         if(evalRotation(r))
             rotations.Add(r);
-    }
-
-    public virtual string GetDescription()
-    {
-        return string.Format("Spin {0} times in under {1} seconds!",goalRotations,goalTime);
     }
 }
