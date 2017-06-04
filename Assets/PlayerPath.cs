@@ -6,9 +6,15 @@ using UnityEngine.UI;
 using System.Linq;
 using UnityEngine.SceneManagement;
 
+public enum Dir
+{
+    counter,
+    clockwards
+}
 public class PlayerPath : MonoBehaviour
 {
     public float distance;
+    private Dir dir;
     public int currentTarget;
     public bool[] circlePoints;
     public int pathObjectsCreated;
@@ -82,10 +88,9 @@ public class PlayerPath : MonoBehaviour
         }
         else
         {
-            float myAbs = Mathf.Abs(current - currentTarget);
             int amount = targets.Count;
-            bool clockwards = Mathf.Abs(current - currentTarget) < amount / 2 ^ currentTarget < current;
-            if (clockwards)
+            //bool clockwards = Mathf.Abs(current - currentTarget) < amount / 2 ^ currentTarget < current;
+            if (dir == Dir.clockwards)
                 current++;
             else
                 current--;
@@ -96,22 +101,34 @@ public class PlayerPath : MonoBehaviour
         }
     }
 
-    public void Shout(int i)
+    public void Shout(int newTarget)
     {
-        currentTarget = i;
-        if (circlePoints[i])
+        int amount = targets.Count;
+        Dir newDir = (Mathf.Abs(currentTarget - newTarget) < amount / 2 ^ newTarget < currentTarget) ? Dir.clockwards : Dir.counter;
+        if(dir != newDir)
+        {
+            resetCirclePoints();
+            dir = newDir;
+        }
+        currentTarget = newTarget;
+        if (circlePoints[newTarget])
         {
             if(circlePoints.Count(c => c) >= 0.75f * circlePoints.Length)
             { 
                 roundCount++;
-                circlePoints = new bool[circlePoints.Length];
+                resetCirclePoints();
             }
             text.text = roundCount.ToString();
             if (roundCount >= 20)
                     LoadGameOver(true);
         }
         else
-            circlePoints[i] = true;
+            circlePoints[newTarget] = true;
+    }
+
+    private void resetCirclePoints()
+    {
+        circlePoints = new bool[circlePoints.Length];
     }
 
     public void LoadGameOver(bool yay)
