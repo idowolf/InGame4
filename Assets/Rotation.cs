@@ -4,10 +4,11 @@ public class Rotation
 {
     private Dir dir;
     private float duration;
-    private float startTime;
-    public Rotation()
+    public Rotation(float duration, Dir dir)
     {
-        startTime = Time.time;
+        this.duration = duration;
+        this.dir = dir;
+
     }
 
     public Dir Dir
@@ -24,11 +25,5 @@ public class Rotation
         {
             return duration;
         }
-    }
-
-    public void endRotation(Dir dir)
-    {
-        duration = Time.time - startTime;
-        this.dir = dir;
     }
 }

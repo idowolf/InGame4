@@ -8,7 +8,7 @@ public class PathManager : MonoBehaviour {
     public bool lineVisible;
 
     // Use this for initialization
-    void Start () {
+    void Awake () {
         populateList();
         if (lineVisible)
         {

@@ -19,18 +19,13 @@ public class PlayerPath : MonoBehaviour
     public int currentTarget;
     public bool[] circlePoints;
     public PathManager path;
-    public int pathRotation;
-    public float speed;
-    public bool loop;
     public bool faceAway;
     public int current;
     public bool goBackwardsOnPath;
-    public static bool allowMovement;
     public int roundCount;
-    public string tagToSearch;
-    public Text text;
     public StatsManager statsManager;
     private List<Transform> targets;
+    public ChallengeManager challengerManager;
 
     private void Start()
     {
@@ -86,11 +81,10 @@ public class PlayerPath : MonoBehaviour
             if(circlePoints.Count(c => c) >= 0.75f * circlePoints.Length)
             { 
                 roundCount++;
+                challengerManager.AddToCurrentChallenge(new Rotation(Time.time - rotationStartTime, dir));
                 resetCirclePoints();
+                rotationStartTime = Time.time;
             }
-            text.text = roundCount.ToString();
-            if (roundCount >= 20)
-                    LoadGameOver(true);
         }
         else
             circlePoints[newTarget] = true;

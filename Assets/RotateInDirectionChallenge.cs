@@ -9,4 +9,11 @@ public class RotateInDirectionChallenge : Challenge
     {
         return r.Dir == direction;
     }
+    public override string GetDescription()
+    {
+        return string.Format("Spin {0} times to the {1} in under {2} seconds!", 
+            goalRotations, 
+            direction==Dir.clockwards ? "right" : "left",
+            goalTime);
+    }
 }

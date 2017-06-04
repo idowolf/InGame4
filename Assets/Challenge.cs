@@ -74,6 +74,7 @@ public class Challenge : MonoBehaviour
     {
         started = ended = succeeded = false;
         elapsedTime = 0;
+        rotations = new List<Rotation>();
     }
 
     public void addRotation(Rotation r)
