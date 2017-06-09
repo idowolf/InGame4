@@ -49,7 +49,7 @@ public class Teleport : MonoBehaviour {
         {
             SetPathHeight();
         }
-        Debug.Log( playerCamera.GetComponent<Transform>().eulerAngles.x);
+        //Debug.Log( playerCamera.GetComponent<Transform>().eulerAngles.x);
     }
     private void TeleportRandomly()
     {

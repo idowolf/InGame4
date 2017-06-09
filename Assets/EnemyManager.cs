@@ -35,8 +35,8 @@ public class EnemyManager : MonoBehaviour {
             enemies[0].GetComponent<SpriteRenderer>().sprite = comboFairy;
             nextInCombo = enemies[0];
         }
-        else
-            timer.LoadGameOver();
+        else { }
+            //timer.LoadGameOver();
 
     }
     // Update is called once per frame

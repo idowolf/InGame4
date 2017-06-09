@@ -13,7 +13,7 @@ using UnityEngine;
 public class SizeController : MonoBehaviour {
 
     public float unGazedTime, gazedTime;
-    private Vector3 sizeVector = new Vector3();
+    private Vector3 sizeVector;
     public bool isTouched;
     public GameObject ExplosionPrefab;
     private float scalseAtStart ;
