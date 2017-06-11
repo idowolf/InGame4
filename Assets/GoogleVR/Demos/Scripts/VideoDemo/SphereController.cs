@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SphereController : MonoBehaviour {
-    public Transform enemyUI;
+    private Transform enemyUI;
     private float maxLifeTime;
 	// Use this for initialization
 	void Start () {
@@ -23,4 +23,22 @@ public class SphereController : MonoBehaviour {
             Debug.Log("destroyed!");
         }
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("collision name = " + other.gameObject.name);
+        if (other.gameObject.name == "EnemyUI")
+        {
+            Destroy(other.gameObject);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("collision name = " + collision.gameObject.name);
+        if (collision.gameObject.name == "EnemyUI")
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 }
