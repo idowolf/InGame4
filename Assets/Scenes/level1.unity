@@ -2845,6 +2845,7 @@ GameObject:
   - component: {fileID: 311730758}
   - component: {fileID: 311730757}
   - component: {fileID: 311730756}
+  - component: {fileID: 311730759}
   m_Layer: 0
   m_Name: EnemyUI
   m_TagString: Untagged
@@ -2907,7 +2908,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.2, y: 1.2, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &311730758
 MeshFilter:
@@ -2916,6 +2917,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 311730754}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &311730759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 311730754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93243922875df741a05d100df0bf8ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &312156970
 GameObject:
   m_ObjectHideFlags: 0
@@ -8107,6 +8119,31 @@ Prefab:
         type: 2}
       propertyPath: goBackwardsOnPath
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65963106972643382, guid: 5106b3cfbbac0a345a7f0da1fb9b9668,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65963106972643382, guid: 5106b3cfbbac0a345a7f0da1fb9b9668,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114842385511078434, guid: 5106b3cfbbac0a345a7f0da1fb9b9668,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114842385511078434, guid: 5106b3cfbbac0a345a7f0da1fb9b9668,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114842385511078434, guid: 5106b3cfbbac0a345a7f0da1fb9b9668,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 212634856551743098, guid: 5106b3cfbbac0a345a7f0da1fb9b9668, type: 2}

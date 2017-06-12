@@ -14,6 +14,7 @@ public class SphereController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        transform.position = transform.position + Vector3.zero;
         maxLifeTime += Time.deltaTime;
         float thisX = this.transform.position.x;
         float otherX = enemyUI.position.x;
@@ -29,16 +30,9 @@ public class SphereController : MonoBehaviour {
         Debug.Log("collision name = " + other.gameObject.name);
         if (other.gameObject.name == "EnemyUI")
         {
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
+            Debug.Log("HOORAAYY!!");
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("collision name = " + collision.gameObject.name);
-        if (collision.gameObject.name == "EnemyUI")
-        {
-            Destroy(collision.gameObject);
-        }
-    }
 }
