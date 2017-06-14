@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
+    public GameObject ExplosionPrefab;
     public int totalCubesCreated = 0;
     private Transform nextInCombo;
     public List<Transform> enemies;
     public bool waveMode;
     public int objectsOnScreen;
     private int waveRemaining;
+    public Sprite comboFairy;
     public ComboManager comboManager;
     public Timer timer;
     // Use this for initialization
@@ -30,11 +32,11 @@ public class EnemyManager : MonoBehaviour {
     {
         if (enemies.Count != 0)
         {
-            enemies[0].GetComponent<SpriteRenderer>().color = Color.red;
+            enemies[0].GetComponent<SpriteRenderer>().sprite = comboFairy;
             nextInCombo = enemies[0];
         }
-        else
-            timer.LoadGameOver();
+        else { }
+            //timer.LoadGameOver();
 
     }
     // Update is called once per frame
@@ -44,6 +46,8 @@ public class EnemyManager : MonoBehaviour {
 
     public void childIsMarked(Transform t)
     {
+        timer.addTimer(0.5f);
+        GameObject.Instantiate(ExplosionPrefab, t.position, t.rotation);
         GetComponent<AudioSource>().Play();
         if (t == nextInCombo)
             comboManager.MangaeTheCombo(true);

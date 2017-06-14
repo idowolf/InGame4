@@ -26,7 +26,7 @@ public class Timer : MonoBehaviour {
         
         if (timeLeft < 0f)
         {
-            LoadGameOver();
+            //LoadGameOver();
         }
     }
 

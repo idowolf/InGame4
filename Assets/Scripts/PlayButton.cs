@@ -7,6 +7,7 @@ public class PlayButton : MonoBehaviour {
     public float gazeTime = 1f;
     private float timer;
     private bool gazedAt;
+    public LifeBar lifeBar;
 	// Use this for initialization
 	void Start () {
 		
@@ -27,15 +28,19 @@ public class PlayButton : MonoBehaviour {
 	}
     public void PointerEnter()
     {
+        lifeBar.duration = gazeTime;
+        lifeBar.setActivated = true;
         gazedAt = true;
     }
     public void PointerExit()
     {
+        lifeBar.deactivate();
+        timer = 0;
         gazedAt = false;
     }
     public void PointerDown()
     {
-        SceneManager.LoadScene("SpinnerMainGame");
+        SceneManager.LoadScene("level1");
     }
     public void PointerDownExit()
     {

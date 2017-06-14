@@ -16,7 +16,7 @@ public class RideTheLightning : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         currentTimeLeft = timer.timeLeft;
-        float ratio = currentTimeLeft / startTime;
+        float ratio = Mathf.Pow((currentTimeLeft) / (startTime),3);
         lightOne.intensity = ratio;
         lightTwo.intensity = ratio;
         lightThree.intensity = ratio;

@@ -175,7 +175,7 @@ public class StatsManager : MonoBehaviour {
         fastRotList.Sort();
         fastRotList.Reverse();
 
-        timeLeftNode.value = timeLeft;
+        timeLeftNode.value = Mathf.Max(timeLeft, 0);
         maxCTimeLeftList.Add(timeLeftNode);
         maxCTimeLeftList.Sort();
 
