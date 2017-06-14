@@ -25,9 +25,9 @@ public class Teleport : MonoBehaviour {
     //LinkedListNode<Vector3> current;
     //static int TotalCubesCreated;
     public int cubeID;
-    public EnemyManager EnemyManager;
+    //public EnemyManager EnemyManager;
     public GameObject playerCamera;
-    public Transform enemyUI;
+    public YAxisMovement enemyUI;
 
     
     private SizeController sizeController = new SizeController();
@@ -75,25 +75,25 @@ public class Teleport : MonoBehaviour {
     public void SetPathHeight()
     {
         float camRotX = playerCamera.GetComponent<Transform>().eulerAngles.x;
-        Vector3 newPosition = new Vector3();
-        newPosition = enemyUI.transform.localPosition;
+        //Vector3 newPosition = new Vector3();
+        //newPosition = enemyUI.transform.localPosition;
         //Debug.Log("camRotX is : " + camRotX);
         if (camRotX < 330 && camRotX >= 275)
         {
-            newPosition.y = -0.35f;
-            enemyUI.transform.localPosition = newPosition ;
+            enemyUI.SetYTarget(-0.35f);
+            //enemyUI.transform.localPosition = newPosition ;
 
             return;
         }
         if (camRotX >= -1 && camRotX <85 )
         {
-            newPosition.y = 0.35f;
-            enemyUI.transform.localPosition = newPosition;
+            enemyUI.SetYTarget(0.35f);
+            //enemyUI.transform.localPosition = newPosition;
 
             return;
         }
-        newPosition.y = 0.0f;
-        enemyUI.transform.localPosition = newPosition;
+        enemyUI.SetYTarget(0.0f);
+        //enemyUI.transform.localPosition = newPosition;
 
         return;
     }
