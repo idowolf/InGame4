@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SphereController : MonoBehaviour {
     private Transform enemyUI;
@@ -21,7 +22,7 @@ public class SphereController : MonoBehaviour {
         if ((int)thisX == (int)otherX)
         {
             Destroy(this,0.2f);
-            Debug.Log("destroyed!");
+            //Debug.Log("destroyed!");
         }
 	}
 
@@ -30,7 +31,12 @@ public class SphereController : MonoBehaviour {
         Debug.Log("collision name = " + other.gameObject.name);
         if (other.gameObject.name == "EnemyUI")
         {
-            //Destroy(other.gameObject);
+            Destroy(other.gameObject);
+            Destroy(this);
+            other = null;
+            enemyUI = null;
+
+            SceneManager.LoadScene("gameOverScene", LoadSceneMode.Single);
             Debug.Log("HOORAAYY!!");
         }
     }
