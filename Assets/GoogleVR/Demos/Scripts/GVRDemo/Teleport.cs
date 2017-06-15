@@ -82,19 +82,19 @@ public class Teleport : MonoBehaviour {
         {
             newPosition.y = -0.35f;
             enemyUI.transform.localPosition = newPosition ;
-
+            //if (enemyUI.transform.localPosition.y != -.35) enemyUI.transform.Translate(newPosition * Time.deltaTime*4);
             return;
         }
         if (camRotX >= -1 && camRotX <85 )
         {
             newPosition.y = 0.35f;
             enemyUI.transform.localPosition = newPosition;
-
+            //if (enemyUI.transform.localPosition.y != .35) enemyUI.transform.Translate(newPosition * Time.deltaTime*4);
             return;
         }
         newPosition.y = 0.0f;
         enemyUI.transform.localPosition = newPosition;
-
+        //if (enemyUI.transform.localPosition.y != 0f) enemyUI.transform.Translate(newPosition * Time.deltaTime*4);
         return;
     }
 
