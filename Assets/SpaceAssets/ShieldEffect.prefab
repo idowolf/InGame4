@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 198097636127849088}
   - component: {fileID: 95355346305758304}
   m_Layer: 0
-  m_Name: Spiral_02.4 Domain
+  m_Name: ShieldEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 198784103993327754}
   - component: {fileID: 199719672662131290}
   m_Layer: 0
-  m_Name: Projectile_01 Noise
+  m_Name: Shoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
