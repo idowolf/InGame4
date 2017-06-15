@@ -8,22 +8,20 @@ public class ObstacleManager : MonoBehaviour {
     public Transform obstaclePreFab;
     
     
-    private float fiveSecTimer, timeFromStart;
+    private float fiveSecTimer;
 
 	// Use this for initialization
 	void Start () {
         dataUpdate();
         fiveSecTimer = 0;
-        timeFromStart = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         dataUpdate();
 
-        timeFromStart += Time.deltaTime;
         fiveSecTimer += Time.deltaTime;
-        if (((int)fiveSecTimer == 5) && (timeFromStart > 7))
+        if ((int)fiveSecTimer == 5)
         {
             fiveSecTimer = 0;
             deployObstacle(Random.Range(1, 4));
@@ -39,7 +37,6 @@ public class ObstacleManager : MonoBehaviour {
     {
         num = Random.Range(1, 4);
         Vector3 pos = this.GetComponent<Transform>().position;
-        pos += new Vector3(0, 0, 1);
         if (num == 1)
         {
             pos.y = .45f;
