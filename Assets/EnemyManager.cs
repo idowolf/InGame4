@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyManager : MonoBehaviour {
+public class EnemyManager : MonoBehaviour
+{
     public GameObject ExplosionPrefab;
     public int totalCubesCreated = 0;
     private Transform nextInCombo;
@@ -14,7 +15,8 @@ public class EnemyManager : MonoBehaviour {
     public ComboManager comboManager;
     public Timer timer;
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         enemies = new List<Transform>();
         foreach (Transform child in transform)
         {
@@ -36,13 +38,14 @@ public class EnemyManager : MonoBehaviour {
             nextInCombo = enemies[0];
         }
         else { }
-            //timer.LoadGameOver();
+        //timer.LoadGameOver();
 
     }
     // Update is called once per frame
-    void Update () {
-		
-	}
+    void Update()
+    {
+
+    }
 
     public void childIsMarked(Transform t)
     {
@@ -65,7 +68,7 @@ public class EnemyManager : MonoBehaviour {
                 if (waveRemaining == 0)
                 {
                     waveRemaining = objectsOnScreen;
-                    for(int i = 0; i <objectsOnScreen && i < enemies.Count; i++)
+                    for (int i = 0; i < objectsOnScreen && i < enemies.Count; i++)
                     {
                         enemies[i].gameObject.SetActive(true);
                     }
@@ -73,7 +76,7 @@ public class EnemyManager : MonoBehaviour {
             }
             else
             {
-                if(FirstUndisplayedChild())
+                if (FirstUndisplayedChild())
                     FirstUndisplayedChild().gameObject.SetActive(true);
             }
         }
