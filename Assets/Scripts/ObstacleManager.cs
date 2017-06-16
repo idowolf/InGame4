@@ -6,14 +6,15 @@ public class ObstacleManager : MonoBehaviour {
     public GameObject enemyCarrier;
     public int distanceFromCarrier;
     public Transform obstaclePreFab;
-    
-    
-    private float fiveSecTimer;
+
+
+    private float fiveSecTimer, timeFromStart;
 
 	// Use this for initialization
 	void Start () {
         dataUpdate();
         fiveSecTimer = 0;
+        timeFromStart = 0;
 	}
 	
 	// Update is called once per frame
@@ -21,10 +22,13 @@ public class ObstacleManager : MonoBehaviour {
         dataUpdate();
 
         fiveSecTimer += Time.deltaTime;
-        if ((int)fiveSecTimer == 5)
+        timeFromStart += Time.deltaTime;
+        Debug.Log(timeFromStart);
+        if (((int)fiveSecTimer == 5 ))
         {
             fiveSecTimer = 0;
-            deployObstacle(Random.Range(1, 4));
+
+            if (timeFromStart > 7) deployObstacle(Random.Range(1, 4));
         }
 	}
     void dataUpdate()

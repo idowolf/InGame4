@@ -37,8 +37,6 @@ public class SphereController : MonoBehaviour {
             enemyUI = null;
 
             SceneManager.LoadScene("gameOverScene", LoadSceneMode.Single);
-            Debug.Log("HOORAAYY!!");
         }
     }
-
 }
