@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 
-class EnemyPath : MonoBehaviour
+public class EnemyPath : MonoBehaviour
 {
     public Transform path;
     public int pathRotation;

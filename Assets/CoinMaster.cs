@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CoinMaster : MonoBehaviour {
-    public  object enemyCarrier;
+    public  GameObject enemyCarrier;
 
     // Use this for initialization
     void Start () {
@@ -17,6 +17,6 @@ public class CoinMaster : MonoBehaviour {
     void dataUpdate()
     {
         this.GetComponent<EnemyPath>().speed = enemyCarrier.GetComponent<EnemyPath>().speed;
-        this.GetComponent<EnemyPath>().current = (enemyCarrier.GetComponent<EnemyPath>().current + distanceFromCarrier) % 40;
+        //this.GetComponent<EnemyPath>().current = (enemyCarrier.GetComponent<EnemyPath>().current + distanceFromCarrier) % 40;
     }
 }

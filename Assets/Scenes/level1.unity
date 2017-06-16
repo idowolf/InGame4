@@ -11115,8 +11115,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCarrier: {fileID: 1470047040}
   distanceFromCarrier: 10
-  obstaclePreFab: {fileID: 4718018490010082, guid: 45a2eb576b327234fb9e60c55797b4a0,
-    type: 2}
+  prefab: {fileID: 1346902699438084, guid: 45a2eb576b327234fb9e60c55797b4a0, type: 2}
+  timeToSpawn: 5
+  timeToStart: 7
 --- !u!54 &1236395897
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SphereController : Spawnable {
-    // Use this for initialization
+public class CoinController : Spawnable {
+    public static int AmountOfCoins = 0;
     private float maxLifeTime = 6f;
     protected Transform enemyUI;
 
@@ -35,10 +35,8 @@ public class SphereController : Spawnable {
         Debug.Log("collision name = " + other.gameObject.name);
         if (other.gameObject.name == "EnemyUI")
         {
-            Destroy(other.gameObject);
-            Destroy(this);
-
-            SceneManager.LoadScene("gameOverScene", LoadSceneMode.Single);
+            AmountOfCoins++;
+            GameObject.Destroy(this);
         }
     }
 }

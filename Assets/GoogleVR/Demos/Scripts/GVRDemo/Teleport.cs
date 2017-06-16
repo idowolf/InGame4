@@ -80,19 +80,19 @@ public class Teleport : MonoBehaviour {
         //Debug.Log("camRotX is : " + camRotX);
         if (camRotX < 330 && camRotX >= 275)
         {
-            enemyUI.SetYTarget(0.35f);
+            enemyUI.SetYTarget(2);
 
             return;
         }
         if (camRotX >= -1 && camRotX <85 )
         {
-            enemyUI.SetYTarget(-0.35f);
+            enemyUI.SetYTarget(-2);
 
             return;
         }
         if (enemyUI.transform.localPosition.y != 0f)
         {
-            enemyUI.SetYTarget(0.0f);
+            enemyUI.SetYTarget(0);
             return;
         }
     }
