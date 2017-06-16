@@ -33,9 +33,10 @@ public class SphereController : MonoBehaviour {
         {
             Destroy(other.gameObject);
             Destroy(this);
-            Debug.Log("HOORAAYY!!");
+            other = null;
+            enemyUI = null;
+
             SceneManager.LoadScene("gameOverScene", LoadSceneMode.Single);
         }
     }
-
 }
