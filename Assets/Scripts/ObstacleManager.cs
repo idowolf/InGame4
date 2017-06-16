@@ -23,7 +23,7 @@ public class ObstacleManager : MonoBehaviour {
 
         fiveSecTimer += Time.deltaTime;
         timeFromStart += Time.deltaTime;
-        Debug.Log(timeFromStart);
+        //Debug.Log(timeFromStart);
         if (((int)fiveSecTimer == 5 ))
         {
             fiveSecTimer = 0;
