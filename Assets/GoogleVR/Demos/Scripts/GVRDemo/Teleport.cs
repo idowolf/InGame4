@@ -31,6 +31,7 @@ public class Teleport : MonoBehaviour {
     public Transform Burst;
     public Transform Burst1;
     public Transform Burst2;
+    public AudioSource audio;
 
 
     private SizeController sizeController = new SizeController();
@@ -47,6 +48,8 @@ public class Teleport : MonoBehaviour {
         Burst.GetComponent<ParticleSystem>().enableEmission = false;
         Burst1.GetComponent<ParticleSystem>().enableEmission = false;
         Burst2.GetComponent<ParticleSystem>().enableEmission = false;
+        audio = GetComponent<AudioSource>();
+
     }
 
     private void Update()
@@ -65,24 +68,27 @@ public class Teleport : MonoBehaviour {
 
     public void PlayerGazedAtMe()
     {
+        isGazed = true;
         sizeController.isTouched = true;
         GetComponent<EnemyPath>().speed = 2.5f;
         Burst.GetComponent<ParticleSystem>().enableEmission = true;
         Burst1.GetComponent<ParticleSystem>().enableEmission = true;
         Burst2.GetComponent<ParticleSystem>().enableEmission = true;
-        
-        isGazed = true;
-        Debug.Log("TEST");
+        audio.GetComponent<AudioSource>().enabled = true;
+        audio.Play();
+     
 
+        
     }
 
 
     IEnumerator stopBurst()
     {
-        yield return new WaitForSeconds(.2f);
+        yield return new WaitForSeconds(.1f);
         Burst.GetComponent<ParticleSystem>().enableEmission = false;
         Burst1.GetComponent<ParticleSystem>().enableEmission = false;
         Burst2.GetComponent<ParticleSystem>().enableEmission = false;
+        audio.GetComponent<AudioSource>().enabled = false;
     }
 
 
