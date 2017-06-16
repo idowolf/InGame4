@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CoinMaster : MonoBehaviour {
-    public  object enemyCarrier;
+    public  GameObject enemyCarrier;
+    int distanceFromCarrier;
 
     // Use this for initialization
     void Start () {
-		
-	}
+        distanceFromCarrier = 10;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
