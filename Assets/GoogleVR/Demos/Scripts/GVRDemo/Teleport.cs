@@ -28,19 +28,37 @@ public class Teleport : MonoBehaviour {
     //public EnemyManager EnemyManager;
     public GameObject playerCamera;
     public YAxisMovement enemyUI;
+    public Transform Burst;
+    public Transform Burst1;
+    public Transform Burst2;
+    public AudioSource audio;
+    Transform burstComponent;
+    ParticleSystem.EmissionModule em1;
+    List<Transform> emch;
 
-    
     private SizeController sizeController = new SizeController();
     private bool isGazed = false;
 
     public void SetID(int ID)
     {
         this.cubeID = ID;
-    } 
+    }
     void Start()
     {
         sizeController.isTouched = false;
         sizeController = GetComponent<SizeController>();
+        burstComponent = GameObject.Instantiate(Burst, enemyUI.transform);
+        emch = new List<Transform>();
+        emch.Add(burstComponent);
+        foreach (Transform child in burstComponent)
+        {
+            emch.Add(child);
+            ParticleSystem.EmissionModule em1 = child.GetComponent<ParticleSystem>().emission;
+            em1.enabled = false;
+        }
+        audio = GetComponent<AudioSource>();
+
+
     }
 
     private void Update()
@@ -49,26 +67,49 @@ public class Teleport : MonoBehaviour {
         {
             SetPathHeight();
         }
-        //Debug.Log( playerCamera.GetComponent<Transform>().eulerAngles.x);
     }
     private void TeleportRandomly()
     {
+
+    }
+
+
+    public void PlayerGazedAtMe()
+    {
+        isGazed = true;
+        sizeController.isTouched = true;
+        GetComponent<EnemyPath>().speed = 2.5f;
+        foreach (Transform child in emch)
+        {
+            ParticleSystem.EmissionModule em1 = child.GetComponent<ParticleSystem>().emission;
+            em1.enabled = true;
+        }
+        audio.GetComponent<AudioSource>().enabled = true;
+        audio.Play();
+     
+
         
     }
 
-   
-    public void PlayerGazedAtMe()
+
+    IEnumerator stopBurst()
     {
-        sizeController.isTouched = true;
-        GetComponent<EnemyPath>().speed = 2.5f;
-        isGazed = true;
+        yield return new WaitForSeconds(.1f);
+        foreach (Transform child in emch)
+        {
+            ParticleSystem.EmissionModule em1 = child.GetComponent<ParticleSystem>().emission;
+            em1.enabled = false;
+        }
+        audio.GetComponent<AudioSource>().enabled = false;
     }
+
 
     public void PlayerStopGazedAtMe()
     {
         sizeController.isTouched = false;
         //GetComponent<EnemyPath>().speed = 0;
         isGazed = false;
+        StartCoroutine(stopBurst());
 
     }
 
@@ -77,20 +118,21 @@ public class Teleport : MonoBehaviour {
         float camRotX = playerCamera.GetComponent<Transform>().eulerAngles.x;
         //Vector3 newPosition = new Vector3();
         //newPosition = enemyUI.transform.localPosition;
-        //Debug.Log("camRotX is : " + camRotX);
         if (camRotX < 330 && camRotX >= 275)
         {
-            enemyUI.SetYTarget(-0.35f);
+            enemyUI.SetYTarget(2);
+
             return;
         }
         if (camRotX >= -1 && camRotX <85 )
         {
-            enemyUI.SetYTarget(0.35f);
+            enemyUI.SetYTarget(-2);
+
             return;
         }
         if (enemyUI.transform.localPosition.y != 0f)
         {
-            enemyUI.SetYTarget(0.0f);
+            enemyUI.SetYTarget(0);
             return;
         }
     }

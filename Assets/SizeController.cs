@@ -18,7 +18,7 @@ public class SizeController : MonoBehaviour {
     public GameObject ExplosionPrefab;
     private float scalseAtStart ;
     private float scaleFactor;
-
+    public float speedMultiplier = 0.005f;
     // Use this for initialization
     void Start()
     {
@@ -35,7 +35,7 @@ public class SizeController : MonoBehaviour {
         {
             gazedTime += Time.deltaTime;
             unGazedTime = 0;
-            GetComponent<EnemyPath>().speed += 0.005f;
+            GetComponent<EnemyPath>().speed += speedMultiplier;
             
         }else
         {
@@ -54,7 +54,7 @@ public class SizeController : MonoBehaviour {
     {
         //scaleFactor = 1 + (twoSecondsTimer / 2);
         //transform.localScale = scalseAtStart * new Vector3(scaleFactor,scaleFactor,scaleFactor);
-        GetComponent<EnemyPath>().speed += scaleFactor/100;
+        //GetComponent<EnemyPath>().speed += scaleFactor/100;
     }
     
 }

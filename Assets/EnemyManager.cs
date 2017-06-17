@@ -18,14 +18,14 @@ public class EnemyManager : MonoBehaviour
     void Start()
     {
         enemies = new List<Transform>();
-        foreach (Transform child in transform)
-        {
-            enemies.Add(child);
-            child.gameObject.GetComponent<Teleport>().SetID(totalCubesCreated);
-            if (totalCubesCreated >= objectsOnScreen)
-                child.gameObject.SetActive(false);
-            totalCubesCreated++;
-        }
+        //foreach (Transform child in transform)
+        //{
+        //    enemies.Add(child);
+        //    child.gameObject.GetComponent<Teleport>().SetID(totalCubesCreated);
+        //    if (totalCubesCreated >= objectsOnScreen)
+        //        child.gameObject.SetActive(false);
+        //    totalCubesCreated++;
+        //}
         waveRemaining = objectsOnScreen;
         setNextInCombo();
 

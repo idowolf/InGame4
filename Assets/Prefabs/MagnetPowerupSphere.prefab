@@ -22,10 +22,10 @@ GameObject:
   - component: {fileID: 33362884149169014}
   - component: {fileID: 135458481649408048}
   - component: {fileID: 23510861919979790}
-  - component: {fileID: 114035211530162978}
   - component: {fileID: 54277708985256240}
+  - component: {fileID: 114006235640259586}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: MagnetPowerupSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114035211530162978
+--- !u!114 &114006235640259586
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -106,9 +106,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1346902699438084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca34a24c239cf3a49b4bedf3781faa0e, type: 3}
+  m_Script: {fileID: 11500000, guid: 74cc3455575784a4f9d588b0d57bf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 5
+  currentPos: 0
+  pathNum: 0
 --- !u!135 &135458481649408048
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -119,5 +122,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}

@@ -12,9 +12,14 @@ public class YAxisMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        Vector3 target = new Vector3(transform.localPosition.x, yTarget, transform.localPosition.z);
         transform.localPosition = Vector3.MoveTowards(transform.localPosition,
-            new Vector3(transform.localPosition.x,yTarget,transform.localPosition.z),
+            target,
             speed * Time.deltaTime);
+        transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
+        Vector3 eu = transform.localEulerAngles;
+        eu.y += 90;
+        transform.localEulerAngles = eu;
     }
 
     public void SetYTarget(float yTarget)
