@@ -28,19 +28,28 @@ public class Teleport : MonoBehaviour {
     //public EnemyManager EnemyManager;
     public GameObject playerCamera;
     public YAxisMovement enemyUI;
+    public Transform Burst;
+    public Transform Burst1;
+    public Transform Burst2;
+    public AudioSource audio;
 
-    
+
     private SizeController sizeController = new SizeController();
     private bool isGazed = false;
 
     public void SetID(int ID)
     {
         this.cubeID = ID;
-    } 
+    }
     void Start()
     {
         sizeController.isTouched = false;
         sizeController = GetComponent<SizeController>();
+        Burst.GetComponent<ParticleSystem>().enableEmission = false;
+        Burst1.GetComponent<ParticleSystem>().enableEmission = false;
+        Burst2.GetComponent<ParticleSystem>().enableEmission = false;
+        audio = GetComponent<AudioSource>();
+
     }
 
     private void Update()
@@ -52,22 +61,42 @@ public class Teleport : MonoBehaviour {
     }
     private void TeleportRandomly()
     {
+
+    }
+
+
+    public void PlayerGazedAtMe()
+    {
+        isGazed = true;
+        sizeController.isTouched = true;
+        GetComponent<EnemyPath>().speed = 2.5f;
+        Burst.GetComponent<ParticleSystem>().enableEmission = true;
+        Burst1.GetComponent<ParticleSystem>().enableEmission = true;
+        Burst2.GetComponent<ParticleSystem>().enableEmission = true;
+        audio.GetComponent<AudioSource>().enabled = true;
+        audio.Play();
+     
+
         
     }
 
-   
-    public void PlayerGazedAtMe()
+
+    IEnumerator stopBurst()
     {
-        sizeController.isTouched = true;
-        GetComponent<EnemyPath>().speed = 2.5f;
-        isGazed = true;
+        yield return new WaitForSeconds(.1f);
+        Burst.GetComponent<ParticleSystem>().enableEmission = false;
+        Burst1.GetComponent<ParticleSystem>().enableEmission = false;
+        Burst2.GetComponent<ParticleSystem>().enableEmission = false;
+        audio.GetComponent<AudioSource>().enabled = false;
     }
+
 
     public void PlayerStopGazedAtMe()
     {
         sizeController.isTouched = false;
         //GetComponent<EnemyPath>().speed = 0;
         isGazed = false;
+        StartCoroutine(stopBurst());
 
     }
 
