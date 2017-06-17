@@ -14,8 +14,7 @@ public class PowerupManager : MonoBehaviour
     public YAxisMovement yAxisController;
     public SizeController xSpeedController;
     public GameObject Magnet;
-    public float xSpeedMultiplier = 1.5f, ySpeedMultiplier = 1.5f;
-
+    public float xSpeedMultiplier = 1.5f, ySpeedMultiplier = 1.5f, storeDuration = 10f;
 
     private bool[] powerupsActive;
     private float[] elapsedTimes;
@@ -30,8 +29,20 @@ public class PowerupManager : MonoBehaviour
         powerupsActive = new bool[System.Enum.GetNames(typeof(PowerupName)).Length];
         elapsedTimes = new float[powerupsActive.Length];
         durations = new float[powerupsActive.Length];
+        HandleStore();
     }
 
+    private void HandleStore()
+    {
+        for (int i = 0; i < StoreManager.ItemsSold.Length; i++)
+        {
+            if (StoreManager.ItemsSold[i])
+            {
+                ActivatePowerup((PowerupName)i, storeDuration);
+                StoreManager.ItemsSold[i] = false;
+            }
+        }
+    }
     // Update is called once per frame
     void Update()
     {
