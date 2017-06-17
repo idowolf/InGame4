@@ -8020,6 +8020,11 @@ Prefab:
       value: 
       objectReference: {fileID: 4562250865699334, guid: 1c093e00d1c89dd4899d55de2d17dbeb,
         type: 2}
+    - target: {fileID: 114899563254936594, guid: 5106b3cfbbac0a345a7f0da1fb9b9668,
+        type: 2}
+      propertyPath: burstComponent
+      value: 
+      objectReference: {fileID: 1844878885}
     m_RemovedComponents:
     - {fileID: 212634856551743098, guid: 5106b3cfbbac0a345a7f0da1fb9b9668, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5106b3cfbbac0a345a7f0da1fb9b9668, type: 2}

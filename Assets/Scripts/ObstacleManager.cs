@@ -7,7 +7,7 @@ public class ObstacleManager : MonoBehaviour
     public GameObject enemyCarrier;
     public int distanceFromCarrier;
     public GameObject prefab;
-    public float timeToSpawn = 5, timeToStart = 7;
+    public float timeToSpawn = 4, timeToStart = 7;
 
     private float elapsedTimeFromSpawn, elapsedTimeFromStart;
     public static bool[,] isAtThisLocationAlready;

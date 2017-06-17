@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SphereController : MonoBehaviour {
     private Transform enemyUI;
     private float maxLifeTime;
-
+    public GameObject explosionPrefab;
     public int currentPos, pathNum;
     // Use this for initialization
     void Start () {
@@ -23,7 +23,7 @@ public class SphereController : MonoBehaviour {
         float otherX = enemyUI.position.x;
         if (thisX - otherX > 1)
         {
-            Destroy(gameObject,0.2f);
+            Destroy(gameObject,2.0f);
             ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
             //Debug.Log("destroyed!");
         }
@@ -33,6 +33,8 @@ public class SphereController : MonoBehaviour {
     {
         if (other.gameObject.name == "EnemyUI")
         {
+            Vector3 explosionPos = transform.position;
+            Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
             ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
             Destroy(gameObject, 0.1f);
             if (!GameObject.Find("EnemyCarrier").GetComponent<PowerupManager>().IsPowerupActive(PowerupName.SHIELD))

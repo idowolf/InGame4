@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 23881755648945672}
   - component: {fileID: 64162738688648080}
   - component: {fileID: 114901150952715752}
+  - component: {fileID: 114035328313778590}
+  - component: {fileID: 114660725395667604}
   m_Layer: 0
   m_Name: GoldCoin 1
   m_TagString: Untagged
@@ -96,6 +98,34 @@ MeshCollider:
   m_InflateMesh: 1
   m_SkinWidth: 0.02
   m_Mesh: {fileID: 4300000, guid: c91509ba6269cfc41b0a3a8e8a1ca2e6, type: 3}
+--- !u!114 &114035328313778590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1281576491174798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4f3335fd45f004fa9570d7c6bdda22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreesPerSecond: 45
+  amplitude: 0.1
+  frequency: 0.5
+--- !u!114 &114660725395667604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1281576491174798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4f3335fd45f004fa9570d7c6bdda22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreesPerSecond: 45
+  amplitude: 0.1
+  frequency: 0.5
 --- !u!114 &114901150952715752
 MonoBehaviour:
   m_ObjectHideFlags: 1

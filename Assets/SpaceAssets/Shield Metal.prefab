@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23825806609494484}
   - component: {fileID: 114819987706753116}
   - component: {fileID: 64457712232211922}
+  - component: {fileID: 114144286882433194}
   m_Layer: 0
   m_Name: Shield Metal
   m_TagString: Untagged
@@ -96,6 +97,20 @@ MeshCollider:
   m_InflateMesh: 1
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 4344a84e7e8ea29419e81930e6e13380, type: 3}
+--- !u!114 &114144286882433194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1132328492692534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4f3335fd45f004fa9570d7c6bdda22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreesPerSecond: 45
+  amplitude: 0.1
+  frequency: 0.5
 --- !u!114 &114819987706753116
 MonoBehaviour:
   m_ObjectHideFlags: 1
