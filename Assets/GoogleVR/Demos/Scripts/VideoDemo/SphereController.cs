@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class SphereController : MonoBehaviour {
     private Transform enemyUI;
     private float maxLifeTime;
-	// Use this for initialization
-	void Start () {
+
+    public int currentPos, pathNum;
+    // Use this for initialization
+    void Start () {
         maxLifeTime = 0;
-        Destroy(gameObject, 6.0f);
+        StartCoroutine("DestroyInSixSeconds");
         enemyUI = GameObject.Find("EnemyUI").transform;
 	}
 	
@@ -21,7 +23,8 @@ public class SphereController : MonoBehaviour {
         float otherX = enemyUI.position.x;
         if (thisX - otherX > 1)
         {
-            Destroy(this,0.2f);
+            Destroy(gameObject,0.2f);
+            ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
             //Debug.Log("destroyed!");
         }
 	}
@@ -32,11 +35,16 @@ public class SphereController : MonoBehaviour {
         if (other.gameObject.name == "EnemyUI")
         {
             Destroy(other.gameObject);
-            Destroy(this);
-            other = null;
-            enemyUI = null;
+            Destroy(gameObject);
+            ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
 
             SceneManager.LoadScene("gameOverScene", LoadSceneMode.Single);
         }
+    }
+    IEnumerator DestroyInSixSeconds()
+    {
+        yield return new WaitForSeconds(6);
+        ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
+        Destroy(gameObject);
     }
 }

@@ -14,7 +14,7 @@ public class ShieldPowerupController : MonoBehaviour
     void Start()
     {
         maxLifeTime = 0;
-        Destroy(this, 6.0f);
+        StartCoroutine("DestroyInSixSeconds");
         enemyUI = GameObject.Find("EnemyUI").transform;
     }
 
@@ -42,5 +42,12 @@ public class ShieldPowerupController : MonoBehaviour
             ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
         }
     }
+    IEnumerator DestroyInSixSeconds()
+    {
+        yield return new WaitForSeconds(6);
+        ObstacleManager.isAtThisLocationAlready[currentPos,pathNum] = false;
+        Destroy(gameObject);
+    }
+
 
 }

@@ -7,11 +7,13 @@ public class LanePowerupController : MonoBehaviour {
     public float duration = 5;
     private Transform enemyUI;
     private float maxLifeTime;
+
+    public int currentPos, pathNum;
     // Use this for initialization
     void Start()
     {
         maxLifeTime = 0;
-        Destroy(gameObject, 6.0f);
+        StartCoroutine("DestroyInSixSeconds");
         enemyUI = GameObject.Find("EnemyUI").transform;
     }
 
@@ -25,7 +27,8 @@ public class LanePowerupController : MonoBehaviour {
         Debug.Log(otherX);
         if (thisX - otherX > 1)
         {
-            //Destroy(this, 0.2f);
+            Destroy(gameObject, 0.2f);
+            ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
             //Debug.Log("destroyed!");
         }
     }
@@ -37,6 +40,13 @@ public class LanePowerupController : MonoBehaviour {
         {
             GameObject.Find("EnemyCarrier").GetComponent<PowerupManager>().ActivatePowerup(PowerupName.LANE, duration);
             GameObject.Destroy(gameObject);
+            ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
         }
+    }
+    IEnumerator DestroyInSixSeconds()
+    {
+        yield return new WaitForSeconds(6);
+        ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
+        Destroy(gameObject);
     }
 }
