@@ -13192,6 +13192,7 @@ MonoBehaviour:
   Magnet: {fileID: 715872677}
   xSpeedMultiplier: 1.5
   ySpeedMultiplier: 3
+  storeDuration: 10
 --- !u!82 &1470047042
 AudioSource:
   m_ObjectHideFlags: 0
