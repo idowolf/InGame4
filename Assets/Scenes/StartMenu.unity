@@ -298,6 +298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gazeTime: 2
   lifeBar: {fileID: 1401621563}
+  nextScene: level1
 --- !u!212 &134904593
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -541,7 +542,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gazeTime: 2
-  lifeBar: {fileID: 0}
+  lifeBar: {fileID: 1401621563}
+  nextScene: options
 --- !u!114 &153888449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -760,13 +762,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 202669414}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcabccf78e3076f439d9f49839610feb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gazeTime: 2
-  lifeBar: {fileID: 0}
+  lifeBar: {fileID: 1401621563}
+  nextScene: store
 --- !u!114 &202669417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -991,7 +994,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gazeTime: 2
-  lifeBar: {fileID: 0}
+  lifeBar: {fileID: 1401621563}
+  nextScene: credits
 --- !u!114 &224231351
 MonoBehaviour:
   m_ObjectHideFlags: 0

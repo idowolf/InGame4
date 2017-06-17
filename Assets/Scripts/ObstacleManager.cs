@@ -15,7 +15,7 @@ public class ObstacleManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        isAtThisLocationAlready = new bool[40,3];
+        isAtThisLocationAlready = new bool[40,4];
         for (int i = 0; i < 40; i++)
         {
             for (int j = 0; j < 3; j++)
@@ -68,6 +68,7 @@ public class ObstacleManager : MonoBehaviour
         }
         Debug.Log(num + "! this is num");
         Debug.Log("position is: " + pos);
+        Debug.Log(currentPlace +", " + num);
         if (isAtThisLocationAlready[currentPlace, num] == false)
         {
             GameObject.Instantiate(prefab, pos, Quaternion.identity);
