@@ -7810,6 +7810,29 @@ Prefab:
       propertyPath: m_Size.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114899563254936594, guid: 5106b3cfbbac0a345a7f0da1fb9b9668,
+        type: 2}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 1470047042}
+    - target: {fileID: 114899563254936594, guid: 5106b3cfbbac0a345a7f0da1fb9b9668,
+        type: 2}
+      propertyPath: Burst
+      value: 
+      objectReference: {fileID: 4505818964596302, guid: 1c093e00d1c89dd4899d55de2d17dbeb,
+        type: 2}
+    - target: {fileID: 114899563254936594, guid: 5106b3cfbbac0a345a7f0da1fb9b9668,
+        type: 2}
+      propertyPath: Burst1
+      value: 
+      objectReference: {fileID: 4938348690967524, guid: 1c093e00d1c89dd4899d55de2d17dbeb,
+        type: 2}
+    - target: {fileID: 114899563254936594, guid: 5106b3cfbbac0a345a7f0da1fb9b9668,
+        type: 2}
+      propertyPath: Burst2
+      value: 
+      objectReference: {fileID: 4562250865699334, guid: 1c093e00d1c89dd4899d55de2d17dbeb,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 212634856551743098, guid: 5106b3cfbbac0a345a7f0da1fb9b9668, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5106b3cfbbac0a345a7f0da1fb9b9668, type: 2}
@@ -13081,6 +13104,86 @@ MonoBehaviour:
   xSpeedController: {fileID: 1470047043}
   xSpeedMultiplier: 1.5
   ySpeedMultiplier: 1.5
+--- !u!82 &1470047042
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1470047040}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: cc12561e39b5aae45b505dddf69702a3, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &1470047043 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114415831693171852, guid: 5106b3cfbbac0a345a7f0da1fb9b9668,

@@ -32,7 +32,9 @@ public class Teleport : MonoBehaviour {
     public Transform Burst1;
     public Transform Burst2;
     public AudioSource audio;
-
+    Transform burstComponent;
+    ParticleSystem.EmissionModule em1;
+    List<Transform> emch;
 
     private SizeController sizeController = new SizeController();
     private bool isGazed = false;
@@ -45,10 +47,17 @@ public class Teleport : MonoBehaviour {
     {
         sizeController.isTouched = false;
         sizeController = GetComponent<SizeController>();
-        Burst.GetComponent<ParticleSystem>().enableEmission = false;
-        Burst1.GetComponent<ParticleSystem>().enableEmission = false;
-        Burst2.GetComponent<ParticleSystem>().enableEmission = false;
+        burstComponent = GameObject.Instantiate(Burst, enemyUI.transform);
+        emch = new List<Transform>();
+        emch.Add(burstComponent);
+        foreach (Transform child in burstComponent)
+        {
+            emch.Add(child);
+            ParticleSystem.EmissionModule em1 = child.GetComponent<ParticleSystem>().emission;
+            em1.enabled = false;
+        }
         audio = GetComponent<AudioSource>();
+
 
     }
 
@@ -70,9 +79,11 @@ public class Teleport : MonoBehaviour {
         isGazed = true;
         sizeController.isTouched = true;
         GetComponent<EnemyPath>().speed = 2.5f;
-        Burst.GetComponent<ParticleSystem>().enableEmission = true;
-        Burst1.GetComponent<ParticleSystem>().enableEmission = true;
-        Burst2.GetComponent<ParticleSystem>().enableEmission = true;
+        foreach (Transform child in emch)
+        {
+            ParticleSystem.EmissionModule em1 = child.GetComponent<ParticleSystem>().emission;
+            em1.enabled = true;
+        }
         audio.GetComponent<AudioSource>().enabled = true;
         audio.Play();
      
@@ -84,9 +95,11 @@ public class Teleport : MonoBehaviour {
     IEnumerator stopBurst()
     {
         yield return new WaitForSeconds(.1f);
-        Burst.GetComponent<ParticleSystem>().enableEmission = false;
-        Burst1.GetComponent<ParticleSystem>().enableEmission = false;
-        Burst2.GetComponent<ParticleSystem>().enableEmission = false;
+        foreach (Transform child in emch)
+        {
+            ParticleSystem.EmissionModule em1 = child.GetComponent<ParticleSystem>().emission;
+            em1.enabled = false;
+        }
         audio.GetComponent<AudioSource>().enabled = false;
     }
 
