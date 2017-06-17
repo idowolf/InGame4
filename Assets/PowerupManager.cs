@@ -11,6 +11,7 @@ public enum PowerupName
 }
 public class PowerupManager : MonoBehaviour
 {
+    public GameObject ShieldEffect;
     public YAxisMovement yAxisController;
     public SizeController xSpeedController;
     public GameObject Magnet;
@@ -134,10 +135,12 @@ public class PowerupManager : MonoBehaviour
     }
     private void ActivateShieldPowerup()
     {
+        ShieldEffect.SetActive(true);
         spaceshipInvincible = true;
     }
     private void DeactivateShieldPowerup()
     {
+        ShieldEffect.SetActive(false);
         spaceshipInvincible = false;
     }
     public void DestroySpaceshipIfPossible()
