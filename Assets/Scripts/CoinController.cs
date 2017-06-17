@@ -5,10 +5,12 @@ using UnityEngine;
 public class CoinController : MonoBehaviour {
     public static int AmountOfCoins = 0;
     private Transform enemyUI;
+
+    public int currentPos, pathNum;
     // Use this for initialization
     void Start()
     {
-        Destroy(gameObject, 6.0f);
+        StartCoroutine("DestroyInSixSeconds");
         enemyUI = GameObject.Find("EnemyUI").transform;
     }
 
@@ -20,7 +22,9 @@ public class CoinController : MonoBehaviour {
         float otherX = enemyUI.position.x;
         if (thisX - otherX > 1)
         {
-            Destroy(this, 0.2f);
+            Destroy(gameObject, 0.2f);
+            ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
+            //Debug.Log("destroyed!");
         }
     }
 
@@ -30,7 +34,14 @@ public class CoinController : MonoBehaviour {
         {
             AmountOfCoins++;
             GameObject.Destroy(gameObject);
+            ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
         }
+    }
+    IEnumerator DestroyInSixSeconds()
+    {
+        yield return new WaitForSeconds(6);
+        ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
+        Destroy(gameObject);
     }
 
 }
