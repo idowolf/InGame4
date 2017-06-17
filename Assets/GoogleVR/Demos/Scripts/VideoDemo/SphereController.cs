@@ -38,7 +38,7 @@ public class SphereController : MonoBehaviour {
             Destroy(gameObject);
             ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
             Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
-            SceneManager.LoadScene("gameOverScene", LoadSceneMode.Single);
+            SceneManager.LoadScene("level2", LoadSceneMode.Single);
         }
     }
     IEnumerator DestroyInSixSeconds()
