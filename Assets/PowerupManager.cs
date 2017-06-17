@@ -83,7 +83,10 @@ public class PowerupManager : MonoBehaviour
 
         durations[(int)powerUp] += duration;
     }
-
+    public bool IsPowerupActive(PowerupName powerup)
+    {
+        return powerupsActive[(int)powerup];
+    }
     public void DeactivatePowerup(int i)
     {
         elapsedTimes[i] = 0;
