@@ -33,7 +33,8 @@ public class SphereController : MonoBehaviour {
     {
         if (other.gameObject.name == "EnemyUI")
         {
-            Destroy(other.gameObject);
+            if(!GameObject.Find("EnemyCarrier").GetComponent<PowerupManager>().IsPowerupActive(PowerupName.SHIELD))
+                Destroy(other.gameObject);
             Destroy(gameObject);
             ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
 
