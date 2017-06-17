@@ -17035,8 +17035,8 @@ MonoBehaviour:
   enemyCarrier: {fileID: 1470047040}
   distanceFromCarrier: 10
   prefab: {fileID: 1132328492692534, guid: 6055e625ba33a79448d20faa6efeaa73, type: 2}
-  timeToSpawn: 5
-  timeToStart: 7
+  timeToSpawn: 1
+  timeToStart: 1
 --- !u!114 &1850027316
 MonoBehaviour:
   m_ObjectHideFlags: 0

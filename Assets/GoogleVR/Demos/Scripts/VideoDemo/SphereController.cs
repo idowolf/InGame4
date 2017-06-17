@@ -33,12 +33,13 @@ public class SphereController : MonoBehaviour {
     {
         if (other.gameObject.name == "EnemyUI")
         {
-            if(!GameObject.Find("EnemyCarrier").GetComponent<PowerupManager>().IsPowerupActive(PowerupName.SHIELD))
-                Destroy(other.gameObject);
-            Destroy(gameObject);
             ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
-
-            SceneManager.LoadScene("gameOverScene", LoadSceneMode.Single);
+            Destroy(gameObject, 0.1f);
+            if (!GameObject.Find("EnemyCarrier").GetComponent<PowerupManager>().IsPowerupActive(PowerupName.SHIELD))
+            {
+                Destroy(other.gameObject);
+                SceneManager.LoadScene("gameOverScene", LoadSceneMode.Single);
+            }
         }
     }
     IEnumerator DestroyInSixSeconds()
