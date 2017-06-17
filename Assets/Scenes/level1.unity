@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16492113, g: 0.10802414, b: 0.22309715, a: 1}
+  m_IndirectSpecularColor: {r: 0.1648978, g: 0.1086768, b: 0.22396868, a: 1}
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -6184,7 +6184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCarrier: {fileID: 1470047040}
   distanceFromCarrier: 10
-  prefab: {fileID: 1346902699438084, guid: 94ea886a62ea7cf4f94ef5955e969810, type: 2}
+  prefab: {fileID: 1905377062101168, guid: 055cf4736c3ff114f91a64bdf083a379, type: 2}
   timeToSpawn: 5
   timeToStart: 7
 --- !u!114 &674391848
@@ -8263,8 +8263,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCarrier: {fileID: 1470047040}
-  distanceFromCarrier: 10
-  prefab: {fileID: 1346902699438084, guid: acc554817a96a4d488cb702eef9cf51a, type: 2}
+  distanceFromCarrier: 5
+  prefab: {fileID: 1281576491174798, guid: c607c4ce97e0f2b47bf52cdc4953025e, type: 2}
   timeToSpawn: 5
   timeToStart: 7
 --- !u!114 &911209638
@@ -11394,7 +11394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCarrier: {fileID: 1470047040}
   distanceFromCarrier: 10
-  prefab: {fileID: 1346902699438084, guid: 45a2eb576b327234fb9e60c55797b4a0, type: 2}
+  prefab: {fileID: 151664, guid: fa49e460baf435b4780da7196c2ab473, type: 2}
   timeToSpawn: 5
   timeToStart: 7
 --- !u!54 &1236395897
@@ -14977,7 +14977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCarrier: {fileID: 1470047040}
   distanceFromCarrier: 10
-  prefab: {fileID: 1346902699438084, guid: f413826a1a024f2448f54254f7b84e7f, type: 2}
+  prefab: {fileID: 1199944230282344, guid: e3567f4768bbf4f4e83abc7833aeac51, type: 2}
   timeToSpawn: 5
   timeToStart: 7
 --- !u!114 &1644147013
@@ -15843,7 +15843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCarrier: {fileID: 1470047040}
   distanceFromCarrier: 10
-  prefab: {fileID: 1346902699438084, guid: 3976870d757f9ba42a7919ff5848c71a, type: 2}
+  prefab: {fileID: 1113893274166124, guid: 8a50b96bd70e0fa4cb7372ece7a40067, type: 2}
   timeToSpawn: 5
   timeToStart: 7
 --- !u!114 &1756462449
@@ -16921,7 +16921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCarrier: {fileID: 1470047040}
   distanceFromCarrier: 10
-  prefab: {fileID: 1346902699438084, guid: fdc02ccc0d6cda64d99d49b71b582bbc, type: 2}
+  prefab: {fileID: 1132328492692534, guid: 6055e625ba33a79448d20faa6efeaa73, type: 2}
   timeToSpawn: 5
   timeToStart: 7
 --- !u!114 &1850027316
