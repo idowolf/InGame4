@@ -8,11 +8,13 @@ public class ShieldPowerupController : MonoBehaviour
     public float duration = 5;
     private Transform enemyUI;
     private float maxLifeTime;
+
+    public int currentPos, pathNum;
     // Use this for initialization
     void Start()
     {
         maxLifeTime = 0;
-        Destroy(gameObject, 6.0f);
+        Destroy(this, 6.0f);
         enemyUI = GameObject.Find("EnemyUI").transform;
     }
 
@@ -25,8 +27,8 @@ public class ShieldPowerupController : MonoBehaviour
         float otherX = enemyUI.position.x;
         if (thisX - otherX > 1)
         {
-            Destroy(this, 0.2f);
-            //Debug.Log("destroyed!");
+            Destroy(gameObject, 0.2f);
+            ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
         }
     }
 
@@ -36,7 +38,8 @@ public class ShieldPowerupController : MonoBehaviour
         if (other.gameObject.name == "EnemyUI")
         {
             GameObject.Find("EnemyCarrier").GetComponent<PowerupManager>().ActivatePowerup(PowerupName.SHIELD, duration);
-            GameObject.Destroy(this);
+            GameObject.Destroy(gameObject);
+            ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
         }
     }
 

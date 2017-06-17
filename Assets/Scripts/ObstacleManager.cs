@@ -10,10 +10,19 @@ public class ObstacleManager : MonoBehaviour
     public float timeToSpawn = 5, timeToStart = 7;
 
     private float elapsedTimeFromSpawn, elapsedTimeFromStart;
+    public static bool[,] isAtThisLocationAlready;
 
     // Use this for initialization
     void Start()
     {
+        isAtThisLocationAlready = new bool[40,3];
+        for (int i = 0; i < 40; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                isAtThisLocationAlready[i, j] = false;
+            }
+        }
         dataUpdate();
         elapsedTimeFromSpawn = 0;
         elapsedTimeFromStart = 0;
@@ -43,6 +52,8 @@ public class ObstacleManager : MonoBehaviour
     void deployObstacle(int num)
     {
         num = Random.Range(1, 4);
+        int currentPlace = this.GetComponent<EnemyPath>().current;
+
         Vector3 pos = this.GetComponent<Transform>().position;
         if (num == 1)
         {
@@ -58,7 +69,11 @@ public class ObstacleManager : MonoBehaviour
         }
         Debug.Log(num + "! this is num");
         Debug.Log("position is: " + pos);
-        GameObject.Instantiate(prefab, pos, Quaternion.identity);
+        if (isAtThisLocationAlready[currentPlace, num] == false)
+        {
+            GameObject.Instantiate(prefab, pos, Quaternion.identity);
+            isAtThisLocationAlready[currentPlace, num] = true;
+        }
 
 
     }
