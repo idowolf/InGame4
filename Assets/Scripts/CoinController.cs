@@ -22,7 +22,7 @@ public class CoinController : MonoBehaviour {
         float otherX = enemyUI.position.x;
         if (thisX - otherX > 1)
         {
-            Destroy(gameObject, 0.2f);
+            Destroy(gameObject, 2.0f);
             ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
             //Debug.Log("destroyed!");
         }

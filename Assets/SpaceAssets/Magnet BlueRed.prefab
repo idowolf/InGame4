@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23071993197431030}
   - component: {fileID: 114616115236532322}
   - component: {fileID: 64492001167555996}
+  - component: {fileID: 114880096986563166}
   m_Layer: 0
   m_Name: Magnet BlueRed
   m_TagString: Untagged
@@ -110,3 +111,17 @@ MonoBehaviour:
   duration: 5
   currentPos: 0
   pathNum: 0
+--- !u!114 &114880096986563166
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1113893274166124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4f3335fd45f004fa9570d7c6bdda22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreesPerSecond: 45
+  amplitude: 0.1
+  frequency: 0.5

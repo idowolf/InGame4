@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23099233523722678}
   - component: {fileID: 114842485224237956}
   - component: {fileID: 64214157061898948}
+  - component: {fileID: 114253765600392226}
   m_Layer: 0
   m_Name: Arrows Green
   m_TagString: Untagged
@@ -96,6 +97,20 @@ MeshCollider:
   m_InflateMesh: 1
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 7ac2319ff4942e64d8b25c0a7b6295fb, type: 3}
+--- !u!114 &114253765600392226
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1905377062101168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4f3335fd45f004fa9570d7c6bdda22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreesPerSecond: 45
+  amplitude: 0.1
+  frequency: 0.5
 --- !u!114 &114842485224237956
 MonoBehaviour:
   m_ObjectHideFlags: 1

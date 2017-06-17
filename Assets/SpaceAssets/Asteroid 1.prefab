@@ -62,6 +62,7 @@ GameObject:
   - component: {fileID: 11425652}
   - component: {fileID: 114603200321949984}
   - component: {fileID: 135740829964400346}
+  - component: {fileID: 114055803292665634}
   m_Layer: 0
   m_Name: Asteroid 1
   m_TagString: Enemy
@@ -363,6 +364,20 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 151664}
   m_IsPrefabParent: 1
+--- !u!114 &114055803292665634
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4f3335fd45f004fa9570d7c6bdda22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreesPerSecond: 45
+  amplitude: 0.1
+  frequency: 0.5
 --- !u!114 &114603200321949984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -374,6 +389,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca34a24c239cf3a49b4bedf3781faa0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 1923038103878798, guid: 181557bcf9d6aa74d89754d7f73e1373,
+    type: 2}
   currentPos: 0
   pathNum: 0
 --- !u!135 &135740829964400346

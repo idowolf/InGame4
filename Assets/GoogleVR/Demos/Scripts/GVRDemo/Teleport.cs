@@ -86,11 +86,16 @@ public class Teleport : MonoBehaviour {
         }
         audio.GetComponent<AudioSource>().enabled = true;
         audio.Play();
-     
-
-        
+             
     }
+    public void PlayerStopGazedAtMe()
+        {
+            sizeController.isTouched = false;
+            //GetComponent<EnemyPath>().speed = 0;
+            isGazed = false;
+            StartCoroutine(stopBurst());
 
+        }
 
     IEnumerator stopBurst()
     {
@@ -104,14 +109,7 @@ public class Teleport : MonoBehaviour {
     }
 
 
-    public void PlayerStopGazedAtMe()
-    {
-        sizeController.isTouched = false;
-        //GetComponent<EnemyPath>().speed = 0;
-        isGazed = false;
-        StartCoroutine(stopBurst());
-
-    }
+    
 
     public void SetPathHeight()
     {
