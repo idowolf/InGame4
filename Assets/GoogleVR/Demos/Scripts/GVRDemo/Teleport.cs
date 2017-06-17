@@ -28,11 +28,8 @@ public class Teleport : MonoBehaviour {
     //public EnemyManager EnemyManager;
     public GameObject playerCamera;
     public YAxisMovement enemyUI;
-    public Transform Burst;
-    public Transform Burst1;
-    public Transform Burst2;
     public AudioSource audio;
-    Transform burstComponent;
+    public Transform burstComponent;
     ParticleSystem.EmissionModule em1;
     List<Transform> emch;
 
@@ -47,7 +44,6 @@ public class Teleport : MonoBehaviour {
     {
         sizeController.isTouched = false;
         sizeController = GetComponent<SizeController>();
-        burstComponent = GameObject.Instantiate(Burst, enemyUI.transform);
         emch = new List<Transform>();
         emch.Add(burstComponent);
         foreach (Transform child in burstComponent)
@@ -86,11 +82,16 @@ public class Teleport : MonoBehaviour {
         }
         audio.GetComponent<AudioSource>().enabled = true;
         audio.Play();
-     
-
-        
+             
     }
+    public void PlayerStopGazedAtMe()
+        {
+            sizeController.isTouched = false;
+            //GetComponent<EnemyPath>().speed = 0;
+            isGazed = false;
+            StartCoroutine(stopBurst());
 
+        }
 
     IEnumerator stopBurst()
     {
@@ -104,14 +105,7 @@ public class Teleport : MonoBehaviour {
     }
 
 
-    public void PlayerStopGazedAtMe()
-    {
-        sizeController.isTouched = false;
-        //GetComponent<EnemyPath>().speed = 0;
-        isGazed = false;
-        StartCoroutine(stopBurst());
-
-    }
+    
 
     public void SetPathHeight()
     {
