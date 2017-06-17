@@ -8,8 +8,9 @@ public class PlayButton : MonoBehaviour {
     private float timer;
     private bool gazedAt;
     public LifeBar lifeBar;
-	// Use this for initialization
-	void Start () {
+    public string nextScene = "level1";
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -40,7 +41,7 @@ public class PlayButton : MonoBehaviour {
     }
     public void PointerDown()
     {
-        SceneManager.LoadScene("level1");
+        SceneManager.LoadScene(nextScene);
     }
     public void PointerDownExit()
     {
