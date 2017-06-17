@@ -11,7 +11,7 @@ public enum PowerupName
 public class PowerupManager : MonoBehaviour
 {
     public YAxisMovement yAxisController;
-    public EnemyPath xSpeedController;
+    public SizeController xSpeedController;
     public float xSpeedMultiplier = 1.5f, ySpeedMultiplier = 1.5f;
 
     private bool[] powerupsActive;
@@ -22,7 +22,7 @@ public class PowerupManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        initXSpeed = xSpeedController.speed;
+        initXSpeed = xSpeedController.speedMultiplier;
         initYSpeed = yAxisController.speed;
         powerupsActive = new bool[3];
         elapsedTimes = new float[powerupsActive.Length];
@@ -87,11 +87,11 @@ public class PowerupManager : MonoBehaviour
     }
     private void ActivateSpeedPowerup()
     {
-        xSpeedController.speed *= xSpeedMultiplier;
+        xSpeedController.speedMultiplier *= xSpeedMultiplier;
     }
     private void DeactivateSpeedPowerup()
     {
-        xSpeedController.speed = initXSpeed;
+        xSpeedController.speedMultiplier = initXSpeed;
     }
     private void ActivateLanePowerup()
     {
