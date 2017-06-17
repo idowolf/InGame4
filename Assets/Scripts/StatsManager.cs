@@ -158,7 +158,6 @@ public class StatsManager : MonoBehaviour {
         {
             maxSpeed = currentSpeed;
             speedRecord.value = maxSpeed;
-            Debug.Log("speed: " + currentSpeed);
         }
     }
 
@@ -189,13 +188,10 @@ public class StatsManager : MonoBehaviour {
     public void printRecordTable()
     {
         //StatsNode temp;
-        //Debug.Log(maxSpeedList.Count);
         foreach (StatsNode item in fastRotList)
         {
-            Debug.Log(item.value);
         }
         //int num = Math.Min(3, maxSpeedList.Count);
-        //Debug.Log(maxSpeedList);
     }
 
    

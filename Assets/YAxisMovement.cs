@@ -20,9 +20,6 @@ public class YAxisMovement : MonoBehaviour {
         Vector3 eu = transform.localEulerAngles;
         eu.y += 90;
         transform.localEulerAngles = eu;
-        Debug.Log(eu);
-
-
     }
 
     public void SetYTarget(float yTarget)

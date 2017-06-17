@@ -21,13 +21,11 @@ public class CoinController : MonoBehaviour {
         if (thisX - otherX > 1)
         {
             Destroy(this, 0.2f);
-            //Debug.Log("destroyed!");
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        Debug.Log("collision name = " + other.gameObject.name);
         if (other.gameObject.name == "EnemyUI")
         {
             AmountOfCoins++;

@@ -22,17 +22,14 @@ public class LanePowerupController : MonoBehaviour {
         maxLifeTime += Time.deltaTime;
         float thisX = this.transform.position.x;
         float otherX = enemyUI.position.x;
-        Debug.Log(otherX);
         if (thisX - otherX > 1)
         {
-            //Destroy(this, 0.2f);
-            //Debug.Log("destroyed!");
+            Destroy(this, 0.2f);
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        Debug.Log("collision name = " + other.gameObject.name);
         if (other.gameObject.name == "EnemyUI")
         {
             GameObject.Find("EnemyCarrier").GetComponent<PowerupManager>().ActivatePowerup(PowerupName.LANE, duration);

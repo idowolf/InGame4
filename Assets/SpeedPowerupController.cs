@@ -26,17 +26,15 @@ public class SpeedPowerupController : MonoBehaviour
         if (thisX - otherX > 1)
         {
             Destroy(this, 0.2f);
-            //Debug.Log("destroyed!");
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        Debug.Log("collision name = " + other.gameObject.name);
         if (other.gameObject.name == "EnemyUI")
         {
             GameObject.Find("EnemyCarrier").GetComponent<PowerupManager>().ActivatePowerup(PowerupName.SPEED, duration);
-            GameObject.Destroy(this);
+            GameObject.Destroy(gameObject);
         }
     }
 }

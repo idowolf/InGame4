@@ -26,7 +26,6 @@ public class ObstacleManager : MonoBehaviour
 
         elapsedTimeFromSpawn += Time.deltaTime;
         elapsedTimeFromStart += Time.deltaTime;
-        //Debug.Log(elapsedTimeFromStart);
         if (elapsedTimeFromSpawn > timeToSpawn)
         {
             elapsedTimeFromSpawn = 0;
@@ -56,8 +55,6 @@ public class ObstacleManager : MonoBehaviour
         {
             pos.y = 4;
         }
-        Debug.Log(num + "! this is num");
-        Debug.Log("position is: " + pos);
         GameObject.Instantiate(prefab, pos, Quaternion.identity);
 
 
