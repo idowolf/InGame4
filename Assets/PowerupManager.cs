@@ -12,7 +12,6 @@ public enum PowerupName
 public class PowerupManager : MonoBehaviour
 {
     public GameObject ShieldEffect;
-    public GameObject MagnetEffect;
     public YAxisMovement yAxisController;
     public SizeController xSpeedController;
     public GameObject Magnet;

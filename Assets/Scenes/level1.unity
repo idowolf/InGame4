@@ -4058,7 +4058,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4060441451107072, guid: 750cbe36b6a1c294faf63dda1b3073cd, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1560324262224134, guid: 750cbe36b6a1c294faf63dda1b3073cd, type: 2}
       propertyPath: m_IsActive
@@ -6243,7 +6243,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &674391845
 Transform:
   m_ObjectHideFlags: 0
@@ -8007,8 +8007,7 @@ Prefab:
         type: 2}
       propertyPath: Burst
       value: 
-      objectReference: {fileID: 4505818964596302, guid: 1c093e00d1c89dd4899d55de2d17dbeb,
-        type: 2}
+      objectReference: {fileID: 1844878885}
     - target: {fileID: 114899563254936594, guid: 5106b3cfbbac0a345a7f0da1fb9b9668,
         type: 2}
       propertyPath: Burst1
@@ -8328,7 +8327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &911209635
 Transform:
   m_ObjectHideFlags: 0
@@ -11460,7 +11459,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1236395894
 Transform:
   m_ObjectHideFlags: 0
@@ -13299,7 +13298,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShieldEffect: {fileID: 1908776251}
-  MagnetEffect: {fileID: 0}
   yAxisController: {fileID: 1325380616}
   xSpeedController: {fileID: 1470047043}
   Magnet: {fileID: 715872677}
@@ -14838,6 +14836,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8bd35a3ee0d9267439d57779a65740d4, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1628961441
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1039597764}
+    m_Modifications:
+    - target: {fileID: 4505818964596302, guid: 1c093e00d1c89dd4899d55de2d17dbeb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505818964596302, guid: 1c093e00d1c89dd4899d55de2d17dbeb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505818964596302, guid: 1c093e00d1c89dd4899d55de2d17dbeb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505818964596302, guid: 1c093e00d1c89dd4899d55de2d17dbeb, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505818964596302, guid: 1c093e00d1c89dd4899d55de2d17dbeb, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505818964596302, guid: 1c093e00d1c89dd4899d55de2d17dbeb, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505818964596302, guid: 1c093e00d1c89dd4899d55de2d17dbeb, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505818964596302, guid: 1c093e00d1c89dd4899d55de2d17dbeb, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1c093e00d1c89dd4899d55de2d17dbeb, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1631225240
 GameObject:
   m_ObjectHideFlags: 0
@@ -15048,7 +15088,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1644147010
 Transform:
   m_ObjectHideFlags: 0
@@ -15914,7 +15954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1756462446
 Transform:
   m_ObjectHideFlags: 0
@@ -16947,6 +16987,11 @@ Transform:
   m_Father: {fileID: 1921010553}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1844878885 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4505818964596302, guid: 1c093e00d1c89dd4899d55de2d17dbeb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1628961441}
 --- !u!1 &1846852080
 GameObject:
   m_ObjectHideFlags: 0

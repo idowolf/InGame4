@@ -29,8 +29,6 @@ public class Teleport : MonoBehaviour {
     public GameObject playerCamera;
     public YAxisMovement enemyUI;
     public Transform Burst;
-    public Transform Burst1;
-    public Transform Burst2;
     public AudioSource audio;
     Transform burstComponent;
     ParticleSystem.EmissionModule em1;
@@ -47,7 +45,6 @@ public class Teleport : MonoBehaviour {
     {
         sizeController.isTouched = false;
         sizeController = GetComponent<SizeController>();
-        burstComponent = GameObject.Instantiate(Burst, enemyUI.transform);
         emch = new List<Transform>();
         emch.Add(burstComponent);
         foreach (Transform child in burstComponent)
