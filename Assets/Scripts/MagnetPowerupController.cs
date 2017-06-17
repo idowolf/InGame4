@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SpeedPowerupController : MonoBehaviour
+public class MagnetPowerupController : MonoBehaviour
 {
     public float duration = 5;
     private Transform enemyUI;
@@ -29,14 +29,14 @@ public class SpeedPowerupController : MonoBehaviour
         {
             Destroy(gameObject, 0.2f);
             ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
-                    }
+        }
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.name == "EnemyUI" || other.gameObject.name == "Magnet")
         {
-            GameObject.Find("EnemyCarrier").GetComponent<PowerupManager>().ActivatePowerup(PowerupName.SPEED, duration);
+            GameObject.Find("EnemyCarrier").GetComponent<PowerupManager>().ActivatePowerup(PowerupName.MAGNET, duration);
             GameObject.Destroy(gameObject);
             ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
         }

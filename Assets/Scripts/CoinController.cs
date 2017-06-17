@@ -30,7 +30,7 @@ public class CoinController : MonoBehaviour {
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.name == "EnemyUI")
+        if (other.gameObject.name == "EnemyUI" || other.gameObject.name == "Magnet")
         {
             AmountOfCoins++;
             GameObject.Destroy(gameObject);

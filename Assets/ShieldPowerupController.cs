@@ -34,7 +34,7 @@ public class ShieldPowerupController : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.name == "EnemyUI")
+        if (other.gameObject.name == "EnemyUI" || other.gameObject.name == "Magnet")
         {
             GameObject.Find("EnemyCarrier").GetComponent<PowerupManager>().ActivatePowerup(PowerupName.SHIELD, duration);
             GameObject.Destroy(gameObject);

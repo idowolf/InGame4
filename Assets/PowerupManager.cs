@@ -6,13 +6,16 @@ public enum PowerupName
 {
     SPEED,
     LANE,
-    SHIELD
+    SHIELD,
+    MAGNET
 }
 public class PowerupManager : MonoBehaviour
 {
     public YAxisMovement yAxisController;
     public SizeController xSpeedController;
+    public GameObject Magnet;
     public float xSpeedMultiplier = 1.5f, ySpeedMultiplier = 1.5f;
+
 
     private bool[] powerupsActive;
     private float[] elapsedTimes;
@@ -24,7 +27,7 @@ public class PowerupManager : MonoBehaviour
     {
         initXSpeed = xSpeedController.speedMultiplier;
         initYSpeed = yAxisController.speed;
-        powerupsActive = new bool[3];
+        powerupsActive = new bool[System.Enum.GetNames(typeof(PowerupName)).Length];
         elapsedTimes = new float[powerupsActive.Length];
         durations = new float[powerupsActive.Length];
     }
@@ -61,6 +64,9 @@ public class PowerupManager : MonoBehaviour
                 case PowerupName.SHIELD:
                     ActivateShieldPowerup();
                     break;
+                case PowerupName.MAGNET:
+                    ActivateMagnetPowerup();
+                    break;
             }
         }
 
@@ -83,7 +89,18 @@ public class PowerupManager : MonoBehaviour
             case PowerupName.SHIELD:
                 DeactivateShieldPowerup();
                 break;
+            case PowerupName.MAGNET:
+                DeactivateMagnetPowerup();
+                break;
         }
+    }
+    private void ActivateMagnetPowerup()
+    {
+        Magnet.SetActive(true);
+    }
+    private void DeactivateMagnetPowerup()
+    {
+        Magnet.SetActive(false);
     }
     private void ActivateSpeedPowerup()
     {
