@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class BlinkArrowSpaceship : MonoBehaviour
 {
+    private bool OnLookAtSpaceship;
+    public GameObject text;
+    public GameObject text2;
     public Transform EnemyCarrier;
     private MeshRenderer renderer;
     public float distance = 1;
@@ -18,9 +21,11 @@ public class BlinkArrowSpaceship : MonoBehaviour
     {
         float spY = EnemyCarrier.eulerAngles.y + (EnemyCarrier.eulerAngles.y < 0 ? 360 : 0);
         float myY = transform.eulerAngles.y + (transform.eulerAngles.y < 0 ? 360 : 0);
-        Debug.Log(myY);
         if (Mathf.Abs(spY - myY) > distance)
         {
+            OnLookAtSpaceship = false;
+            text.SetActive(true);
+            text2.SetActive(false);
             Vector3 rot = transform.eulerAngles;
             bool flg1 = ind(spY, 180, 360) && ind(myY, 180, 360) && myY < spY;
             bool flg2 = ind(spY, 0, 180) && ind(myY, 0, 180) && myY < spY;
@@ -41,6 +46,12 @@ public class BlinkArrowSpaceship : MonoBehaviour
         }
         else
         {
+            text.SetActive(false);
+            if (!OnLookAtSpaceship)
+            {
+                text2.SetActive(true);
+                OnLookAtSpaceship = true;
+            }
             renderer.enabled = false;
             if (disableWhenTargetReached)
             {
