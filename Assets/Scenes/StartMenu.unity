@@ -1975,6 +1975,7 @@ Transform:
   - {fileID: 1259821880}
   - {fileID: 848404733}
   - {fileID: 1775400482}
+  - {fileID: 1880660156}
   m_Father: {fileID: 907292808}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3525,6 +3526,53 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1880660155
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 959308593}
+    m_Modifications:
+    - target: {fileID: 4769254522466154, guid: 420dbcbd90acd2e49ba9cc89207dc0bd, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769254522466154, guid: 420dbcbd90acd2e49ba9cc89207dc0bd, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769254522466154, guid: 420dbcbd90acd2e49ba9cc89207dc0bd, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769254522466154, guid: 420dbcbd90acd2e49ba9cc89207dc0bd, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769254522466154, guid: 420dbcbd90acd2e49ba9cc89207dc0bd, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769254522466154, guid: 420dbcbd90acd2e49ba9cc89207dc0bd, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769254522466154, guid: 420dbcbd90acd2e49ba9cc89207dc0bd, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769254522466154, guid: 420dbcbd90acd2e49ba9cc89207dc0bd, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 420dbcbd90acd2e49ba9cc89207dc0bd, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1880660156 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4769254522466154, guid: 420dbcbd90acd2e49ba9cc89207dc0bd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1880660155}
 --- !u!1 &1905655130
 GameObject:
   m_ObjectHideFlags: 0

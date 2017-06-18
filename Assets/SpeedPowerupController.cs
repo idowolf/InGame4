@@ -24,7 +24,7 @@ public class SpeedPowerupController : MonoBehaviour
         transform.position = transform.position + Vector3.zero;
         maxLifeTime += Time.deltaTime;
         float thisX = this.transform.position.x;
-        float otherX = enemyUI.position.x;
+            float otherX = enemyUI.position.x;
         if (thisX - otherX > 1)
         {
             Destroy(gameObject, 2.0f);
