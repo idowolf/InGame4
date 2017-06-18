@@ -8,6 +8,7 @@ public class SphereController : MonoBehaviour {
     private float maxLifeTime;
     public GameObject explosionPrefab;
     public int currentPos, pathNum;
+    bool destroyed;
     // Use this for initialization
     void Start () {
         maxLifeTime = 0;
@@ -23,7 +24,10 @@ public class SphereController : MonoBehaviour {
         float otherX = enemyUI.position.x;
         if (thisX - otherX > 1)
         {
-            Destroy(gameObject,2.0f);
+            if (!destroyed)
+            {
+                Destroy(gameObject, 2.0f);
+            }
             ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
             //Debug.Log("destroyed!");
         }
@@ -36,18 +40,28 @@ public class SphereController : MonoBehaviour {
             Vector3 explosionPos = transform.position;
             Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
             ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
-            Destroy(gameObject, 0.1f);
             if (!GameObject.Find("EnemyCarrier").GetComponent<PowerupManager>().IsPowerupActive(PowerupName.SHIELD))
             {
+                destroyed = true;
+                gameObject.transform.localScale = Vector3.zero;
                 Destroy(other.gameObject);
-                SceneManager.LoadScene("gameOverScene", LoadSceneMode.Single);
+                StartCoroutine("DelayedChangeScene");
             }
         }
     }
     IEnumerator DestroyInSixSeconds()
     {
         yield return new WaitForSeconds(6);
-        ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
-        Destroy(gameObject);
+        if (!destroyed)
+        {
+            ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
+            Destroy(gameObject);
+        }
+    }
+    IEnumerator DelayedChangeScene()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("gameOverScene", LoadSceneMode.Single);
+
     }
 }
