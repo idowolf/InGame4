@@ -45,7 +45,7 @@ public class SphereController : MonoBehaviour {
                 destroyed = true;
                 gameObject.transform.localScale = Vector3.zero;
                 Destroy(other.gameObject);
-                StartCoroutine("DelayedChangeScene");
+                StartCoroutine(GameObject.Find("EnemyCarrier").GetComponent<Teleport>().DelayedChangeScene());
             }
         }
     }
@@ -58,10 +58,5 @@ public class SphereController : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-    IEnumerator DelayedChangeScene()
-    {
-        yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("gameOverScene", LoadSceneMode.Single);
 
-    }
 }

@@ -21,7 +21,6 @@ public class BlinkArrowSpaceship : MonoBehaviour
     {
         float spY = EnemyCarrier.eulerAngles.y + (EnemyCarrier.eulerAngles.y < 0 ? 360 : 0);
         float myY = transform.eulerAngles.y + (transform.eulerAngles.y < 0 ? 360 : 0);
-        Debug.Log(myY);
         if (Mathf.Abs(spY - myY) > distance)
         {
             OnLookAtSpaceship = false;

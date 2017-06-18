@@ -15,6 +15,8 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+
 [RequireComponent(typeof(Collider))]
 public class Teleport : MonoBehaviour {
     //private Vector3 startingPosition;
@@ -114,21 +116,26 @@ public class Teleport : MonoBehaviour {
         //newPosition = enemyUI.transform.localPosition;
         if (camRotX < 330 && camRotX >= 275)
         {
-            enemyUI.SetYTarget(2);
+            enemyUI.SetYTarget(Target.TOP);
 
             return;
         }
         if (camRotX >= -1 && camRotX <85 )
         {
-            enemyUI.SetYTarget(-2);
+            enemyUI.SetYTarget(Target.BOTTOM);
 
             return;
         }
         if (enemyUI.transform.localPosition.y != 0f)
         {
-            enemyUI.SetYTarget(0);
+            enemyUI.SetYTarget(Target.MIDDLE);
             return;
         }
     }
+    public IEnumerator DelayedChangeScene()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("gameOverScene", LoadSceneMode.Single);
 
+    }
 }
