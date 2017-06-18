@@ -14,6 +14,7 @@ public class SphereController : MonoBehaviour {
         maxLifeTime = 0;
         StartCoroutine("DestroyInSixSeconds");
         enemyUI = GameObject.Find("EnemyUI").transform;
+        GetComponent<AudioSource>().Stop();
 	}
 	
 	// Update is called once per frame
@@ -45,6 +46,7 @@ public class SphereController : MonoBehaviour {
                 destroyed = true;
                 gameObject.transform.localScale = Vector3.zero;
                 Destroy(other.gameObject);
+                GetComponent<AudioSource>().Play();
                 StartCoroutine(GameObject.Find("EnemyCarrier").GetComponent<Teleport>().DelayedChangeScene());
             }
         }
