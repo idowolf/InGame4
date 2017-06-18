@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &2680970
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -424,6 +425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &8825282
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -615,6 +617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &10263428
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -806,6 +809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &29903388
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -997,6 +1001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &33647625
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1258,6 +1263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &38747123
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1449,6 +1455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &50005886
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1749,6 +1756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &61668195
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1940,6 +1948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &69177395
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2131,6 +2140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &99277071
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2322,6 +2332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &106914854
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2513,6 +2524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &128594248
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2756,6 +2768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &167321468
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2947,6 +2960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &195481777
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3138,6 +3152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &205645145
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3329,6 +3344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &246223118
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3520,6 +3536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &249086257
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3711,6 +3728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &253449802
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3902,6 +3920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &267781116
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4093,6 +4112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &275422491
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4284,6 +4304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &278992250
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4475,6 +4496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &280695866
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4762,6 +4784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &287722674
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4953,6 +4976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &288007088
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5218,6 +5242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &307128579
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5409,6 +5434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &313043187
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5600,6 +5626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &313818576
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5791,6 +5818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &319619091
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5982,6 +6010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &323993306
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6173,6 +6202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &330648428
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6364,6 +6394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &348670656
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6555,6 +6586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &358358215
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6746,6 +6778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &366731533
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6986,6 +7019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &377657711
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7177,6 +7211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &379573634
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7368,6 +7403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &404894839
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7559,6 +7595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &407076313
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7750,6 +7787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &408667422
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7941,6 +7979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &412061913
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8132,6 +8171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &414081881
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8367,6 +8407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &417301916
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8558,6 +8599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &454424298
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8749,6 +8791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &454709518
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8940,6 +8983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &459215918
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9131,6 +9175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &459644815
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9396,6 +9441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &464202851
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9587,6 +9633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &474047054
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9887,6 +9934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &501248841
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10078,6 +10126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &529116449
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10269,6 +10318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &533972949
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10460,6 +10510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &539462714
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10651,6 +10702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &539489454
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10842,6 +10894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &547268751
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11033,6 +11086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &548031051
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11224,6 +11278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &551519451
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11415,6 +11470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &555167959
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11606,6 +11662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &557239425
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11797,6 +11854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &576319589
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11988,6 +12046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &587478571
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12179,6 +12238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &588678131
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12370,6 +12430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &604338498
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12561,6 +12622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &632236828
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12752,6 +12814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &636419007
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12943,6 +13006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &642704737
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13370,6 +13434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &706240250
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13561,6 +13626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &751428263
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13752,6 +13818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &771811661
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13943,6 +14010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &772954911
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14134,6 +14202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &777285962
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14325,6 +14394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &784976477
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14516,6 +14586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &788633828
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14707,6 +14778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &815995873
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14898,6 +14970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &820305487
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15168,6 +15241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &855791369
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15359,6 +15433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &866640420
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15550,6 +15625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &887591669
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15741,6 +15817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &905940038
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15932,6 +16009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &905947203
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16123,6 +16201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &907094356
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16348,6 +16427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &929268186
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16692,6 +16772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &984678007
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16883,6 +16964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1007020746
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17074,6 +17156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1012838687
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17265,6 +17348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1023460655
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17565,6 +17649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1027920424
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17756,6 +17841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1030148660
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17947,6 +18033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1035355360
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18138,6 +18225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1035654177
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18329,6 +18417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1061988603
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18520,6 +18609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1090971412
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18711,6 +18801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1095048115
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18902,6 +18993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1096447680
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19093,6 +19185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1109400547
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19334,6 +19427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1137488188
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19525,6 +19619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1155767728
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19716,6 +19811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1166060619
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20001,6 +20097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1194905887
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20192,6 +20289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1195798890
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20383,6 +20481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1200412678
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20579,6 +20678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1269885531
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20770,6 +20870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1285715877
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20961,6 +21062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1319372117
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21152,6 +21254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1326484729
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21343,6 +21446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1345846712
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21534,6 +21638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1346337348
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21767,6 +21872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1366438938
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21958,6 +22064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1374167206
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22149,6 +22256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1375263626
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22340,6 +22448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1413215222
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22566,6 +22675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1429930152
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22844,6 +22954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1455467688
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23128,6 +23239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1475415922
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23319,6 +23431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1492385650
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23605,6 +23718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1533368262
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23796,6 +23910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1543092197
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23987,6 +24102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1543881067
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24178,6 +24294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1548749839
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24369,6 +24486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1557348166
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24602,6 +24720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1571744226
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24793,6 +24912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1579208994
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24984,6 +25104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1587654719
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25226,6 +25347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1625755339
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25526,6 +25648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1660605581
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25717,6 +25840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1671066880
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25954,6 +26078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1677830591
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26193,6 +26318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1707867778
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26384,6 +26510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1736974389
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26617,6 +26744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1761144297
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26808,6 +26936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1761145028
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26999,6 +27128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1771038119
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27190,6 +27320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1796206349
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27381,6 +27512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1800895855
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27572,6 +27704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1813545400
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27763,6 +27896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1832993537
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27954,6 +28088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1849665036
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28359,6 +28494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1857036322
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28550,6 +28686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1870103978
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28741,6 +28878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1872772177
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28932,6 +29070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1881500108
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29127,6 +29266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1889683355
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29318,6 +29458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1901317311
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29580,6 +29721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1918426432
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29771,6 +29913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &1919075191
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30031,6 +30174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &2012693235
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30343,6 +30487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &2048780088
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30534,6 +30679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &2077295417
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30730,6 +30876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &2094296138
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30921,6 +31068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &2105312870
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31112,6 +31260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &2131201118
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31434,6 +31583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dbc1987c2e71438c2b0e2b40711ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb, type: 2}
 --- !u!23 &2144023222
 MeshRenderer:
   m_ObjectHideFlags: 0

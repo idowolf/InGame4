@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SilverCoinScript : MonoBehaviour {
+public class CreateCoinSound : MonoBehaviour {
     public GameObject coinSound;
 	// Use this for initialization
 	void Start () {
@@ -13,11 +13,8 @@ public class SilverCoinScript : MonoBehaviour {
 	void Update () {
 		
 	}
-
-    public void gazeAtSilverCoin()
+    public void OnKilledMe()
     {
-        CoinController.AmountOfCoins++;
         GameObject.Instantiate(coinSound);
-        Destroy(gameObject);
     }
 }
