@@ -7,9 +7,10 @@ public class BlinkArrow : MonoBehaviour
     public float camRotMax = 300, camRotMin = 50;
     public bool fromMinToMax, disableWhenTargetReached;
     public float blinkTime = 0.2f;
-    private float elapsedTime;
+    private float elapsedTime, camRotMiddle;
     void Start()
     {
+        camRotMiddle = camRotMin + (camRotMax - camRotMin) / 2;
         renderer = GetComponent<MeshRenderer>();
     }
 
@@ -25,7 +26,7 @@ public class BlinkArrow : MonoBehaviour
         if (flg)
         {
             Vector3 rot = transform.eulerAngles;
-            if ((fromMinToMax && camRoty > camRotMax) || (!fromMinToMax && camRoty < 1))
+            if ((fromMinToMax && camRoty > camRotMax) || (!fromMinToMax && camRoty < camRotMiddle))
             {
                 rot.z = 90;
             }
