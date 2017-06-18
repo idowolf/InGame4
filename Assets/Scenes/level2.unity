@@ -13240,7 +13240,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 195966, guid: 8524bbe5e592a42dc9251484a73c9c7f, type: 2}
       propertyPath: m_Name
-      value: DemoInputManager (1)
+      value: DemoInputManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8524bbe5e592a42dc9251484a73c9c7f, type: 2}
