@@ -40,8 +40,6 @@ public class YAxisMovement : MonoBehaviour {
             eu.y += 90;
         }
 
-
-
         transform.localEulerAngles = eu;
     }
     Vector3 SetRotationEuler()
