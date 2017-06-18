@@ -137,5 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3def093f8da6b54680e95bd9de17dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundPrefab: {fileID: 1413944886503276, guid: 736d8f92eaf53524fb7343a6a88786fb,
+    type: 2}
   currentPos: 0
   pathNum: 0

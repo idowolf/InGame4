@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CoinController : MonoBehaviour {
+    public GameObject soundPrefab;
     public static int AmountOfCoins = 0;
     private Transform enemyUI;
 
@@ -33,6 +34,7 @@ public class CoinController : MonoBehaviour {
         if (other.gameObject.name == "EnemyUI" || other.gameObject.name == "Magnet")
         {
             AmountOfCoins++;
+            GameObject.Instantiate(soundPrefab);
             GameObject.Destroy(gameObject);
             ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
         }

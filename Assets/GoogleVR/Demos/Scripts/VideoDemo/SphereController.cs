@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SphereController : MonoBehaviour {
+    public GameObject explosionSound;
     private Transform enemyUI;
     private float maxLifeTime;
     public GameObject explosionPrefab;
@@ -39,6 +40,7 @@ public class SphereController : MonoBehaviour {
         {
             Vector3 explosionPos = transform.position;
             Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
+            Instantiate(explosionSound);
             ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
             if (!GameObject.Find("EnemyCarrier").GetComponent<PowerupManager>().IsPowerupActive(PowerupName.SHIELD))
             {
