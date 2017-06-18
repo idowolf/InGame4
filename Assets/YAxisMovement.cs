@@ -18,7 +18,7 @@ public class YAxisMovement : MonoBehaviour {
             speed * Time.deltaTime);
         transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
         Vector3 eu = transform.localEulerAngles;
-        eu.y += 90;
+        eu.y +=  90;
         transform.localEulerAngles = eu;
     }
 
