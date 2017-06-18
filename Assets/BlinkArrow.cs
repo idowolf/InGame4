@@ -17,7 +17,6 @@ public class BlinkArrow : MonoBehaviour
     private void Update()
     {
         float camRoty = Camera.main.transform.eulerAngles.y;
-        Debug.Log(camRoty);
         bool flg;
         if (fromMinToMax)
             flg = camRoty > camRotMax || camRoty < camRotMin;

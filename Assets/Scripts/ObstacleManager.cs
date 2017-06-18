@@ -66,9 +66,6 @@ public class ObstacleManager : MonoBehaviour
         {
             pos.y = 4;
         }
-        Debug.Log(num + "! this is num");
-        Debug.Log("position is: " + pos);
-        Debug.Log(currentPlace +", " + num);
         if (isAtThisLocationAlready[currentPlace, num] == false)
         {
             GameObject.Instantiate(prefab, pos, Quaternion.identity);

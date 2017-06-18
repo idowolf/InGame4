@@ -65,6 +65,15 @@ public class Teleport : MonoBehaviour {
         {
             SetPathHeight();
         }
+        else
+        {
+            foreach (Transform child in emch)
+            {
+                ParticleSystem.EmissionModule em1 = child.GetComponent<ParticleSystem>().emission;
+                em1.enabled = false;
+            }
+            audio.GetComponent<AudioSource>().enabled = false;
+        }
     }
     private void TeleportRandomly()
     {
@@ -91,21 +100,8 @@ public class Teleport : MonoBehaviour {
             sizeController.isTouched = false;
             //GetComponent<EnemyPath>().speed = 0;
             isGazed = false;
-            StartCoroutine(stopBurst());
 
         }
-
-    IEnumerator stopBurst()
-    {
-        yield return new WaitForSeconds(.1f);
-        foreach (Transform child in emch)
-        {
-            ParticleSystem.EmissionModule em1 = child.GetComponent<ParticleSystem>().emission;
-            em1.enabled = false;
-        }
-        audio.GetComponent<AudioSource>().enabled = false;
-    }
-
 
     
 
@@ -135,7 +131,7 @@ public class Teleport : MonoBehaviour {
     public IEnumerator DelayedChangeScene()
     {
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("gameOverScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("level2", LoadSceneMode.Single);
 
     }
 }

@@ -10,7 +10,6 @@ public enum Target
 }
 public class YAxisMovement : MonoBehaviour {
     private float yTarget;
-    public float targetX, targetZ;
     private Target target;
     public float speed = 0.1f;
     Vector3 eu;
@@ -24,7 +23,6 @@ public class YAxisMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Vector3 target = new Vector3(transform.localPosition.x, yTarget, transform.localPosition.z);
-        Debug.Log(Vector3.Distance(transform.localPosition, target));
 
         if (Vector3.Distance(transform.localPosition, target) < 0.3f)
         {
