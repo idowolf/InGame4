@@ -1348,7 +1348,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 95
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1701,7 +1701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: {fileID: 1226297637}
   pathRotation: 0
-  speed: 5
+  speed: 7
   loop: 1
   faceAway: 0
   current: 0
@@ -1719,8 +1719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceFromCarrier: 10
   prefab: {fileID: 151664, guid: fa49e460baf435b4780da7196c2ab473, type: 2}
-  timeToSpawn: 2.5
-  timeToStart: 0
+  timeToSpawn: 0.3
 --- !u!54 &1236395897
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -27,7 +27,7 @@ public class LanePowerupController : MonoBehaviour {
         if (thisX - otherX > 1)
         {
             Destroy(gameObject, 2.0f);
-            ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
+            ObstacleManager.isAtThisLocationAlready[currentPos] = false;
             //Debug.Log("destroyed!");
         }
     }
@@ -38,13 +38,13 @@ public class LanePowerupController : MonoBehaviour {
         {
             GameObject.Find("EnemyCarrier").GetComponent<PowerupManager>().ActivatePowerup(PowerupName.LANE, duration);
             GameObject.Destroy(gameObject);
-            ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
+            ObstacleManager.isAtThisLocationAlready[currentPos] = false;
         }
     }
     IEnumerator DestroyInSixSeconds()
     {
         yield return new WaitForSeconds(6);
-        ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
+        ObstacleManager.isAtThisLocationAlready[currentPos] = false;
         Destroy(gameObject);
     }
 }

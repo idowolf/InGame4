@@ -4,41 +4,39 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SphereController : MonoBehaviour {
+    public GameObject m_shotPrefab;
     public GameObject explosionSound;
     private Transform enemyUI;
-    private float maxLifeTime;
     public GameObject explosionPrefab;
     public int currentPos, pathNum;
     bool destroyed;
     // Use this for initialization
     void Start () {
-        maxLifeTime = 0;
-        //StartCoroutine(DestroyInSixSeconds());
         enemyUI = GameObject.Find("EnemyUI").transform;
 	}
 
     public void OnGaze()
     {
-        DestroyMe();
-    }
-    IEnumerator DestroyInSixSeconds()
-    {
-        yield return new WaitForSeconds(6);
-        if(gameObject)
-            SilentDestroyMe();
+        StartCoroutine(DestroyMe());
     }
 
-    public void DestroyMe()
+    IEnumerator DestroyMe()
     {
+        GameObject go = GameObject.Instantiate(m_shotPrefab, enemyUI.position, enemyUI.rotation) as GameObject;
+        yield return new WaitForSeconds(0.1f);
+
         Vector3 explosionPos = transform.position;
+        Destroy(go);
         Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
         Instantiate(explosionSound);
         SilentDestroyMe();
-    }
 
+        if (gameObject)
+            SilentDestroyMe();
+    }
     public void SilentDestroyMe()
     {
-        ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
+        ObstacleManager.isAtThisLocationAlready[currentPos] = false;
         Destroy(gameObject);
     }
 }

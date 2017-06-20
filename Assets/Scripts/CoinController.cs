@@ -24,7 +24,7 @@ public class CoinController : MonoBehaviour {
         if (thisX - otherX > 1)
         {
             Destroy(gameObject, 2.0f);
-            ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
+            ObstacleManager.isAtThisLocationAlready[currentPos] = false;
             //Debug.Log("destroyed!");
         }
     }
@@ -36,13 +36,13 @@ public class CoinController : MonoBehaviour {
             AmountOfCoins++;
             GameObject.Instantiate(soundPrefab);
             GameObject.Destroy(gameObject);
-            ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
+            ObstacleManager.isAtThisLocationAlready[currentPos] = false;
         }
     }
     IEnumerator DestroyInSixSeconds()
     {
         yield return new WaitForSeconds(6);
-        ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
+        ObstacleManager.isAtThisLocationAlready[currentPos] = false;
         Destroy(gameObject);
     }
 

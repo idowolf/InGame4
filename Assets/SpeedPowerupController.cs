@@ -28,7 +28,7 @@ public class SpeedPowerupController : MonoBehaviour
         if (thisX - otherX > 1)
         {
             Destroy(gameObject, 2.0f);
-            ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
+            ObstacleManager.isAtThisLocationAlready[currentPos] = false;
                     }
     }
 
@@ -38,13 +38,13 @@ public class SpeedPowerupController : MonoBehaviour
         {
             GameObject.Find("EnemyCarrier").GetComponent<PowerupManager>().ActivatePowerup(PowerupName.SPEED, duration);
             GameObject.Destroy(gameObject);
-            ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
+            ObstacleManager.isAtThisLocationAlready[currentPos] = false;
         }
     }
     IEnumerator DestroyInSixSeconds()
     {
         yield return new WaitForSeconds(6);
-        ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
+        ObstacleManager.isAtThisLocationAlready[currentPos] = false;
         Destroy(gameObject);
     }
 }
