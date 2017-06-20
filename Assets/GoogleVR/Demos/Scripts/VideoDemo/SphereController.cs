@@ -13,52 +13,32 @@ public class SphereController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         maxLifeTime = 0;
-        StartCoroutine("DestroyInSixSeconds");
+        //StartCoroutine(DestroyInSixSeconds());
         enemyUI = GameObject.Find("EnemyUI").transform;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        transform.position = transform.position + Vector3.zero;
-        maxLifeTime += Time.deltaTime;
-        float thisX = this.transform.position.x;
-        float otherX = enemyUI.position.x;
-        if (thisX - otherX > 1)
-        {
-            if (!destroyed)
-            {
-                Destroy(gameObject, 2.0f);
-            }
-            ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
-            //Debug.Log("destroyed!");
-        }
-	}
 
-    private void OnTriggerStay(Collider other)
+    public void OnGaze()
     {
-        if (other.gameObject.name == "EnemyUI")
-        {
-            Vector3 explosionPos = transform.position;
-            Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
-            Instantiate(explosionSound);
-            ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
-            if (!GameObject.Find("EnemyCarrier").GetComponent<PowerupManager>().IsPowerupActive(PowerupName.SHIELD))
-            {
-                destroyed = true;
-                gameObject.transform.localScale = Vector3.zero;
-                Destroy(other.gameObject);
-                StartCoroutine(GameObject.Find("EnemyCarrier").GetComponent<Teleport>().DelayedChangeScene());
-            }
-        }
+        DestroyMe();
     }
     IEnumerator DestroyInSixSeconds()
     {
         yield return new WaitForSeconds(6);
-        if (!destroyed)
-        {
-            ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
-            Destroy(gameObject);
-        }
+        if(gameObject)
+            SilentDestroyMe();
     }
 
+    public void DestroyMe()
+    {
+        Vector3 explosionPos = transform.position;
+        Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
+        Instantiate(explosionSound);
+        SilentDestroyMe();
+    }
+
+    public void SilentDestroyMe()
+    {
+        ObstacleManager.isAtThisLocationAlready[currentPos, pathNum] = false;
+        Destroy(gameObject);
+    }
 }

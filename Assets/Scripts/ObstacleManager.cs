@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ObstacleManager : MonoBehaviour
 {
-    public GameObject enemyCarrier;
     public int distanceFromCarrier;
     public GameObject prefab;
     public float timeToSpawn = 4, timeToStart = 7;
@@ -23,7 +22,6 @@ public class ObstacleManager : MonoBehaviour
                 isAtThisLocationAlready[i, j] = false;
             }
         }
-        dataUpdate();
         elapsedTimeFromSpawn = 0;
         elapsedTimeFromStart = 0;
     }
@@ -31,8 +29,6 @@ public class ObstacleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dataUpdate();
-
         elapsedTimeFromSpawn += Time.deltaTime;
         elapsedTimeFromStart += Time.deltaTime;
         if (elapsedTimeFromSpawn > timeToSpawn)
@@ -41,11 +37,6 @@ public class ObstacleManager : MonoBehaviour
 
             if (elapsedTimeFromStart > timeToStart) deployObstacle(Random.Range(1, 4));
         }
-    }
-    void dataUpdate()
-    {
-        this.GetComponent<EnemyPath>().speed = enemyCarrier.GetComponent<EnemyPath>().speed;
-        this.GetComponent<EnemyPath>().current = (enemyCarrier.GetComponent<EnemyPath>().current + distanceFromCarrier) % 40;
     }
 
     void deployObstacle(int num)
@@ -68,7 +59,7 @@ public class ObstacleManager : MonoBehaviour
         }
         if (isAtThisLocationAlready[currentPlace, num] == false)
         {
-            GameObject.Instantiate(prefab, pos, Quaternion.identity);
+            GameObject.Instantiate(prefab, pos, Quaternion.identity, GameObject.Find("EnemyContainer").transform);
             isAtThisLocationAlready[currentPlace, num] = true;
         }
 
