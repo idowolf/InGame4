@@ -15,6 +15,5 @@ public class CreateCoinSound : MonoBehaviour {
 	}
     public void OnKilledMe()
     {
-        GameObject.Instantiate(coinSound);
     }
 }

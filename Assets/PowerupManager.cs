@@ -121,7 +121,7 @@ public class PowerupManager : MonoBehaviour
     {
         xSpeedController.speedMultiplier *= xSpeedMultiplier;
         ParticleSystem.MainModule em = GameObject.Find("par1").GetComponent<ParticleSystem>().main;
-        em.startSpeedMultiplier = 5;
+        em.startSpeedMultiplier = 10;
     }
     private void DeactivateSpeedPowerup()
     {
