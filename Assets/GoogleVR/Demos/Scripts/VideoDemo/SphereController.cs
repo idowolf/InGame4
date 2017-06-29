@@ -7,6 +7,7 @@ public class SphereController : MonoBehaviour {
     public GameObject m_shotPrefab;
     public GameObject explosionSound;
     private Transform enemyUI;
+    public float comingToYouSpeed = 1;
     public GameObject explosionPrefab;
     public int currentPos, pathNum;
     bool destroyed;
@@ -14,7 +15,10 @@ public class SphereController : MonoBehaviour {
     void Start () {
         enemyUI = GameObject.Find("EnemyUI").transform;
 	}
-
+    private void Update()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, Camera.main.transform.position, Time.deltaTime * comingToYouSpeed);
+    }
     public void OnGaze()
     {
         StartCoroutine(DestroyMe());
@@ -27,7 +31,7 @@ public class SphereController : MonoBehaviour {
 
         Vector3 explosionPos = transform.position;
         Destroy(go);
-        Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
+        //Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
         Instantiate(explosionSound);
         SilentDestroyMe();
 
@@ -36,7 +40,11 @@ public class SphereController : MonoBehaviour {
     }
     public void SilentDestroyMe()
     {
-        ObstacleManager.isAtThisLocationAlready[currentPos] = false;
+        //ObstacleManager.isAtThisLocationAlready[currentPos] = false;
         Destroy(gameObject);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        StartCoroutine(DestroyMe());
     }
 }
