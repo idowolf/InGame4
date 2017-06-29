@@ -1,52 +1,74 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CircleManager : MonoBehaviour {
     public static float currentCircleStartTime;
     public static float prevCircleStartTime;
-    public static float rpm;
+    public static float rps;
     public static float timeFromStart;
-    private float minute = 60f;
-    public int hitCounter;
+    public static float energyMass;
+    public static int hitCounter;
+    public static int score;
+    private float scaleFactor;
+    private Vector3 scaleFactorV;
+
 
     public GameObject burner;
-    public bool makeItBigger;
-    float[] rpmArray = new float[11];
+    
     // Use this for initialization
     void Start () {
         currentCircleStartTime = 0;
+        timeFromStart = 0; 
         prevCircleStartTime = 0;
         hitCounter = 0;
-        makeItBigger = true;
-        setRpmArray(35, 2);
-	}
+        scaleFactor = (1f / 15f);
+        energyMass = 0;
+        score = 0;
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
         timeFromStart += Time.deltaTime;
-        if (makeItBigger) burner.transform.localScale *= 1.0018f;
-	}
+        //if player hasnt finish a full spin- therefore want to shoot his energy ball
+        score = (int)energyMass * 1000;
+
+        //player stopped spinning
+        if (timeFromStart - currentCircleStartTime > 3f) {
+
+            //TODO: decide what score is enough to impact
+            //TODO: complite scene names options
+            string sceneName = (score > 4500) ? "gameOverScene" : "gameOverScene";
+            SceneManager.LoadScene(sceneName);
+        }
+        
+
+
+    }
 
     public void gazeActive()
     {
         prevCircleStartTime = currentCircleStartTime;
         currentCircleStartTime = timeFromStart;
-        rpm = minute / (currentCircleStartTime - prevCircleStartTime);
-        Debug.Log("rpm is: " + rpm);
+        rps = 1 / (currentCircleStartTime - prevCircleStartTime);
+
         hitCounter++;
+        //if number of hits is ZUGI then a spin has ended
         if (hitCounter % 2 == 0)
         {
-           if (rpmArray[hitCounter] <= rpm) burner.transform.localScale *= .85f;
+
+            if (rps > .5) {
+                //Debug.Log("rps is: " + rps);
+                float temp = rps * scaleFactor;
+                scaleFactorV = new Vector3(temp, temp, temp);
+                burner.transform.localScale += scaleFactorV;
+                energyMass += rps;
+            }
         }
+        
     }
 
-    public void setRpmArray(float mid,float diff)
-    {
-        float first = mid - (5 * diff);
-        for (int i = 0; i < 11; i++)
-        {
-            rpmArray[i] = mid + (diff * i);
-        }
-    }
+   
 }
