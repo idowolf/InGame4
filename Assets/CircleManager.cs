@@ -13,8 +13,8 @@ public class CircleManager : MonoBehaviour {
     public static int score;
     private float scaleFactor;
     private Vector3 scaleFactorV;
-
-
+    public EndGameScene endGameObject;
+    private bool started;
     public GameObject burner;
     
     // Use this for initialization
@@ -23,7 +23,7 @@ public class CircleManager : MonoBehaviour {
         timeFromStart = 0; 
         prevCircleStartTime = 0;
         hitCounter = 0;
-        scaleFactor = (1f / 15f);
+        scaleFactor = (2f / 15f);
         energyMass = 0;
         score = 0;
         
@@ -31,18 +31,23 @@ public class CircleManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        timeFromStart += Time.deltaTime;
-        //if player hasnt finish a full spin- therefore want to shoot his energy ball
-        score = (int)energyMass * 1000;
+        if (started)
+        {
+            timeFromStart += Time.deltaTime;
+            //if player hasnt finish a full spin- therefore want to shoot his energy ball
+            score = (int)energyMass * 1000;
 
-        //player stopped spinning
-        if (timeFromStart - currentCircleStartTime > 3f) {
+            //player stopped spinning
+            if (timeFromStart - currentCircleStartTime > 3f)
+            {
 
-            //TODO: decide what score is enough to impact
-            //TODO: complite scene names options
-            string sceneName = (score > 4500) ? "gameOverScene" : "gameOverScene";
-            SceneManager.LoadScene(sceneName);
+                //TODO: decide what score is enough to impact
+                //TODO: complite scene names options
+                //string sceneName = (score > 4500) ? "gameOverScene" : "gameOverScene";
+                endGameObject.Activate();
+            }
         }
+
         
 
 
@@ -50,24 +55,30 @@ public class CircleManager : MonoBehaviour {
 
     public void gazeActive()
     {
-        prevCircleStartTime = currentCircleStartTime;
-        currentCircleStartTime = timeFromStart;
-        rps = 1 / (currentCircleStartTime - prevCircleStartTime);
-
-        hitCounter++;
-        //if number of hits is ZUGI then a spin has ended
-        if (hitCounter % 2 == 0)
+        if (!started) started = true;
+        if (started)
         {
+            prevCircleStartTime = currentCircleStartTime;
+            currentCircleStartTime = timeFromStart;
+            rps = 1 / (currentCircleStartTime - prevCircleStartTime);
 
-            if (rps > .5) {
-                //Debug.Log("rps is: " + rps);
-                float temp = rps * scaleFactor;
-                scaleFactorV = new Vector3(temp, temp, temp);
-                burner.transform.localScale += scaleFactorV;
-                energyMass += rps;
+            hitCounter++;
+            //if number of hits is ZUGI then a spin has ended
+            if (hitCounter % 2 == 0)
+            {
+
+                if (rps > .5)
+                {
+                    //Debug.Log("rps is: " + rps);
+                    float temp = rps * scaleFactor;
+                    scaleFactorV = new Vector3(temp, temp, temp);
+                    burner.transform.localScale += scaleFactorV;
+                    energyMass += rps;
+                }
             }
+
         }
-        
+
     }
 
    
