@@ -16,7 +16,7 @@ public class ChooseQuarter : MonoBehaviour {
 	void Start () {
         timeFromStart = 0;
         difficulty = 0;
-        quartersArray = new GameObject[3,3,4];
+        quartersArray = new GameObject[3,4,4];
         quartersArray[0, 0, 0] = Resources.Load("quarter1A") as GameObject;
         quartersArray[0, 0, 1] = Resources.Load("quarter1B") as GameObject;
         quartersArray[0, 0, 2] = Resources.Load("quarter1C") as GameObject;
@@ -29,7 +29,10 @@ public class ChooseQuarter : MonoBehaviour {
         quartersArray[0, 2, 1] = Resources.Load("quarter1J") as GameObject;
         quartersArray[0, 2, 2] = Resources.Load("quarter1K") as GameObject;
         quartersArray[0, 2, 3] = Resources.Load("quarter1L") as GameObject;
-
+        quartersArray[0, 3, 0] = Resources.Load("quarter1M") as GameObject;
+        quartersArray[0, 3, 1] = Resources.Load("quarter1N") as GameObject;
+        quartersArray[0, 3, 2] = Resources.Load("quarter1O") as GameObject;
+        quartersArray[0, 3, 3] = Resources.Load("quarter1P") as GameObject;
 
         quartersArray[1, 0, 0] = Resources.Load("quarter2A") as GameObject;
         quartersArray[1, 0, 1] = Resources.Load("quarter2B") as GameObject;
@@ -43,6 +46,10 @@ public class ChooseQuarter : MonoBehaviour {
         quartersArray[1, 2, 1] = Resources.Load("quarter2J") as GameObject;
         quartersArray[1, 2, 2] = Resources.Load("quarter2K") as GameObject;
         quartersArray[1, 2, 3] = Resources.Load("quarter2L") as GameObject;
+        quartersArray[1, 3, 0] = Resources.Load("quarter2M") as GameObject;
+        quartersArray[1, 3, 1] = Resources.Load("quarter2N") as GameObject;
+        quartersArray[1, 3, 2] = Resources.Load("quarter2O") as GameObject;
+        quartersArray[1, 3, 3] = Resources.Load("quarter2P") as GameObject;
 
         quartersArray[2, 0, 0] = Resources.Load("quarter3A") as GameObject;
         quartersArray[2, 0, 1] = Resources.Load("quarter3B") as GameObject;
@@ -56,6 +63,10 @@ public class ChooseQuarter : MonoBehaviour {
         quartersArray[2, 2, 1] = Resources.Load("quarter3J") as GameObject;
         quartersArray[2, 2, 2] = Resources.Load("quarter3K") as GameObject;
         quartersArray[2, 2, 3] = Resources.Load("quarter3L") as GameObject;
+        quartersArray[2, 3, 0] = Resources.Load("quarter3M") as GameObject;
+        quartersArray[2, 3, 1] = Resources.Load("quarter3N") as GameObject;
+        quartersArray[2, 3, 2] = Resources.Load("quarter3O") as GameObject;
+        quartersArray[2, 3, 3] = Resources.Load("quarter3P") as GameObject;
 
         currentPattern = Instantiate(quartersArray[0, 0, 0]);
         nextPattern = quartersArray[1, 0, Random.Range(0, 4)];
@@ -77,10 +88,13 @@ public class ChooseQuarter : MonoBehaviour {
         int i = Random.Range(0,4);
         Destroy(currentPattern);
         currentPattern = Instantiate(nextPattern);
+        Debug.Log("current quarter is: " + currQuarter);
+        Debug.Log("difficlty  is: " + difficulty);
+        Debug.Log("quarter index is: " + i);
         nextPattern = quartersArray[currQuarter,difficulty,i];
         quartersCount ++;
         currQuarter  = quartersCount % 3;
-        if(quartersCount == 4 || quartersCount == 8)
+        if(quartersCount == 4 || quartersCount == 8 || quartersCount == 24)
         {
             increaseDifficulty();
         }
