@@ -31,17 +31,9 @@ public class SphereController : MonoBehaviour {
 
         Vector3 explosionPos = transform.position;
         Destroy(go);
-        //Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
+        Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
         Instantiate(explosionSound);
-        SilentDestroyMe();
-
-        if (gameObject)
-            SilentDestroyMe();
-    }
-    public void SilentDestroyMe()
-    {
-        //ObstacleManager.isAtThisLocationAlready[currentPos] = false;
-        Destroy(gameObject);
+        GetComponent<MoveTowardsObject>().ProbeParent();
     }
     private void OnTriggerEnter(Collider other)
     {

@@ -11,6 +11,7 @@ public class MoveTowardsObject : MonoBehaviour {
     private bool reached;
     private int childIndex;
     private Vector3 rotationAxis;
+    public bool testResetPattern;
 	// Use this for initialization
 	void Start () {
         reached = true;
@@ -20,6 +21,10 @@ public class MoveTowardsObject : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        if(testResetPattern)
+        {
+            SetPattern(pattern);
+        }
         if(!reached)
         {
             if (target)
@@ -28,10 +33,6 @@ public class MoveTowardsObject : MonoBehaviour {
                 transform.Rotate(rotationAxis);
                 reached = Vector3.Distance(transform.position, target.position) < 0.1f;
             }
-        }
-        else
-        {
-            ProbeParent();
         }
 	}
     public void SetTarget(Transform target)

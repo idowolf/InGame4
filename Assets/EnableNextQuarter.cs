@@ -7,10 +7,6 @@ public class EnableNextQuarter : MonoBehaviour {
     public float quarterSpeed = 1;
 	// Use this for initialization
 	void Start () {
-		foreach(Transform child in transform)
-        {
-            child.GetComponent<SphereController>().comingToYouSpeed = quarterSpeed;
-        }
 	}
 	
 	// Update is called once per frame
