@@ -17,7 +17,6 @@ public class SphereController : MonoBehaviour {
 	}
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, Camera.main.transform.position, Time.deltaTime * comingToYouSpeed);
     }
     public void OnGaze()
     {
