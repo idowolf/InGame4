@@ -30,6 +30,7 @@ public class SphereController : MonoBehaviour {
                 Vector3 explosionPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 20));
                 Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
                 Instantiate(explosionSound);
+                GetComponent<HealthManager>().giveLife();
                 GetComponent<MoveTowardsObject>().ProbeParent();
             }
         }
