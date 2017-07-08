@@ -11,7 +11,6 @@ public class MoveTowardsObject : MonoBehaviour {
     private bool reached;
     private int childIndex;
     private Vector3 rotationAxis;
-    public bool testResetPattern;
 	// Use this for initialization
 	void Start () {
         reached = true;
@@ -21,10 +20,7 @@ public class MoveTowardsObject : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if(testResetPattern)
-        {
-            SetPattern(pattern);
-        }
+
         if(!reached)
         {
             if (target)
@@ -46,6 +42,10 @@ public class MoveTowardsObject : MonoBehaviour {
             reached = false;
             target = pattern.GetChild(childIndex);
             childIndex++;
+        }
+        else
+        {
+            GetComponent<ChooseQuarter>().setNextPattren();
         }
     }
     public void SetPattern(Transform pattern)

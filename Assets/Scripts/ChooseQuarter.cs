@@ -8,7 +8,6 @@ public class ChooseQuarter : MonoBehaviour {
     GameObject [,,] quartersArray;
     int currQuarter;
     int difficulty;
-    public GameObject halalit;
     GameObject currentPattern,nextPattern;
 	// Use this for initialization
 	void Start () {
@@ -56,9 +55,10 @@ public class ChooseQuarter : MonoBehaviour {
         quartersArray[2, 2, 3] = Resources.Load("quarter3L") as GameObject;
 
         currentPattern = Instantiate(quartersArray[0, 0, 0]);
-        nextPattern = quartersArray[1, 0, Random.Range(0, 3)];
+        nextPattern = quartersArray[1, 0, Random.Range(0, 4)];
 
         currQuarter = 2;
+        GetComponent<MoveTowardsObject>().SetPattern(currentPattern.transform);
 
 
     }
@@ -76,6 +76,7 @@ public class ChooseQuarter : MonoBehaviour {
         nextPattern = quartersArray[currQuarter,difficulty,i];
         currQuarter ++;
         currQuarter %= 3;
+        GetComponent<MoveTowardsObject>().SetPattern(currentPattern.transform);
     }
 
     public void setDifficulty(int d)
