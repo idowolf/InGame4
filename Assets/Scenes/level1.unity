@@ -108,34 +108,6 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &33035141
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 33035142}
-  m_Layer: 0
-  m_Name: EnemyContainer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &33035142
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 33035141}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -21.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &34062306 stripped
 Transform:
   m_PrefabParentObject: {fileID: 1820761120, guid: 34c21f523e72f45509a4e37ed0293c3b,
@@ -493,7 +465,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 446224, guid: f9ed7f6908b8b4f8c94fc6f99f9ec961, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 446224, guid: f9ed7f6908b8b4f8c94fc6f99f9ec961, type: 2}
       propertyPath: m_LocalScale.x
@@ -1874,6 +1846,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quartersCount: 0
   timeFromStart: 0
+--- !u!4 &1302434605 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 446224, guid: f9ed7f6908b8b4f8c94fc6f99f9ec961, type: 2}
+  m_PrefabInternal: {fileID: 271091975}
 --- !u!1 &1325380615 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000012790150022, guid: c609ff1263f22a045a115cc9524ecdc7,
@@ -2465,7 +2441,7 @@ Transform:
   m_Children:
   - {fileID: 374283588}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1968184278
 GameObject:
@@ -2692,7 +2668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2fe980bb57e75c429cd58b075e5f790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyContainer: {fileID: 33035142}
+  EnemyContainer: {fileID: 1302434605}
   cam: {fileID: 0}
-  distance: 10
+  distance: 60
   blinkTime: 0.2
