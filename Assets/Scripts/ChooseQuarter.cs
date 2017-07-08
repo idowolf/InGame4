@@ -9,9 +9,12 @@ public class ChooseQuarter : MonoBehaviour {
     public int quartersCount;
     int currQuarter, difficulty;
     GameObject currentPattern,nextPattern;
+   
+
+    public float timeFromStart;
 	// Use this for initialization
 	void Start () {
-        
+        timeFromStart = 0;
         difficulty = 0;
         quartersArray = new GameObject[3,3,4];
         quartersArray[0, 0, 0] = Resources.Load("quarter1A") as GameObject;
@@ -58,6 +61,7 @@ public class ChooseQuarter : MonoBehaviour {
         nextPattern = quartersArray[1, 0, Random.Range(0, 4)];
 
         currQuarter = 2;
+        quartersCount = 2;
         GetComponent<MoveTowardsObject>().SetPattern(currentPattern.transform);
 
 
@@ -65,7 +69,7 @@ public class ChooseQuarter : MonoBehaviour {
 
     // Update is c alled once per frame
     void Update () {
-		
+        timeFromStart += Time.deltaTime;
 	}
 
     public void setNextPattren()
@@ -81,6 +85,7 @@ public class ChooseQuarter : MonoBehaviour {
             increaseDifficulty();
         }
         GetComponent<MoveTowardsObject>().SetPattern(currentPattern.transform);
+               
     }
 
     public void increaseDifficulty()
@@ -94,5 +99,7 @@ public class ChooseQuarter : MonoBehaviour {
         if (difficulty - 1 >= 0)
             difficulty--;
     }
+
+
 
 }
