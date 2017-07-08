@@ -26,11 +26,10 @@ public class SphereController : MonoBehaviour {
 
     IEnumerator DestroyMe()
     {
-        GameObject go = GameObject.Instantiate(m_shotPrefab, enemyUI.position, enemyUI.rotation) as GameObject;
+        Vector3 goPosition = enemyUI.position;
+        GameObject go = GameObject.Instantiate(m_shotPrefab, goPosition, enemyUI.rotation) as GameObject;
         yield return new WaitForSeconds(0.1f);
-
-        Vector3 explosionPos = GameObject.Find("VRPointingArrow").transform.position;
-        Destroy(go);
+        Vector3 explosionPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 20));
         Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
         Instantiate(explosionSound);
         GetComponent<MoveTowardsObject>().ProbeParent();
