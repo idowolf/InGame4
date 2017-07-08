@@ -88,9 +88,8 @@ public class ChooseQuarter : MonoBehaviour {
         int i = Random.Range(0,4);
         Destroy(currentPattern);
         currentPattern = Instantiate(nextPattern);
-        Debug.Log("current quarter is: " + currQuarter);
-        Debug.Log("difficlty  is: " + difficulty);
-        Debug.Log("quarter index is: " + i);
+        Debug.Log("current quarter is: " + currQuarter + " difficlty  is: " + difficulty + " quarter index is: " + i);
+        
         nextPattern = quartersArray[currQuarter,difficulty,i];
         quartersCount ++;
         currQuarter  = quartersCount % 3;
