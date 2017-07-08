@@ -29,7 +29,7 @@ public class SphereController : MonoBehaviour {
         GameObject go = GameObject.Instantiate(m_shotPrefab, enemyUI.position, enemyUI.rotation) as GameObject;
         yield return new WaitForSeconds(0.1f);
 
-        Vector3 explosionPos = transform.position;
+        Vector3 explosionPos = GameObject.Find("VRPointingArrow").transform.position;
         Destroy(go);
         Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
         Instantiate(explosionSound);

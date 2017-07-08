@@ -1318,7 +1318,7 @@ MonoBehaviour:
   explosionSound: {fileID: 1413944886503276, guid: b20a6d9beb08f944e966aad6df4c6814,
     type: 2}
   comingToYouSpeed: 1
-  explosionPrefab: {fileID: 1923038103878798, guid: 181557bcf9d6aa74d89754d7f73e1373,
+  explosionPrefab: {fileID: 1923038103878798, guid: 6b764d668cf7b8d44be2b48fb21dcf51,
     type: 2}
   currentPos: 0
   pathNum: 0
