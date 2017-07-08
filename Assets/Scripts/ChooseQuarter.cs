@@ -6,8 +6,8 @@ using UnityEngine;
 public class ChooseQuarter : MonoBehaviour {
 
     GameObject [,,] quartersArray;
-    int currQuarter;
-    int difficulty;
+    public int quartersCount;
+    int currQuarter, difficulty;
     GameObject currentPattern,nextPattern;
 	// Use this for initialization
 	void Start () {
@@ -74,15 +74,25 @@ public class ChooseQuarter : MonoBehaviour {
         Destroy(currentPattern);
         currentPattern = Instantiate(nextPattern);
         nextPattern = quartersArray[currQuarter,difficulty,i];
-        currQuarter ++;
-        currQuarter %= 3;
+        quartersCount ++;
+        currQuarter  = quartersCount % 3;
+        if(quartersCount == 4 || quartersCount == 8)
+        {
+            increaseDifficulty();
+        }
         GetComponent<MoveTowardsObject>().SetPattern(currentPattern.transform);
     }
 
-    public void setDifficulty(int d)
+    public void increaseDifficulty()
     {
-        difficulty = d;
+        if (difficulty + 1 < quartersArray.GetLength(1))
+            difficulty++;
     }
 
+    public void decreaseDifficulty()
+    {
+        if (difficulty - 1 >= 0)
+            difficulty--;
+    }
 
 }

@@ -53,7 +53,6 @@ public class ObstacleManager : MonoBehaviour
             {
                 isAtThisLocationAlready[currentPlace] = true;
                 GameObject b = GameObject.Instantiate(prefab, pos, Quaternion.identity, GameObject.Find("EnemyContainer").transform);
-                b.GetComponent<SphereController>().currentPos = currentPlace;
             }
         }
     }
