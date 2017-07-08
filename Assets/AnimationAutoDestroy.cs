@@ -8,6 +8,9 @@ public class AnimationAutoDestroy : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length - 0.01f + delay);
+        if(GetComponent<Animator>())
+            Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length - 0.01f + delay);
+        else if(GetComponent<ParticleSystem>())
+            Destroy(gameObject, this.GetComponent<ParticleSystem>().main.duration - 0.01f + delay);
     }
 }
