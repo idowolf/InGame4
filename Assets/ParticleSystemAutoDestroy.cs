@@ -3,22 +3,10 @@ using System.Collections;
 
 public class ParticleSystemAutoDestroy : MonoBehaviour
 {
-    private ParticleSystem ps;
 
-
-    public void Start()
+    private void Start()
     {
-        ps = GetComponent<ParticleSystem>();
+        Destroy(gameObject, GetComponent<ParticleSystem>().main.duration - 0.05f);
     }
 
-    public void Update()
-    {
-        if (ps)
-        {
-            if (!ps.IsAlive())
-            {
-                Destroy(gameObject);
-            }
-        }
-    }
 }

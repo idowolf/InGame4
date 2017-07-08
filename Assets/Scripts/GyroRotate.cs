@@ -14,7 +14,6 @@ using UnityEngine;
          }
          else
          {
-             Debug.Log("Phone doesen't support");
          }
      }
  

@@ -63,6 +63,7 @@ GameObject:
   - component: {fileID: 114603200321949984}
   - component: {fileID: 135740829964400346}
   - component: {fileID: 114055803292665634}
+  - component: {fileID: 114479340460260688}
   m_Layer: 0
   m_Name: Asteroid 1
   m_TagString: Enemy
@@ -150,7 +151,7 @@ Transform:
   m_GameObject: {fileID: 151664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 488002}
   m_Father: {fileID: 0}
@@ -378,6 +379,36 @@ MonoBehaviour:
   degreesPerSecond: 45
   amplitude: 0.1
   frequency: 0.5
+--- !u!114 &114479340460260688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114603200321949984}
+          m_MethodName: OnGaze
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &114603200321949984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -389,6 +420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca34a24c239cf3a49b4bedf3781faa0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_shotPrefab: {fileID: 163672, guid: fcfb51ced5e88fc4a93a8eea0822d58a, type: 2}
   explosionSound: {fileID: 1413944886503276, guid: b20a6d9beb08f944e966aad6df4c6814,
     type: 2}
   explosionPrefab: {fileID: 1923038103878798, guid: 181557bcf9d6aa74d89754d7f73e1373,
