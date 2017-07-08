@@ -16,6 +16,6 @@ public class colideme : MonoBehaviour {
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<Renderer>().material.color == Color.red){scoreManager.lives--; }
+       
     }
 }
