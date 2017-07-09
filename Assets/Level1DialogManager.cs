@@ -7,7 +7,7 @@ public class Level1DialogManager : MonoBehaviour
 {
     public DialogManager dialogManager;
     public ChooseQuarter quarterManager;
-    public GameObject[] sounds;
+    public AudioSource[] sounds;
     float time;
     bool flg, flg2, flg3, flg4,flg5,flgnew;
     // Use this for initialization
@@ -23,8 +23,8 @@ public class Level1DialogManager : MonoBehaviour
         if (!flg)
         {
             flg = true;
-            dialogManager.ShowText("LEADER 1", "We can't destroy them,\nbut our blasters slow them down.",2);
-            Instantiate(sounds[0]);
+            dialogManager.ShowText("LEADER 1", "We can't destroy them,\nbut our blasters slow them down.", sounds[0].clip.length);
+            Instantiate(sounds[0].gameObject);
         }
         if(time > 2.5f && !flg2)
         {
@@ -35,26 +35,26 @@ public class Level1DialogManager : MonoBehaviour
         if (quarterManager.quartersCount == 9 && !flg3)
         {
             flg3 = true;
-            dialogManager.ShowText("LEADER 1", "Great shot!", 1);
-            Instantiate(sounds[1]);
+            dialogManager.ShowText("LEADER 1", "Great shot!", sounds[1].clip.length);
+            Instantiate(sounds[1].gameObject);
         }
         if (quarterManager.quartersCount == 13 && !flgnew)
         {
             flgnew = true;
-            dialogManager.ShowText("LEADER 1", "Mind the life bar!When it runs out, the UFO will enter Earth!", 1);
-            Instantiate(sounds[2]);
+            dialogManager.ShowText("LEADER 1", "Mind the life bar!When it runs out, the UFO will enter Earth!", sounds[2].clip.length);
+            Instantiate(sounds[2].gameObject);
         }
         if (quarterManager.quartersCount == 18 && !flg4)
         {
             flg4 = true;
-            dialogManager.ShowText("LEADER 1", "It's starting to move around like crazy!\nStay on target!!", 1);
-            Instantiate(sounds[3]);
+            dialogManager.ShowText("LEADER 1", "It's starting to move around like crazy!\nStay on target!!", sounds[3].clip.length);
+            Instantiate(sounds[3].gameObject);
         }
         if (quarterManager.quartersCount == 27 && !flg5)
         {
             flg5 = true;
-            dialogManager.ShowText("LEADER 1", "Great shot!", 1);
-            Instantiate(sounds[1]);
+            dialogManager.ShowText("LEADER 1", "Great shot!", sounds[1].clip.length);
+            Instantiate(sounds[1].gameObject);
         }
     }
 }

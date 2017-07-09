@@ -2412,10 +2412,10 @@ MonoBehaviour:
   dialogManager: {fileID: 841942052}
   quarterManager: {fileID: 1302434604}
   sounds:
-  - {fileID: 1413944886503276, guid: c22ebb2838388504282eadbad705d292, type: 2}
-  - {fileID: 1413944886503276, guid: 1cb93a34a1eb6d6439292cd3f8769813, type: 2}
-  - {fileID: 1413944886503276, guid: 3535f35d65936244480a9d33854bbac6, type: 2}
-  - {fileID: 1413944886503276, guid: fe1456a08accb244587a0c019bc21373, type: 2}
+  - {fileID: 82854385429353542, guid: c22ebb2838388504282eadbad705d292, type: 2}
+  - {fileID: 82854385429353542, guid: 1cb93a34a1eb6d6439292cd3f8769813, type: 2}
+  - {fileID: 82854385429353542, guid: 3535f35d65936244480a9d33854bbac6, type: 2}
+  - {fileID: 82854385429353542, guid: fe1456a08accb244587a0c019bc21373, type: 2}
 --- !u!4 &1679971063
 Transform:
   m_ObjectHideFlags: 0
