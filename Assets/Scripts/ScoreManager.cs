@@ -13,7 +13,7 @@ public class ScoreManager : MonoBehaviour {
     int numberOfRotations;
     public ChooseQuarter chooseQuarter;
     public SphereController sphereControler;
-    public static ArrayList scoreArray;
+    public static ArrayList scoreArray = new ArrayList();
     public Text first, second, third, yours;
     
     // Use this for initialization
@@ -24,7 +24,6 @@ public class ScoreManager : MonoBehaviour {
         {
             score = 0;
             timeFromStart = 0;
-            scoreArray = new ArrayList();
             scoreArray.Add(0);
             scoreArray.Add(0);
             scoreArray.Add(0);
@@ -37,9 +36,9 @@ public class ScoreManager : MonoBehaviour {
         Scene currentScene = SceneManager.GetActiveScene();
         if (currentScene.name == "gameOverScene")
         {
-            first.text = "1. " + scoreArray[0].ToString();
-            second.text = "2. " + scoreArray[1].ToString();
-            third.text = "3. " + scoreArray[2].ToString();
+            first.text = "1 - " + scoreArray[0].ToString();
+            second.text = "2 - " + scoreArray[1].ToString();
+            third.text = "3 - " + scoreArray[2].ToString();
             yours.text = score.ToString();
         }
         else
