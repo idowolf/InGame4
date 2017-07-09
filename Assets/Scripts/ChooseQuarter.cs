@@ -95,13 +95,13 @@ public class ChooseQuarter : MonoBehaviour {
         Destroy(currentPattern);
         currentPattern = Instantiate(nextPattern);
         Debug.Log("current quarter is: " + currQuarter + " difficlty  is: " + difficulty + " quarter index is: " + i);
-
-
+        
         qurterText.text = "current quarter is: " + currQuarter + "\ndifficlty  is: " + difficulty + "\nquarter index is: " + i;
 
         nextPattern = quartersArray[currQuarter,difficulty,i];
         quartersCount ++;
-        currQuarter  = quartersCount % 3;
+        currQuarter++;
+        currQuarter %= 3;
         if(quartersCount == 4 || quartersCount == 8 || quartersCount == 24)
         {
             increaseDifficulty();
