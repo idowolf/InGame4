@@ -265,8 +265,9 @@ GameObject:
   - component: {fileID: 182092275}
   - component: {fileID: 182092274}
   - component: {fileID: 182092273}
+  - component: {fileID: 182092277}
   m_Layer: 5
-  m_Name: Galactic DODO (1)
+  m_Name: ScoreBoard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -343,6 +344,8 @@ RectTransform:
   - {fileID: 1593818227}
   - {fileID: 765910622}
   - {fileID: 1367662346}
+  - {fileID: 935638665}
+  - {fileID: 579839995}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 3.7120001, y: 90.55601, z: 1.616}
@@ -351,6 +354,24 @@ RectTransform:
   m_AnchoredPosition: {x: 11.64, y: 4.98}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &182092277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 182092272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1e47f22ff934145b30188ebf85ac78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeFromStart: 0
+  chooseQuarter: {fileID: 0}
+  sphereControler: {fileID: 0}
+  first: {fileID: 1593818228}
+  second: {fileID: 1367662347}
+  third: {fileID: 765910623}
+  yours: {fileID: 935638666}
 --- !u!4 &247337652 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4651379767189654, guid: 8bd35a3ee0d9267439d57779a65740d4,
@@ -1024,6 +1045,80 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
+--- !u!1 &579839994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 579839995}
+  - component: {fileID: 579839997}
+  - component: {fileID: 579839996}
+  m_Layer: 5
+  m_Name: YOUR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &579839995
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 579839994}
+  m_LocalRotation: {x: 0.00003198348, y: -0.0026178057, z: -0.0122170085, w: 0.999922}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00000095001207}
+  m_LocalScale: {x: 1.0019715, y: 0.99999505, z: 1.001716}
+  m_Children: []
+  m_Father: {fileID: 182092276}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: -0.3, z: -1.4}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -210.76006, y: -24.98}
+  m_SizeDelta: {x: 187.97, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &579839996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 579839994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: eb22fc0dd5e7d3d449b4b5c98d8ea5a6, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'YOUR SCOE:'
+--- !u!222 &579839997
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 579839994}
 --- !u!4 &615432253 stripped
 Transform:
   m_PrefabParentObject: {fileID: 1820761120, guid: 34c21f523e72f45509a4e37ed0293c3b,
@@ -1116,7 +1211,7 @@ GameObject:
   - component: {fileID: 765910624}
   - component: {fileID: 765910623}
   m_Layer: 5
-  m_Name: Second
+  m_Name: Third
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1260,6 +1355,82 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &935638664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 935638665}
+  - component: {fileID: 935638667}
+  - component: {fileID: 935638666}
+  m_Layer: 5
+  m_Name: PlayerScore
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &935638665
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 935638664}
+  m_LocalRotation: {x: 0.00003198348, y: -0.0026178057, z: -0.0122170085, w: 0.999922}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0009792, y: 0.99999505, z: 1.0008583}
+  m_Children: []
+  m_Father: {fileID: 182092276}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: -0.3, z: -1.4}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -210.76, y: -57.92}
+  m_SizeDelta: {x: 187.97, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &935638666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 935638664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: eb22fc0dd5e7d3d449b4b5c98d8ea5a6, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Score Board
+
+'
+--- !u!222 &935638667
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 935638664}
 --- !u!1 &943564844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,7 +2150,7 @@ GameObject:
   - component: {fileID: 1367662348}
   - component: {fileID: 1367662347}
   m_Layer: 5
-  m_Name: Third
+  m_Name: Second
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
