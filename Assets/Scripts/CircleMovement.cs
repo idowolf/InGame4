@@ -13,7 +13,12 @@ public class CircleMovement : MonoBehaviour
     public Transform pivot;
     private void Start()
     {
-        _centre = pivot.position;
+        if(false)
+            _centre = pivot.localPosition;
+        else
+        {
+            _centre = transform.position;
+        }
     }
 
     private void Update()
@@ -22,7 +27,8 @@ public class CircleMovement : MonoBehaviour
         _angle += RotateSpeed * Time.deltaTime;
 
         var offset = new Vector3(Mathf.Sin(_angle), 0, Mathf.Cos(_angle)) * Radius;
-        transform.position = _centre + offset;
+        transform.localPosition = _centre + offset;
+        transform.forward = offset;
     }
 
 

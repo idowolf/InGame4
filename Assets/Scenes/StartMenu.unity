@@ -315,7 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gazeTime: 2
   lifeBar: {fileID: 1401621563}
-  nextScene: level1
+  nextScene: openingscene
 --- !u!212 &134904593
 SpriteRenderer:
   m_ObjectHideFlags: 0

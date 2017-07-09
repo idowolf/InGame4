@@ -23,21 +23,21 @@ public class EnemyPath : MonoBehaviour
         if (goBackwardsOnPath)
             targets.Reverse();
     }
-    public void OnDrawGizmos()
-    {
-        Start();
-        if (!Application.isPlaying)
-        {
-            transform.position = targets[0].position;
-        }
-        Gizmos.color = Color.green;
+    //public void OnDrawGizmos()
+    //{
+    //    Start();
+    //    if (!Application.isPlaying)
+    //    {
+    //        transform.position = targets[0].position;
+    //    }
+    //    Gizmos.color = Color.green;
 
-        for (int i = 1; targets != null && i < targets.Count; ++i)
-        {
-            Gizmos.DrawLine(targets[i - 1].position, targets[i].position);
-        }
+    //    for (int i = 1; targets != null && i < targets.Count; ++i)
+    //    {
+    //        Gizmos.DrawLine(targets[i - 1].position, targets[i].position);
+    //    }
 
-    }
+    //}
 
     private void Update()
     {
@@ -48,6 +48,9 @@ public class EnemyPath : MonoBehaviour
                 transform.rotation = Quaternion.LookRotation(Camera.main.transform.position - transform.position);
             else
                 transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
+            Vector3 eu = transform.eulerAngles;
+            eu.y += 90;
+            transform.eulerAngles = eu;
 
             GetComponent<Rigidbody>().MovePosition(pos);
         }
