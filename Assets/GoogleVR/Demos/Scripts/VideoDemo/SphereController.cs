@@ -28,6 +28,7 @@ public class SphereController : MonoBehaviour {
                 Vector3 goPosition = enemyUI.position;
                 GameObject go = GameObject.Instantiate(m_shotPrefab, goPosition, enemyUI.rotation) as GameObject;
                 Vector3 explosionPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 20));
+                //Vector3 explosionPos = transform.position;
                 Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
                 Instantiate(explosionSound);
                 GetComponent<HealthManager>().giveLife();
