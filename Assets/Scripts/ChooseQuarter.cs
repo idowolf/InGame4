@@ -85,7 +85,7 @@ public class ChooseQuarter : MonoBehaviour {
     void Update () {
         timeFromStart += Time.deltaTime;
         string myPath = AssetDatabase.GetAssetPath(currentPattern);
-        Debug.Log(myPath);
+        //Debug.Log(myPath);
         
 	}
 
@@ -98,7 +98,7 @@ public class ChooseQuarter : MonoBehaviour {
         
         qurterText.text = "current quarter is: " + currQuarter + "\ndifficlty  is: " + difficulty + "\nquarter index is: " + i;
 
-        nextPattern = quartersArray[currQuarter,difficulty,i];
+        nextPattern = quartersArray[quartersCount % 3,difficulty,i];
         quartersCount ++;
         currQuarter++;
         currQuarter %= 3;
