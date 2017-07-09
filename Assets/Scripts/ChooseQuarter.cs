@@ -101,7 +101,7 @@ public class ChooseQuarter : MonoBehaviour {
         quartersCount ++;
         currQuarter++;
         currQuarter %= 3;
-        if(quartersCount == 4 || quartersCount == 8 || quartersCount == 24)
+        if(quartersCount == 9 || quartersCount == 18 || quartersCount == 27)
         {
             increaseDifficulty();
         }

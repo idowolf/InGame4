@@ -7,40 +7,35 @@ public class MoveTowardsObject : MonoBehaviour {
     public float movementSpeed, rotationSpeed;
 
 
-    private Transform target;
-    private bool reached;
+    public Queue<Vector3> targets;
     private int childIndex;
     private Vector3 rotationAxis;
 	// Use this for initialization
 	void Start () {
-        reached = true;
         rotationAxis = new Vector3(0, rotationSpeed, 0);
+        targets = new Queue<Vector3>();
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
 
-        if(!reached)
+        if(targets.Count > 0)
         {
-            if (target)
+            transform.position = Vector3.MoveTowards(transform.position, targets.Peek(), movementSpeed * Time.deltaTime);
+            transform.Rotate(rotationAxis);
+            if(Vector3.Distance(transform.position, targets.Peek()) < 0.1f)
             {
-                transform.position = Vector3.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
-                transform.Rotate(rotationAxis);
-                reached = Vector3.Distance(transform.position, target.position) < 0.1f;
+                targets.Dequeue();
             }
         }
 	}
-    public void SetTarget(Transform target)
-    {
-        this.target = target;
-    }
+
     public void ProbeParent()
     {
         if(childIndex < pattern.childCount)
         {
-            reached = false;
-            target = pattern.GetChild(childIndex);
+            targets.Enqueue(pattern.GetChild(childIndex).position);
             childIndex++;
         }
         else
@@ -51,7 +46,6 @@ public class MoveTowardsObject : MonoBehaviour {
     public void SetPattern(Transform pattern)
     {
         childIndex = 0;
-        reached = true;
         this.pattern = pattern;
         ProbeParent();
     }

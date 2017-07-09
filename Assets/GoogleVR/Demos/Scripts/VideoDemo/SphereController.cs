@@ -21,7 +21,7 @@ public class SphereController : MonoBehaviour {
         if (shooting)
         {
             timeElapsed += Time.deltaTime;
-            if(timeElapsed > 0.1f)
+            if(timeElapsed > 0.5f)
             {
                 timeElapsed = 0;
                 shotsCount++;
