@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Text;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -83,8 +82,8 @@ public class ChooseQuarter : MonoBehaviour {
 
     // Update is c alled once per frame
     void Update () {
-        timeFromStart += Time.deltaTime;
-        string myPath = AssetDatabase.GetAssetPath(currentPattern);
+        //timeFromStart += Time.deltaTime;
+        //string myPath = AssetDatabase.GetAssetPath(currentPattern);
         //Debug.Log(myPath);
         
 	}
