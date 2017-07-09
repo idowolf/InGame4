@@ -1793,9 +1793,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc4f3335fd45f004fa9570d7c6bdda22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  degreesPerSecond: 45
+  degreesPerSecond: 180
   amplitude: 0.1
-  frequency: 0.5
+  frequency: 1.5
 --- !u!114 &1302434600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1807,7 +1807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a718c138b20419b499c3d92b17e6ff7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tumble: 0.25
+  tumble: 0.1
 --- !u!114 &1302434601
 MonoBehaviour:
   m_ObjectHideFlags: 0
