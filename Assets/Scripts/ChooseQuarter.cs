@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChooseQuarter : MonoBehaviour {
 
@@ -9,6 +11,7 @@ public class ChooseQuarter : MonoBehaviour {
     public int quartersCount;
     int currQuarter, difficulty;
     GameObject currentPattern,nextPattern;
+    public Text qurterText;
    
 
     public float timeFromStart;
@@ -81,6 +84,9 @@ public class ChooseQuarter : MonoBehaviour {
     // Update is c alled once per frame
     void Update () {
         timeFromStart += Time.deltaTime;
+        string myPath = AssetDatabase.GetAssetPath(currentPattern);
+        //Debug.Log(myPath);
+        
 	}
 
     public void setNextPattren()
@@ -90,9 +96,12 @@ public class ChooseQuarter : MonoBehaviour {
         currentPattern = Instantiate(nextPattern);
         Debug.Log("current quarter is: " + currQuarter + " difficlty  is: " + difficulty + " quarter index is: " + i);
         
-        nextPattern = quartersArray[currQuarter,difficulty,i];
+        qurterText.text = "current quarter is: " + currQuarter + "\ndifficlty  is: " + difficulty + "\nquarter index is: " + i;
+
+        nextPattern = quartersArray[quartersCount % 3,difficulty,i];
         quartersCount ++;
-        currQuarter  = quartersCount % 3;
+        currQuarter++;
+        currQuarter %= 3;
         if(quartersCount == 4 || quartersCount == 8 || quartersCount == 24)
         {
             increaseDifficulty();
