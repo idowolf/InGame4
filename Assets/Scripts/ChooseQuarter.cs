@@ -10,7 +10,7 @@ public class ChooseQuarter : MonoBehaviour {
     public int quartersCount;
     int currQuarter, difficulty;
     GameObject currentPattern,nextPattern;
-    public Text qurterText;
+    //public Text qurterText;
    
 
     public float timeFromStart;
@@ -95,7 +95,7 @@ public class ChooseQuarter : MonoBehaviour {
         currentPattern = Instantiate(nextPattern);
         Debug.Log("current quarter is: " + currQuarter + " difficlty  is: " + difficulty + " quarter index is: " + i);
         
-        qurterText.text = "current quarter is: " + currQuarter + "\ndifficlty  is: " + difficulty + "\nquarter index is: " + i;
+        //qurterText.text = "current quarter is: " + currQuarter + "\ndifficlty  is: " + difficulty + "\nquarter index is: " + i;
 
         nextPattern = quartersArray[quartersCount % 3,difficulty,i];
         quartersCount ++;
