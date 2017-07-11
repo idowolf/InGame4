@@ -13,6 +13,9 @@ public class ScoreManager : MonoBehaviour {
     int numberOfRotations;
     public ChooseQuarter chooseQuarter;
     public SphereController sphereControler;
+    public GameObject explosion;
+    public Transform ufo;
+    private bool myflg;
     public static ArrayList scoreArray = new ArrayList();
     public Text first, second, third, yours;
     
@@ -57,10 +60,19 @@ public class ScoreManager : MonoBehaviour {
         score += shotFired;
         score += (int)timeFromStart;
         updateScoreBoard();
-        SceneManager.LoadScene("gameOverScene");
-        
-    }
+        if (!myflg) {
+            myflg = true;
+        StartCoroutine(ChageAndExplode());
+        }
 
+    }
+    public IEnumerator ChageAndExplode()
+    {
+        Instantiate(explosion, ufo.position, Quaternion.identity);
+        ufo.localScale = Vector3.zero;
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("gameOverScene");
+    }
     private void updateScoreBoard()
     {
         scoreArray.Add(score);

@@ -1793,7 +1793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc4f3335fd45f004fa9570d7c6bdda22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  degreesPerSecond: 180
+  degreesPerSecond: 45
   amplitude: 0.1
   frequency: 1.5
 --- !u!114 &1302434600
@@ -1972,6 +1972,8 @@ MonoBehaviour:
   timeFromStart: 0
   chooseQuarter: {fileID: 1302434604}
   sphereControler: {fileID: 1302434601}
+  explosion: {fileID: 1923038103878798, guid: 6b764d668cf7b8d44be2b48fb21dcf51, type: 2}
+  ufo: {fileID: 1302434605}
   first: {fileID: 0}
   second: {fileID: 0}
   third: {fileID: 0}

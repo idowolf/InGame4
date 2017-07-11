@@ -7,6 +7,7 @@ public class HealthManager : MonoBehaviour {
     public Slider healthSlider;
     private float timeFromStart, sliderMax;
     public float timeToGiveOnShot, duration;
+    private bool flg;
     public ScoreManager scoreManager;
 	// Use this for initialization
 	void Start () {
@@ -17,8 +18,9 @@ public class HealthManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         healthSlider.value -= (sliderMax * (Time.deltaTime / duration));
-        if (healthSlider.value <= 0)
+        if (healthSlider.value <= 0 && !flg)
         {
+            flg = true;
             healthSlider.value = 0;
             scoreManager.gameOver();
         }
