@@ -11,7 +11,11 @@ public class ChooseQuarter : MonoBehaviour {
     int currQuarter, difficulty;
     GameObject currentPattern,nextPattern;
     //public Text qurterText;
-   
+    public enum RotationSide { left, right };
+    public RotationSide rotationSide;
+
+
+
 
     public float timeFromStart;
 	// Use this for initialization
@@ -69,13 +73,14 @@ public class ChooseQuarter : MonoBehaviour {
         quartersArray[2, 3, 1] = Resources.Load("quarter3N") as GameObject;
         quartersArray[2, 3, 2] = Resources.Load("quarter3O") as GameObject;
         quartersArray[2, 3, 3] = Resources.Load("quarter3P") as GameObject;
-
+        rotationSide = RotationSide.right;
         currentPattern = Instantiate(quartersArray[0, 0, 0]);
         nextPattern = quartersArray[1, 0, Random.Range(0, 4)];
 
         currQuarter = 2;
         quartersCount = 2;
         GetComponent<MoveTowardsObject>().SetPattern(currentPattern.transform);
+        
 
 
     }
@@ -97,10 +102,10 @@ public class ChooseQuarter : MonoBehaviour {
         
         //qurterText.text = "current quarter is: " + currQuarter + "\ndifficlty  is: " + difficulty + "\nquarter index is: " + i;
 
-        nextPattern = quartersArray[quartersCount % 3,difficulty,i];
-        quartersCount ++;
-        currQuarter++;
-        currQuarter %= 3;
+        nextPattern = quartersArray[Mathf.Abs(quartersCount % 3),difficulty,i];
+        quartersCount = (rotationSide == RotationSide.right) ? quartersCount++ : quartersCount--;
+        currQuarter = (rotationSide == RotationSide.right)   ? currQuarter++   : currQuarter--;
+        currQuarter = Mathf.Abs(currQuarter % 3);
         if(quartersCount == 9 || quartersCount == 18 || quartersCount == 27)
         {
             increaseDifficulty();
@@ -121,6 +126,12 @@ public class ChooseQuarter : MonoBehaviour {
             difficulty--;
     }
 
+    public void changeSide()
+    {
+        rotationSide = (rotationSide == RotationSide.right) ?
+            RotationSide.left :
+            RotationSide.right;
+    }
 
 
 }
