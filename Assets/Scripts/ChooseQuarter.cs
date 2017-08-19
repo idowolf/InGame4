@@ -79,7 +79,7 @@ public class ChooseQuarter : MonoBehaviour {
 
         currQuarter = 2;
         quartersCount = 2;
-        GetComponent<MoveTowardsObject>().SetPattern(currentPattern.transform);
+        GetComponent<MoveTowardsObject>().SetPattern(currentPattern.transform, rotationSide == RotationSide.right);
         
 
 
@@ -110,7 +110,7 @@ public class ChooseQuarter : MonoBehaviour {
         {
             increaseDifficulty();
         }
-        GetComponent<MoveTowardsObject>().SetPattern(currentPattern.transform);
+        GetComponent<MoveTowardsObject>().SetPattern(currentPattern.transform, rotationSide == RotationSide.right);
                
     }
 
