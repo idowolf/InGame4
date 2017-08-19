@@ -118,7 +118,7 @@ public class ChooseQuarter : MonoBehaviour {
             increaseDifficulty();
         }
         GetComponent<MoveTowardsObject>().SetPattern(currentPattern.transform);
-        if (quartersCount == 15)
+        if (quartersCount % 16 == 0)
         {
             changeSide();
             changeSkyBox();
@@ -182,6 +182,7 @@ public class ChooseQuarter : MonoBehaviour {
 
     public void changeSkyBox()
     {
+        if (skyBoxIterator >= skyBoxes.Length - 1) { skyBoxIterator = -1; }
         RenderSettings.skybox = skyBoxes[++skyBoxIterator];
     }
 
