@@ -13,6 +13,8 @@ public class ChooseQuarter : MonoBehaviour {
     //public Text qurterText;
     public enum RotationSide { left, right };
     public RotationSide rotationSide;
+    public enum QuarterIndx { A, B, C };
+    public QuarterIndx quarterIndx;
 
 
 
@@ -80,6 +82,7 @@ public class ChooseQuarter : MonoBehaviour {
         currQuarter = 2;
         quartersCount = 2;
         GetComponent<MoveTowardsObject>().SetPattern(currentPattern.transform, rotationSide == RotationSide.right);
+        quarterIndx = QuarterIndx.C;
         
 
 
@@ -102,15 +105,20 @@ public class ChooseQuarter : MonoBehaviour {
         
         //qurterText.text = "current quarter is: " + currQuarter + "\ndifficlty  is: " + difficulty + "\nquarter index is: " + i;
 
-        nextPattern = quartersArray[Mathf.Abs(quartersCount % 3),difficulty,i];
-        quartersCount = (rotationSide == RotationSide.right) ? quartersCount++ : quartersCount--;
-        currQuarter = (rotationSide == RotationSide.right)   ? currQuarter++   : currQuarter--;
-        currQuarter = Mathf.Abs(currQuarter % 3);
-        if(quartersCount == 9 || quartersCount == 18 || quartersCount == 27)
+        nextPattern = quartersArray[(int)quarterIndx,difficulty,i];
+        quartersCount++;
+        currQuarter++;
+        currQuarter %= 3;
+        quarterIndx = updateQuarterIndex();
+        if (quartersCount == 9 || quartersCount == 18 || quartersCount == 27)
         {
             increaseDifficulty();
         }
         GetComponent<MoveTowardsObject>().SetPattern(currentPattern.transform, rotationSide == RotationSide.right);
+        if (quartersCount == 15)
+        {
+            changeSide();
+        }
                
     }
 
@@ -131,6 +139,41 @@ public class ChooseQuarter : MonoBehaviour {
         rotationSide = (rotationSide == RotationSide.right) ?
             RotationSide.left :
             RotationSide.right;
+    }
+
+    public QuarterIndx updateQuarterIndex()
+    {
+        QuarterIndx tempIndex;
+        if (rotationSide == RotationSide.right)
+        {
+            if (quarterIndx == QuarterIndx.A)
+            {
+                return QuarterIndx.B;
+            }
+            if (quarterIndx == QuarterIndx.B)
+            {
+                return QuarterIndx.C;
+            }else
+            {
+                return QuarterIndx.A;
+            }
+        }
+        else
+        {
+            if (quarterIndx == QuarterIndx.A)
+            {
+                return QuarterIndx.C;
+            }
+            if (quarterIndx == QuarterIndx.B)
+            {
+                return QuarterIndx.A;
+            }
+            else
+            {
+                return QuarterIndx.B;
+            }
+        }
+        
     }
 
 
