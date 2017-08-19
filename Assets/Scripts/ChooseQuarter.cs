@@ -78,6 +78,12 @@ public class ChooseQuarter : MonoBehaviour {
         quartersArray[2, 3, 1] = Resources.Load("quarter3N") as GameObject;
         quartersArray[2, 3, 2] = Resources.Load("quarter3O") as GameObject;
         quartersArray[2, 3, 3] = Resources.Load("quarter3P") as GameObject;
+
+        skyBoxes = new Material[4];
+        skyBoxes[0] = (Material)Resources.Load("sb1");
+        skyBoxes[1] = (Material)Resources.Load("sb2");
+        skyBoxes[2] = (Material)Resources.Load("sb3");
+        skyBoxes[3] = (Material)Resources.Load("sb4");
         rotationSide = RotationSide.right;
         currentPattern = Instantiate(quartersArray[0, 0, 0]);
         nextPattern = quartersArray[1, 0, Random.Range(0, 4)];
