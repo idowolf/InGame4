@@ -16,6 +16,8 @@ public class ChooseQuarter : MonoBehaviour {
     public enum QuarterIndx { A, B, C };
     public QuarterIndx quarterIndx;
 
+    public Material[] skyBoxes;
+    int skyBoxIterator;
 
 
 
@@ -23,6 +25,7 @@ public class ChooseQuarter : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         timeFromStart = 0;
+        skyBoxIterator = 0; 
         difficulty = 0;
         quartersArray = new GameObject[3,4,4];
         quartersArray[0, 0, 0] = Resources.Load("quarter1A") as GameObject;
@@ -115,9 +118,10 @@ public class ChooseQuarter : MonoBehaviour {
             increaseDifficulty();
         }
         GetComponent<MoveTowardsObject>().SetPattern(currentPattern.transform, rotationSide == RotationSide.right);
-        if (quartersCount == 15)
+        if (quartersCount % 16 == 0)
         {
             changeSide();
+            changeSkyBox();
         }
                
     }
@@ -143,7 +147,7 @@ public class ChooseQuarter : MonoBehaviour {
 
     public QuarterIndx updateQuarterIndex()
     {
-        QuarterIndx tempIndex;
+        
         if (rotationSide == RotationSide.right)
         {
             if (quarterIndx == QuarterIndx.A)
@@ -174,6 +178,12 @@ public class ChooseQuarter : MonoBehaviour {
             }
         }
         
+    }
+
+    public void changeSkyBox()
+    {
+        if (skyBoxIterator >= skyBoxes.Length - 1) { skyBoxIterator = -1; }
+        RenderSettings.skybox = skyBoxes[++skyBoxIterator];
     }
 
 
