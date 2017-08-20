@@ -46,7 +46,7 @@ public class MainMenuAudio : MonoBehaviour
             {
                 Debug.Log("SLIDEEERRRRR!! WOOHOO");
                 this.GetComponent<AudioSource>().pitch = (lifeBar.GetComponent<Slider>().value <= 30) ?
-                     1 + (lifeBar.GetComponent<Slider>().value / 300) :
+                     1 + (lifeBar.GetComponent<Slider>().value / 500) :
                      1;
                 this.GetComponent<AudioSource>().volume = (lifeBar.GetComponent<Slider>().value <= 50) ?
                     0.175f + (lifeBar.GetComponent<Slider>().value / 100) :
