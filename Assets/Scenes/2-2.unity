@@ -2084,7 +2084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 1970785060}
   timeToGiveOnShot: 0
-  duration: 10
+  duration: 20
   scoreManager: {fileID: 1410206238}
 --- !u!114 &1302434603
 MonoBehaviour:
@@ -2098,13 +2098,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patternList:
-  - pattern: {fileID: 1493402887312532, guid: 3947a08ef0a10844fb296ef9878fcf6b, type: 2}
+  - pattern: {fileID: 1002037921571692, guid: 8ae2295a65ef76743a82bcd602003c4c, type: 2}
     rotatingLeft: 0
-  - pattern: {fileID: 1938565444628532, guid: d63ba59306ea5f841a1e33934a638df9, type: 2}
+  - pattern: {fileID: 1335141191589100, guid: 5f555f746e761364185c469bfc4857ff, type: 2}
     rotatingLeft: 0
-  - pattern: {fileID: 1938565444628532, guid: d63ba59306ea5f841a1e33934a638df9, type: 2}
+  - pattern: {fileID: 1341869177659218, guid: c45d022afe165ba409e3c935aa606fae, type: 2}
+    rotatingLeft: 0
+  - pattern: {fileID: 1031023077113872, guid: e132f184570f40545ad6f1546d6cd29a, type: 2}
+    rotatingLeft: 0
+  - pattern: {fileID: 1312837958468698, guid: ed350747acd39fd4fabbd8897103b247, type: 2}
+    rotatingLeft: 0
+  - pattern: {fileID: 1015673111873596, guid: 44aa595fa3cff944997854167a60db78, type: 2}
+    rotatingLeft: 0
+  - pattern: {fileID: 1015673111873596, guid: 44aa595fa3cff944997854167a60db78, type: 2}
     rotatingLeft: 1
-  - pattern: {fileID: 1493402887312532, guid: 3947a08ef0a10844fb296ef9878fcf6b, type: 2}
+  - pattern: {fileID: 1723684529558768, guid: 82af2a7ba04b2c54db57a9962f6f5b0a, type: 2}
+    rotatingLeft: 1
+  - pattern: {fileID: 1031023077113872, guid: e132f184570f40545ad6f1546d6cd29a, type: 2}
+    rotatingLeft: 1
+  - pattern: {fileID: 1015673111873596, guid: 44aa595fa3cff944997854167a60db78, type: 2}
+    rotatingLeft: 1
+  - pattern: {fileID: 1312837958468698, guid: ed350747acd39fd4fabbd8897103b247, type: 2}
+    rotatingLeft: 1
+  - pattern: {fileID: 1313804092331862, guid: 5d60d26531d838548910918a11a926dc, type: 2}
     rotatingLeft: 1
 --- !u!4 &1302434605 stripped
 Transform:
@@ -2795,19 +2811,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1695027285, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1695027285, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.00000004371139
       objectReference: {fileID: 0}
     - target: {fileID: 1124067406, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1124067406, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.00000004371139
       objectReference: {fileID: 0}
     - target: {fileID: 1150962481, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_LocalRotation.z
@@ -2959,11 +2975,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1124067406, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 110
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 409752931, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 110
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
