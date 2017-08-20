@@ -2084,7 +2084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 1970785060}
   timeToGiveOnShot: 0
-  duration: 10
+  duration: 22
   scoreManager: {fileID: 1410206238}
 --- !u!114 &1302434603
 MonoBehaviour:
@@ -2098,14 +2098,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patternList:
-  - pattern: {fileID: 1493402887312532, guid: 3947a08ef0a10844fb296ef9878fcf6b, type: 2}
+  - pattern: {fileID: 1645349050633294, guid: 482feb95163d4944d98a943d33658fe1, type: 2}
     rotatingLeft: 0
-  - pattern: {fileID: 1938565444628532, guid: d63ba59306ea5f841a1e33934a638df9, type: 2}
+  - pattern: {fileID: 1335141191589100, guid: 5f555f746e761364185c469bfc4857ff, type: 2}
     rotatingLeft: 0
-  - pattern: {fileID: 1938565444628532, guid: d63ba59306ea5f841a1e33934a638df9, type: 2}
-    rotatingLeft: 1
-  - pattern: {fileID: 1493402887312532, guid: 3947a08ef0a10844fb296ef9878fcf6b, type: 2}
-    rotatingLeft: 1
+  - pattern: {fileID: 1629742842672032, guid: 26568356ef8ff5342a0d0978b3e59c13, type: 2}
+    rotatingLeft: 0
+  - pattern: {fileID: 1002037921571692, guid: 8ae2295a65ef76743a82bcd602003c4c, type: 2}
+    rotatingLeft: 0
+  - pattern: {fileID: 1714885228352150, guid: 4b2e1f667c8759c4f94237474796475e, type: 2}
+    rotatingLeft: 0
+  - pattern: {fileID: 1378027586957658, guid: 140b46ba1997e8e4786f9e2338cc3e1f, type: 2}
+    rotatingLeft: 0
+  - pattern: {fileID: 1481495097464450, guid: 45bed79bc7618f44f83ed5429215a0f8, type: 2}
+    rotatingLeft: 0
+  - pattern: {fileID: 1859561005725198, guid: bee1308ca7ce28e43bafa8e6fb84752d, type: 2}
+    rotatingLeft: 0
+  - pattern: {fileID: 1341869177659218, guid: c45d022afe165ba409e3c935aa606fae, type: 2}
+    rotatingLeft: 0
+  - pattern: {fileID: 1786509935300756, guid: 4df77b91ca228c4408328ad8ea03e2a3, type: 2}
+    rotatingLeft: 0
+  - pattern: {fileID: 1138902675339160, guid: 65bccf2a8ba5de341975f01a95dc1bb9, type: 2}
+    rotatingLeft: 0
+  - pattern: {fileID: 1518803876229448, guid: b60128bccfb18bc45aac7f950de6ea5f, type: 2}
+    rotatingLeft: 0
 --- !u!4 &1302434605 stripped
 Transform:
   m_PrefabParentObject: {fileID: 446224, guid: f9ed7f6908b8b4f8c94fc6f99f9ec961, type: 2}
@@ -2795,19 +2811,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1695027285, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1695027285, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.00000004371139
       objectReference: {fileID: 0}
     - target: {fileID: 1124067406, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1124067406, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.00000004371139
       objectReference: {fileID: 0}
     - target: {fileID: 1150962481, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_LocalRotation.z
@@ -2959,11 +2975,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1124067406, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 110
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 409752931, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 110
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
