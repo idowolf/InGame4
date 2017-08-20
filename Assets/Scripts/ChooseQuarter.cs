@@ -135,12 +135,12 @@ public class ChooseQuarter : MonoBehaviour {
         if (resize)
         {
             transform.localScale = Vector3.Lerp(transform.localScale, initScale, 0.7f * Time.deltaTime);
+            halo.enabled = true;
 
             //Once the Black image is visible enough, Start loading the next level
             if (Vector3.Distance(transform.localScale,initScale) < 0.0001f)
             {
                 resize = false;
-                halo.enabled = true;
             }
         }
         if (fadein)
@@ -216,7 +216,7 @@ public class ChooseQuarter : MonoBehaviour {
     public void ResizeMe()
     {
         Vector3 explosionPos = Camera.main.ScreenToWorldPoint(new Vector3(UnityEngine.VR.VRSettings.eyeTextureWidth / 2, UnityEngine.VR.VRSettings.eyeTextureHeight / 2, 13));
-        Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         resize = true;
         transform.localScale = Vector3.zero;
         GameObject.Find("UFO_Hull").GetComponent<IterateColors>().NextColor();

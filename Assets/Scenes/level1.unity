@@ -2104,7 +2104,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 1970785060}
   timeToGiveOnShot: 1
-  duration: 3
+  duration: 5
+  destroyed: 0
   scoreManager: {fileID: 1410206238}
 --- !u!114 &1302434604
 MonoBehaviour:

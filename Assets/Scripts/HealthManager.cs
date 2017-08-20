@@ -9,6 +9,7 @@ public class HealthManager : MonoBehaviour {
     private float timeFromStart, sliderMax;
     public float timeToGiveOnShot, duration;
     private bool flg;
+    public bool destroyed;
     public ScoreManager scoreManager;
 	// Use this for initialization
 	void Start () {
@@ -35,6 +36,7 @@ public class HealthManager : MonoBehaviour {
 
     public void giveLife()
     {
-        healthSlider.value += sliderMax * (timeToGiveOnShot / duration);
+        if(!destroyed)
+            healthSlider.value += sliderMax * (timeToGiveOnShot / duration);
     }
 }

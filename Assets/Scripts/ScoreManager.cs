@@ -70,7 +70,8 @@ public class ScoreManager : MonoBehaviour {
     {
         Instantiate(explosion, ufo.position, Quaternion.identity);
         ufo.localScale = Vector3.zero;
-        yield return new WaitForSeconds(2f);
+        ufo.GetComponent<HealthManager>().destroyed = true;
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("gameOverScene");
     }
     private void updateScoreBoard()
