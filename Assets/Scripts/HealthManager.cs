@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour {
@@ -22,7 +23,13 @@ public class HealthManager : MonoBehaviour {
         {
             flg = true;
             healthSlider.value = 0;
-            scoreManager.gameOver();
+            if (GetComponent<ChooseQuarter>())
+                scoreManager.gameOver();
+            else if (GetComponent<LevelChooseQuarter>())
+            {
+                RetryButton.nextScene = SceneManager.GetActiveScene().name;
+                SceneManager.LoadScene("Failure");
+            }
         }
     }
 

@@ -164,7 +164,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 26438832}
   m_LocalRotation: {x: -0, y: -0.99803555, z: -0, w: 0.06265119}
-  m_LocalPosition: {x: 0, y: 0, z: 1.1611049}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.030239759, y: 0.03, z: 1.0038553}
   m_Children:
   - {fileID: 1270059631}
@@ -173,8 +173,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -140, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1, y: -0.5}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &26438834
 MonoBehaviour:
@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 85110975}
   - component: {fileID: 85110974}
   m_Layer: 5
-  m_Name: Text
+  m_Name: LevelButtonsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -437,7 +437,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000009059559, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 60, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &85110974
 SpriteRenderer:
@@ -545,7 +545,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 115050665}
   m_LocalRotation: {x: -0, y: -0.99803555, z: -0, w: 0.06265119}
-  m_LocalPosition: {x: 0, y: 0, z: 1.1611049}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.030239759, y: 0.03, z: 1.0038553}
   m_Children:
   - {fileID: 508452944}
@@ -554,8 +554,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -140, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1, y: -0.5}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &115050667
 MonoBehaviour:
@@ -702,12 +702,10 @@ GameObject:
   m_Component:
   - component: {fileID: 134904589}
   - component: {fileID: 134904593}
-  - component: {fileID: 134904591}
-  - component: {fileID: 134904590}
   - component: {fileID: 134904594}
-  - component: {fileID: 134904592}
+  - component: {fileID: 134904595}
   m_Layer: 0
-  m_Name: assets_0003_Rock2
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,50 +718,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 134904588}
   m_LocalRotation: {x: -0, y: 0.28247544, z: -0, w: 0.95927453}
-  m_LocalPosition: {x: -0.9, y: 0.26, z: -1.4800003}
+  m_LocalPosition: {x: -1.19, y: 0.03, z: -1.23}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_Children:
   - {fileID: 888290511}
   m_Father: {fileID: 804650127}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 32.816, z: 0}
---- !u!65 &134904590
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 134904588}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 0.20000015}
-  m_Center: {x: 0.5, y: 0, z: 0}
---- !u!114 &134904591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 134904588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22444243d7235ca43b32c54806d8a966, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &134904592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 134904588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcabccf78e3076f439d9f49839610feb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gazeTime: 2
-  lifeBar: {fileID: 1401621563}
-  nextScene: openingscene
 --- !u!212 &134904593
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -822,7 +783,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 134904592}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerDown
           m_Mode: 1
           m_Arguments:
@@ -839,7 +800,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 134904592}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerEnter
           m_Mode: 1
           m_Arguments:
@@ -856,7 +817,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 134904592}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerExit
           m_Mode: 1
           m_Arguments:
@@ -921,6 +882,21 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &134904595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 134904588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f47cbd5c232944799e404e0df5d8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gazeTime: 2
+  lifeBar: {fileID: 1401621563}
+  nextScene: 1-1
+  transitionText: Destroy the UFO!
 --- !u!1001 &141290983
 Prefab:
   m_ObjectHideFlags: 0
@@ -975,7 +951,7 @@ GameObject:
   - component: {fileID: 141906459}
   - component: {fileID: 141906458}
   m_Layer: 5
-  m_Name: Text
+  m_Name: LevelButtonsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -997,7 +973,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000009059559, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 60, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &141906458
 SpriteRenderer:
@@ -1168,12 +1144,10 @@ GameObject:
   m_Component:
   - component: {fileID: 257624928}
   - component: {fileID: 257624933}
-  - component: {fileID: 257624932}
-  - component: {fileID: 257624931}
   - component: {fileID: 257624930}
-  - component: {fileID: 257624929}
+  - component: {fileID: 257624934}
   m_Layer: 0
-  m_Name: assets_0003_Rock2
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1186,27 +1160,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 257624927}
   m_LocalRotation: {x: -0, y: 0.28247544, z: -0, w: 0.95927453}
-  m_LocalPosition: {x: -0.9, y: 0.26, z: -1.4800003}
+  m_LocalPosition: {x: -1.19, y: 0.03, z: -1.23}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_Children:
   - {fileID: 932945800}
   m_Father: {fileID: 1332667074}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 32.816, z: 0}
---- !u!114 &257624929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 257624927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcabccf78e3076f439d9f49839610feb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gazeTime: 2
-  lifeBar: {fileID: 1401621563}
-  nextScene: openingscene
 --- !u!114 &257624930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1223,7 +1183,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 257624929}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerDown
           m_Mode: 1
           m_Arguments:
@@ -1240,7 +1200,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 257624929}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerEnter
           m_Mode: 1
           m_Arguments:
@@ -1257,7 +1217,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 257624929}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerExit
           m_Mode: 1
           m_Arguments:
@@ -1322,29 +1282,6 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
---- !u!65 &257624931
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 257624927}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 0.20000015}
-  m_Center: {x: 0.5, y: 0, z: 0}
---- !u!114 &257624932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 257624927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22444243d7235ca43b32c54806d8a966, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &257624933
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1387,6 +1324,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
+--- !u!114 &257624934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 257624927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f47cbd5c232944799e404e0df5d8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gazeTime: 2
+  lifeBar: {fileID: 1401621563}
+  nextScene: 3-1
+  transitionText: Destroy the UFO!
 --- !u!1 &271036515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,12 +1378,10 @@ GameObject:
   m_Component:
   - component: {fileID: 288780079}
   - component: {fileID: 288780084}
-  - component: {fileID: 288780083}
-  - component: {fileID: 288780082}
   - component: {fileID: 288780081}
-  - component: {fileID: 288780080}
+  - component: {fileID: 288780085}
   m_Layer: 0
-  m_Name: assets_0003_Rock2
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1444,27 +1394,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 288780078}
   m_LocalRotation: {x: -0, y: 0.28247544, z: -0, w: 0.95927453}
-  m_LocalPosition: {x: -0.9, y: 0.26, z: -1.4800003}
+  m_LocalPosition: {x: -1.19, y: 0.03, z: -1.23}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_Children:
   - {fileID: 1659738229}
   m_Father: {fileID: 1144447941}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 32.816, z: 0}
---- !u!114 &288780080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 288780078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcabccf78e3076f439d9f49839610feb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gazeTime: 2
-  lifeBar: {fileID: 1401621563}
-  nextScene: openingscene
 --- !u!114 &288780081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1481,7 +1417,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 288780080}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerDown
           m_Mode: 1
           m_Arguments:
@@ -1498,7 +1434,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 288780080}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerEnter
           m_Mode: 1
           m_Arguments:
@@ -1515,7 +1451,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 288780080}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerExit
           m_Mode: 1
           m_Arguments:
@@ -1580,29 +1516,6 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
---- !u!65 &288780082
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 288780078}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 0.20000015}
-  m_Center: {x: 0.5, y: 0, z: 0}
---- !u!114 &288780083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 288780078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22444243d7235ca43b32c54806d8a966, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &288780084
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1645,6 +1558,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
+--- !u!114 &288780085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 288780078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f47cbd5c232944799e404e0df5d8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gazeTime: 2
+  lifeBar: {fileID: 1401621563}
+  nextScene: 2-1
+  transitionText: Destroy the UFO!
 --- !u!1 &299844329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1657,7 +1585,7 @@ GameObject:
   - component: {fileID: 299844331}
   - component: {fileID: 299844333}
   m_Layer: 5
-  m_Name: Text
+  m_Name: LevelButtonsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1679,7 +1607,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000009059559, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 60, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &299844331
 MonoBehaviour:
@@ -2003,7 +1931,7 @@ GameObject:
   - component: {fileID: 412859053}
   - component: {fileID: 412859052}
   m_Layer: 5
-  m_Name: Text
+  m_Name: LevelButtonsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2025,7 +1953,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000009059559, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 60, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &412859052
 SpriteRenderer:
@@ -2117,12 +2045,10 @@ GameObject:
   m_Component:
   - component: {fileID: 419221346}
   - component: {fileID: 419221351}
-  - component: {fileID: 419221350}
-  - component: {fileID: 419221349}
   - component: {fileID: 419221348}
-  - component: {fileID: 419221347}
+  - component: {fileID: 419221352}
   m_Layer: 0
-  m_Name: assets_0003_Rock2
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2135,27 +2061,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 419221345}
   m_LocalRotation: {x: -0, y: 0.28247544, z: -0, w: 0.95927453}
-  m_LocalPosition: {x: -0.9, y: 0.26, z: -1.4800003}
+  m_LocalPosition: {x: -1.19, y: 0.03, z: -1.23}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_Children:
   - {fileID: 1378335857}
   m_Father: {fileID: 1309704254}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 32.816, z: 0}
---- !u!114 &419221347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 419221345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcabccf78e3076f439d9f49839610feb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gazeTime: 2
-  lifeBar: {fileID: 1401621563}
-  nextScene: openingscene
 --- !u!114 &419221348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2172,8 +2084,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 419221347}
-          m_MethodName: PointerDown
+        - m_Target: {fileID: 419221352}
+          m_MethodName: 
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2189,8 +2101,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 419221347}
-          m_MethodName: PointerEnter
+        - m_Target: {fileID: 419221352}
+          m_MethodName: 
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2206,8 +2118,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 419221347}
-          m_MethodName: PointerExit
+        - m_Target: {fileID: 419221352}
+          m_MethodName: 
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2271,29 +2183,6 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
---- !u!65 &419221349
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 419221345}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 0.20000015}
-  m_Center: {x: 0.5, y: 0, z: 0}
---- !u!114 &419221350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 419221345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22444243d7235ca43b32c54806d8a966, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &419221351
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2336,6 +2225,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
+--- !u!114 &419221352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 419221345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f47cbd5c232944799e404e0df5d8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gazeTime: 2
+  lifeBar: {fileID: 1401621563}
+  nextScene: 3-3
+  transitionText: Destroy the UFO!
 --- !u!1 &430493712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2427,7 +2331,7 @@ GameObject:
   - component: {fileID: 457282309}
   - component: {fileID: 457282308}
   m_Layer: 5
-  m_Name: Text
+  m_Name: LevelButtonsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2449,7 +2353,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000009059559, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 60, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &457282308
 SpriteRenderer:
@@ -2792,7 +2696,7 @@ GameObject:
   - component: {fileID: 581084261}
   - component: {fileID: 581084260}
   m_Layer: 5
-  m_Name: Text
+  m_Name: LevelButtonsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2814,7 +2718,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000009059559, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 60, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &581084260
 SpriteRenderer:
@@ -3098,12 +3002,10 @@ GameObject:
   m_Component:
   - component: {fileID: 679545727}
   - component: {fileID: 679545732}
-  - component: {fileID: 679545731}
-  - component: {fileID: 679545730}
   - component: {fileID: 679545729}
-  - component: {fileID: 679545728}
+  - component: {fileID: 679545733}
   m_Layer: 0
-  m_Name: assets_0003_Rock2
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3116,27 +3018,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 679545726}
   m_LocalRotation: {x: -0, y: 0.28247544, z: -0, w: 0.95927453}
-  m_LocalPosition: {x: -0.9, y: 0.26, z: -1.4800003}
+  m_LocalPosition: {x: -1.19, y: 0.03, z: -1.23}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_Children:
   - {fileID: 115050666}
   m_Father: {fileID: 1401925500}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 32.816, z: 0}
---- !u!114 &679545728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 679545726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcabccf78e3076f439d9f49839610feb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gazeTime: 2
-  lifeBar: {fileID: 1401621563}
-  nextScene: openingscene
 --- !u!114 &679545729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3153,7 +3041,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 679545728}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerDown
           m_Mode: 1
           m_Arguments:
@@ -3170,7 +3058,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 679545728}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerEnter
           m_Mode: 1
           m_Arguments:
@@ -3187,7 +3075,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 679545728}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerExit
           m_Mode: 1
           m_Arguments:
@@ -3252,29 +3140,6 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
---- !u!65 &679545730
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 679545726}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 0.20000015}
-  m_Center: {x: 0.5, y: 0, z: 0}
---- !u!114 &679545731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 679545726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22444243d7235ca43b32c54806d8a966, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &679545732
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3317,6 +3182,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
+--- !u!114 &679545733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 679545726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f47cbd5c232944799e404e0df5d8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gazeTime: 2
+  lifeBar: {fileID: 1401621563}
+  nextScene: 1-3
+  transitionText: Destroy the UFO!
 --- !u!1 &680290483
 GameObject:
   m_ObjectHideFlags: 0
@@ -3405,12 +3285,10 @@ GameObject:
   m_Component:
   - component: {fileID: 724189399}
   - component: {fileID: 724189404}
-  - component: {fileID: 724189403}
-  - component: {fileID: 724189402}
   - component: {fileID: 724189401}
-  - component: {fileID: 724189400}
+  - component: {fileID: 724189405}
   m_Layer: 0
-  m_Name: assets_0003_Rock2
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3423,27 +3301,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 724189398}
   m_LocalRotation: {x: -0, y: 0.28247544, z: -0, w: 0.95927453}
-  m_LocalPosition: {x: -0.9, y: 0.26, z: -1.4800003}
+  m_LocalPosition: {x: -1.19, y: 0.03, z: -1.23}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_Children:
   - {fileID: 2020655385}
   m_Father: {fileID: 1324597064}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 32.816, z: 0}
---- !u!114 &724189400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 724189398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcabccf78e3076f439d9f49839610feb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gazeTime: 2
-  lifeBar: {fileID: 1401621563}
-  nextScene: openingscene
 --- !u!114 &724189401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3460,7 +3324,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 724189400}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerDown
           m_Mode: 1
           m_Arguments:
@@ -3477,7 +3341,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 724189400}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerEnter
           m_Mode: 1
           m_Arguments:
@@ -3494,7 +3358,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 724189400}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerExit
           m_Mode: 1
           m_Arguments:
@@ -3559,29 +3423,6 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
---- !u!65 &724189402
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 724189398}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 0.20000015}
-  m_Center: {x: 0.5, y: 0, z: 0}
---- !u!114 &724189403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 724189398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22444243d7235ca43b32c54806d8a966, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &724189404
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3624,6 +3465,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
+--- !u!114 &724189405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 724189398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f47cbd5c232944799e404e0df5d8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gazeTime: 2
+  lifeBar: {fileID: 1401621563}
+  nextScene: 3-2
+  transitionText: Destroy the UFO!
 --- !u!1 &786990714
 GameObject:
   m_ObjectHideFlags: 0
@@ -3743,12 +3599,10 @@ GameObject:
   m_Component:
   - component: {fileID: 798088562}
   - component: {fileID: 798088567}
-  - component: {fileID: 798088566}
-  - component: {fileID: 798088565}
   - component: {fileID: 798088564}
   - component: {fileID: 798088563}
   m_Layer: 0
-  m_Name: assets_0003_Rock2
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3897,29 +3751,6 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
---- !u!65 &798088565
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 798088561}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 0.20000015}
-  m_Center: {x: 0.5, y: 0, z: 0}
---- !u!114 &798088566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 798088561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22444243d7235ca43b32c54806d8a966, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &798088567
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4142,7 +3973,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 888290510}
   m_LocalRotation: {x: -0, y: -0.99803555, z: -0, w: 0.06265119}
-  m_LocalPosition: {x: 0, y: 0, z: 1.1611049}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.030239759, y: 0.03, z: 1.0038553}
   m_Children:
   - {fileID: 1264819229}
@@ -4151,8 +3982,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -140, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1, y: -0.5}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &888290512
 MonoBehaviour:
@@ -4254,7 +4085,7 @@ GameObject:
   - component: {fileID: 919395698}
   - component: {fileID: 919395697}
   m_Layer: 5
-  m_Name: Text
+  m_Name: LevelButtonsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4276,7 +4107,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000009059559, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 60, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &919395697
 SpriteRenderer:
@@ -4376,7 +4207,7 @@ GameObject:
   - component: {fileID: 927415833}
   - component: {fileID: 927415832}
   m_Layer: 5
-  m_Name: Text
+  m_Name: LevelButtonsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4398,7 +4229,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000009059559, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 60, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &927415832
 SpriteRenderer:
@@ -4506,7 +4337,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 932945799}
   m_LocalRotation: {x: -0, y: -0.99803555, z: -0, w: 0.06265119}
-  m_LocalPosition: {x: 0, y: 0, z: 1.1611049}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.030239759, y: 0.03, z: 1.0038553}
   m_Children:
   - {fileID: 1724889829}
@@ -4515,8 +4346,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -140, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1, y: -0.5}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &932945801
 MonoBehaviour:
@@ -4994,12 +4825,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1088830148}
   - component: {fileID: 1088830153}
-  - component: {fileID: 1088830152}
-  - component: {fileID: 1088830151}
   - component: {fileID: 1088830150}
-  - component: {fileID: 1088830149}
+  - component: {fileID: 1088830154}
   m_Layer: 0
-  m_Name: assets_0003_Rock2
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5012,27 +4841,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1088830147}
   m_LocalRotation: {x: -0, y: 0.28247544, z: -0, w: 0.95927453}
-  m_LocalPosition: {x: -0.9, y: 0.26, z: -1.4800003}
+  m_LocalPosition: {x: -1.19, y: 0.03, z: -1.23}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_Children:
   - {fileID: 26438833}
   m_Father: {fileID: 1852172852}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 32.816, z: 0}
---- !u!114 &1088830149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1088830147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcabccf78e3076f439d9f49839610feb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gazeTime: 2
-  lifeBar: {fileID: 1401621563}
-  nextScene: openingscene
 --- !u!114 &1088830150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5049,7 +4864,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1088830149}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerDown
           m_Mode: 1
           m_Arguments:
@@ -5066,7 +4881,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1088830149}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerEnter
           m_Mode: 1
           m_Arguments:
@@ -5083,7 +4898,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1088830149}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerExit
           m_Mode: 1
           m_Arguments:
@@ -5148,29 +4963,6 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
---- !u!65 &1088830151
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1088830147}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 0.20000015}
-  m_Center: {x: 0.5, y: 0, z: 0}
---- !u!114 &1088830152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1088830147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22444243d7235ca43b32c54806d8a966, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1088830153
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5213,6 +5005,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
+--- !u!114 &1088830154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1088830147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f47cbd5c232944799e404e0df5d8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gazeTime: 2
+  lifeBar: {fileID: 1401621563}
+  nextScene: 2-2
+  transitionText: Destroy the UFO!
 --- !u!1001 &1135855349
 Prefab:
   m_ObjectHideFlags: 0
@@ -5632,12 +5439,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1225875902}
   - component: {fileID: 1225875907}
-  - component: {fileID: 1225875906}
-  - component: {fileID: 1225875905}
   - component: {fileID: 1225875904}
-  - component: {fileID: 1225875903}
+  - component: {fileID: 1225875908}
   m_Layer: 0
-  m_Name: assets_0003_Rock2
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5650,27 +5455,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1225875901}
   m_LocalRotation: {x: -0, y: 0.28247544, z: -0, w: 0.95927453}
-  m_LocalPosition: {x: -0.9, y: 0.26, z: -1.4800003}
+  m_LocalPosition: {x: -1.19, y: 0.03, z: -1.23}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_Children:
   - {fileID: 1679323638}
   m_Father: {fileID: 271036516}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 32.816, z: 0}
---- !u!114 &1225875903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1225875901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcabccf78e3076f439d9f49839610feb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gazeTime: 2
-  lifeBar: {fileID: 1401621563}
-  nextScene: openingscene
 --- !u!114 &1225875904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5687,7 +5478,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1225875903}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerDown
           m_Mode: 1
           m_Arguments:
@@ -5704,7 +5495,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1225875903}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerEnter
           m_Mode: 1
           m_Arguments:
@@ -5721,7 +5512,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1225875903}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerExit
           m_Mode: 1
           m_Arguments:
@@ -5786,29 +5577,6 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
---- !u!65 &1225875905
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1225875901}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 0.20000015}
-  m_Center: {x: 0.5, y: 0, z: 0}
---- !u!114 &1225875906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1225875901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22444243d7235ca43b32c54806d8a966, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1225875907
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5851,6 +5619,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
+--- !u!114 &1225875908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1225875901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f47cbd5c232944799e404e0df5d8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gazeTime: 2
+  lifeBar: {fileID: 1401621563}
+  nextScene: 2-3
+  transitionText: Destroy the UFO!
 --- !u!4 &1259821880 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4651379767189654, guid: 8bd35a3ee0d9267439d57779a65740d4,
@@ -6383,7 +6166,7 @@ GameObject:
   - component: {fileID: 1357800148}
   - component: {fileID: 1357800147}
   m_Layer: 5
-  m_Name: Text
+  m_Name: LevelButtonsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6405,7 +6188,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000009059559, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 60, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1357800147
 SpriteRenderer:
@@ -6592,7 +6375,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1378335856}
   m_LocalRotation: {x: -0, y: -0.99803555, z: -0, w: 0.06265119}
-  m_LocalPosition: {x: 0, y: 0, z: 1.1611049}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.030239759, y: 0.03, z: 1.0038553}
   m_Children:
   - {fileID: 54219642}
@@ -6601,8 +6384,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -140, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1, y: -0.5}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1378335858
 MonoBehaviour:
@@ -7541,7 +7324,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1659738228}
   m_LocalRotation: {x: -0, y: -0.99803555, z: -0, w: 0.06265119}
-  m_LocalPosition: {x: 0, y: 0, z: 1.1611049}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.030239759, y: 0.03, z: 1.0038553}
   m_Children:
   - {fileID: 1047240211}
@@ -7550,8 +7333,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -140, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1, y: -0.5}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1659738230
 MonoBehaviour:
@@ -7854,7 +7637,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1679323637}
   m_LocalRotation: {x: -0, y: -0.99803555, z: -0, w: 0.06265119}
-  m_LocalPosition: {x: 0, y: 0, z: 1.1611049}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.030239759, y: 0.03, z: 1.0038553}
   m_Children:
   - {fileID: 548344325}
@@ -7863,8 +7646,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -140, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1, y: -0.5}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1679323639
 MonoBehaviour:
@@ -8767,12 +8550,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1855038583}
   - component: {fileID: 1855038588}
-  - component: {fileID: 1855038587}
-  - component: {fileID: 1855038586}
   - component: {fileID: 1855038585}
-  - component: {fileID: 1855038584}
+  - component: {fileID: 1855038589}
   m_Layer: 0
-  m_Name: assets_0003_Rock2
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8785,27 +8566,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1855038582}
   m_LocalRotation: {x: -0, y: 0.28247544, z: -0, w: 0.95927453}
-  m_LocalPosition: {x: -0.9, y: 0.26, z: -1.4800003}
+  m_LocalPosition: {x: -1.19, y: 0.03, z: -1.23}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_Children:
   - {fileID: 2034098589}
   m_Father: {fileID: 599167421}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 32.816, z: 0}
---- !u!114 &1855038584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1855038582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcabccf78e3076f439d9f49839610feb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gazeTime: 2
-  lifeBar: {fileID: 1401621563}
-  nextScene: openingscene
 --- !u!114 &1855038585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8822,7 +8589,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1855038584}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerDown
           m_Mode: 1
           m_Arguments:
@@ -8839,7 +8606,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1855038584}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerEnter
           m_Mode: 1
           m_Arguments:
@@ -8856,7 +8623,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1855038584}
+        - m_Target: {fileID: 0}
           m_MethodName: PointerExit
           m_Mode: 1
           m_Arguments:
@@ -8921,29 +8688,6 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
---- !u!65 &1855038586
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1855038582}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 0.20000015}
-  m_Center: {x: 0.5, y: 0, z: 0}
---- !u!114 &1855038587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1855038582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22444243d7235ca43b32c54806d8a966, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1855038588
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8986,6 +8730,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
+--- !u!114 &1855038589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1855038582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f47cbd5c232944799e404e0df5d8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gazeTime: 2
+  lifeBar: {fileID: 1401621563}
+  nextScene: 1-2
+  transitionText: Destroy the UFO!
 --- !u!1 &1877582681
 GameObject:
   m_ObjectHideFlags: 0
@@ -9335,7 +9094,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2020655384}
   m_LocalRotation: {x: -0, y: -0.99803555, z: -0, w: 0.06265119}
-  m_LocalPosition: {x: 0, y: 0, z: 1.1611049}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.030239759, y: 0.03, z: 1.0038553}
   m_Children:
   - {fileID: 1137751916}
@@ -9344,8 +9103,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -140, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1, y: -0.5}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2020655386
 MonoBehaviour:
@@ -9508,7 +9267,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2034098588}
   m_LocalRotation: {x: -0, y: -0.99803555, z: -0, w: 0.06265119}
-  m_LocalPosition: {x: 0, y: 0, z: 1.1611049}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.030239759, y: 0.03, z: 1.0038553}
   m_Children:
   - {fileID: 1533829828}
@@ -9517,8 +9276,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -140, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1, y: -0.5}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2034098590
 MonoBehaviour:

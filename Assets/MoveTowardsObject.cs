@@ -15,6 +15,8 @@ public class MoveTowardsObject : MonoBehaviour {
 	void Start () {
         rotationAxis = new Vector3(0, rotationSpeed, 0);
         targets = new Queue<Vector3>();
+        if (GetComponent<LevelChooseQuarter>())
+            GetComponent<LevelChooseQuarter>().setNextPattren();
         rightRotation = true;
     }
 	
@@ -47,7 +49,10 @@ public class MoveTowardsObject : MonoBehaviour {
         }
         else
         {
-            GetComponent<ChooseQuarter>().setNextPattren();
+            if (GetComponent<ChooseQuarter>())
+                GetComponent<ChooseQuarter>().setNextPattren();
+            else if (GetComponent<LevelChooseQuarter>())
+                GetComponent<LevelChooseQuarter>().setNextPattren();
         }
     }
     public void SetPattern(Transform pattern, bool rightRotation)
