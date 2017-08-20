@@ -5,7 +5,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ChooseQuarter : MonoBehaviour {
-
+    public Behaviour halo;
+    public List<Color> ufoColors;
     GameObject [,,] quartersArray;
     public int quartersCount;
     int currQuarter, difficulty;
@@ -16,15 +17,17 @@ public class ChooseQuarter : MonoBehaviour {
     public enum QuarterIndx { A, B, C };
     public QuarterIndx nextQuarterIndx;
     bool dontChangeQuarter;
-
+    public GameObject explosionPrefab;
+    private Vector3 initScale;
     public Material[] skyBoxes;
     int skyBoxIterator;
+    private bool resize;
 
-
-
+    private float initMovementSpeed;
     public float timeFromStart;
 	// Use this for initialization
 	void Start () {
+        initScale = transform.localScale;
         timeFromStart = 0;
         skyBoxIterator = 0; 
         difficulty = 0;
@@ -94,7 +97,7 @@ public class ChooseQuarter : MonoBehaviour {
         quartersCount = 2;
         GetComponent<MoveTowardsObject>().SetPattern(currentPattern.transform, rotationSide == RotationSide.right);
         nextQuarterIndx = QuarterIndx.C;
-        
+        initMovementSpeed = GetComponent<MoveTowardsObject>().movementSpeed;
 
 
     }
@@ -129,7 +132,17 @@ public class ChooseQuarter : MonoBehaviour {
                 fadeout = false;
             }
         }
+        if (resize)
+        {
+            transform.localScale = Vector3.Lerp(transform.localScale, initScale, 0.7f * Time.deltaTime);
 
+            //Once the Black image is visible enough, Start loading the next level
+            if (Vector3.Distance(transform.localScale,initScale) < 0.0001f)
+            {
+                resize = false;
+                halo.enabled = true;
+            }
+        }
         if (fadein)
         {
             myImage.color = Color.Lerp(myImage.color, new Color(0, 0, 0, 0), fadeSpeed * Time.deltaTime);
@@ -143,6 +156,14 @@ public class ChooseQuarter : MonoBehaviour {
 
     public void setNextPattren()
     {
+        if(quartersCount < 6)
+        {
+            GetComponent<MoveTowardsObject>().movementSpeed = 10;
+        }
+        else
+        {
+            GetComponent<MoveTowardsObject>().movementSpeed = initMovementSpeed;
+        }
         int i = Random.Range(0,4);
         currentPatternII = Instantiate(currentPattern);
         Destroy(currentPattern);
@@ -189,6 +210,17 @@ public class ChooseQuarter : MonoBehaviour {
         rotationSide = (rotationSide == RotationSide.right) ?
             RotationSide.left :
             RotationSide.right;
+        ResizeMe();
+    }
+
+    public void ResizeMe()
+    {
+        Vector3 explosionPos = Camera.main.ScreenToWorldPoint(new Vector3(UnityEngine.VR.VRSettings.eyeTextureWidth / 2, UnityEngine.VR.VRSettings.eyeTextureHeight / 2, 13));
+        Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
+        resize = true;
+        transform.localScale = Vector3.zero;
+        GameObject.Find("UFO_Hull").GetComponent<IterateColors>().NextColor();
+        halo.enabled = false;
     }
 
     public QuarterIndx updateQuarterIndex()
