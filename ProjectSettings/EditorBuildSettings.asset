@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/openingscene.unity
     guid: 806db1a4539215b42a703195d71c532d
+  - enabled: 1
+    path: Assets/Scenes/WorldSelect.unity
+    guid: 4021f3b1d2ab0ce4c99d3600b9e2d717
