@@ -1761,7 +1761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pattern: {fileID: 0}
-  movementSpeed: 20
+  movementSpeed: 12
   rotationSpeed: 5
 --- !u!114 &1302434598
 MonoBehaviour:

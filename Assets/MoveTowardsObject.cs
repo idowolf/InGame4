@@ -24,7 +24,7 @@ public class MoveTowardsObject : MonoBehaviour {
 
         if(targets.Count > 0)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targets.Peek(), movementSpeed * Time.deltaTime);
+            transform.position = Vector3.Slerp(transform.position, targets.Peek(), movementSpeed * Time.deltaTime);
             transform.Rotate(rotationAxis);
             if(Vector3.Distance(transform.position, targets.Peek()) < 0.1f)
             {
