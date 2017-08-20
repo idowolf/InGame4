@@ -44,7 +44,7 @@ public class MainMenuAudio : MonoBehaviour
             lifeBar = GameObject.Find("Slider");
             if (lifeBar)
             {
-                Debug.Log("SLIDEEERRRRR!! WOOHOO");
+                //Debug.Log("SLIDEEERRRRR!! WOOHOO");
                 this.GetComponent<AudioSource>().pitch = (lifeBar.GetComponent<Slider>().value <= 30) ?
                      1 + (lifeBar.GetComponent<Slider>().value / 500) :
                      1;
