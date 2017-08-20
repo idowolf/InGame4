@@ -102,15 +102,49 @@ public class ChooseQuarter : MonoBehaviour {
         //timeFromStart += Time.deltaTime;
         //string myPath = AssetDatabase.GetAssetPath(currentPattern);
         //Debug.Log(myPath);
-        
-	}
+
+        //Fade Out the screen to black
+        if (fadingNow)
+        {
+            fadeElapsed += Time.deltaTime;
+            //When the Async is finished, the level is done loading, fade in the screen
+            if (fadeElapsed >= fadeTime)
+            {
+                fadeElapsed = 0;
+                fadingNow = false;
+                FadeIn();
+            }
+        }
+
+        if (fadeout)
+        {
+            myImage.color = Color.Lerp(myImage.color, Color.black, fadeSpeed * Time.deltaTime);
+
+            //Once the Black image is visible enough, Start loading the next level
+            if (myImage.color.a >= 0.999)
+            {
+                StartCoroutine("LoadALevel");
+                fadeout = false;
+            }
+        }
+
+        if (fadein)
+        {
+            myImage.color = Color.Lerp(myImage.color, new Color(0, 0, 0, 0), fadeSpeed * Time.deltaTime);
+
+            if (myImage.color.a <= 0.01)
+            {
+                fadein = false;
+            }
+        }
+    }
 
     public void setNextPattren()
     {
         int i = Random.Range(0,4);
         Destroy(currentPattern);
         currentPattern = Instantiate(nextPattern);
-        Debug.Log("current quarter is: " + currQuarter + " difficlty  is: " + difficulty + " quarter index is: " + i);
+        //Debug.Log("current quarter is: " + currQuarter + " difficlty  is: " + difficulty + " quarter index is: " + i);
         
         //qurterText.text = "current quarter is: " + currQuarter + "\ndifficlty  is: " + difficulty + "\nquarter index is: " + i;
 
@@ -189,8 +223,35 @@ public class ChooseQuarter : MonoBehaviour {
     public void changeSkyBox()
     {
         if (skyBoxIterator >= skyBoxes.Length - 1) { skyBoxIterator = -1; }
-        RenderSettings.skybox = skyBoxes[++skyBoxIterator];
+        FadeOut();
     }
 
+    public Image myImage;
+    // Use this for initialization
+    public int LevelToLoad;
+    public float fadeSpeed = 1.5f, fadeTime;
+    private float fadeElapsed;
+    private bool fadein, fadeout, fadingNow;
 
+
+    public void FadeOut()
+    {
+        fadein = false;
+        fadeout = true;
+        //Debug.Log("Fading Out");
+    }
+
+    public void FadeIn()
+    {
+        fadeout = false;
+        fadein = true;
+        //Debug.Log("Fading In");
+    }
+
+    public IEnumerator LoadALevel()
+    {
+        fadingNow = true;
+        yield return new WaitForSeconds(fadeTime);
+        RenderSettings.skybox = skyBoxes[++skyBoxIterator];
+    }
 }
