@@ -156,7 +156,10 @@ public class ChooseQuarter : MonoBehaviour {
 
     public QuarterIndx updateQuarterIndex()
     {
-        if (dontChangeQuarter) return quarterIndx;
+        if (dontChangeQuarter) {
+            dontChangeQuarter = false;
+            return quarterIndx;
+        }
 
         if (rotationSide == RotationSide.right)
         {
