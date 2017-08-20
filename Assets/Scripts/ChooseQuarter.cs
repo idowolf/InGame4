@@ -9,12 +9,13 @@ public class ChooseQuarter : MonoBehaviour {
     GameObject [,,] quartersArray;
     public int quartersCount;
     int currQuarter, difficulty;
-    GameObject currentPattern,nextPattern;
+    GameObject currentPattern,nextPattern,currentPatternII;
     //public Text qurterText;
     public enum RotationSide { left, right };
     public RotationSide rotationSide;
     public enum QuarterIndx { A, B, C };
-    public QuarterIndx quarterIndx;
+    public QuarterIndx nextQuarterIndx;
+    bool dontChangeQuarter;
 
     public Material[] skyBoxes;
     int skyBoxIterator;
@@ -27,6 +28,7 @@ public class ChooseQuarter : MonoBehaviour {
         timeFromStart = 0;
         skyBoxIterator = 0; 
         difficulty = 0;
+        dontChangeQuarter = false;
         quartersArray = new GameObject[3,4,4];
         quartersArray[0, 0, 0] = Resources.Load("quarter1A") as GameObject;
         quartersArray[0, 0, 1] = Resources.Load("quarter1B") as GameObject;
@@ -91,7 +93,7 @@ public class ChooseQuarter : MonoBehaviour {
         currQuarter = 2;
         quartersCount = 2;
         GetComponent<MoveTowardsObject>().SetPattern(currentPattern.transform, rotationSide == RotationSide.right);
-        quarterIndx = QuarterIndx.C;
+        nextQuarterIndx = QuarterIndx.C;
         
 
 
@@ -142,28 +144,32 @@ public class ChooseQuarter : MonoBehaviour {
     public void setNextPattren()
     {
         int i = Random.Range(0,4);
+        currentPatternII = Instantiate(currentPattern);
         Destroy(currentPattern);
         currentPattern = Instantiate(nextPattern);
         //Debug.Log("current quarter is: " + currQuarter + " difficlty  is: " + difficulty + " quarter index is: " + i);
         
         //qurterText.text = "current quarter is: " + currQuarter + "\ndifficlty  is: " + difficulty + "\nquarter index is: " + i;
 
-        nextPattern = quartersArray[(int)quarterIndx,difficulty,i];
+        nextPattern = quartersArray[(int)nextQuarterIndx,difficulty,i];
         quartersCount++;
         currQuarter++;
         currQuarter %= 3;
-        quarterIndx = updateQuarterIndex();
+        nextQuarterIndx = updateQuarterIndex();
         if (quartersCount == 9 || quartersCount == 18 || quartersCount == 27)
         {
             increaseDifficulty();
         }
-        GetComponent<MoveTowardsObject>().SetPattern(currentPattern.transform, rotationSide == RotationSide.right);
-        if (quartersCount % 16 == 0)
+        if (quartersCount % 15 == 0)
         {
             changeSide();
             changeSkyBox();
+            nextPattern = currentPatternII;
+            nextQuarterIndx = updateQuarterIndex();
         }
-               
+        GetComponent<MoveTowardsObject>().SetPattern(currentPattern.transform, rotationSide == RotationSide.right);
+
+
     }
 
     public void increaseDifficulty()
@@ -187,14 +193,14 @@ public class ChooseQuarter : MonoBehaviour {
 
     public QuarterIndx updateQuarterIndex()
     {
-        
+       
         if (rotationSide == RotationSide.right)
         {
-            if (quarterIndx == QuarterIndx.A)
+            if (nextQuarterIndx == QuarterIndx.A)
             {
                 return QuarterIndx.B;
             }
-            if (quarterIndx == QuarterIndx.B)
+            if (nextQuarterIndx == QuarterIndx.B)
             {
                 return QuarterIndx.C;
             }else
@@ -204,11 +210,11 @@ public class ChooseQuarter : MonoBehaviour {
         }
         else
         {
-            if (quarterIndx == QuarterIndx.A)
+            if (nextQuarterIndx == QuarterIndx.A)
             {
                 return QuarterIndx.C;
             }
-            if (quarterIndx == QuarterIndx.B)
+            if (nextQuarterIndx == QuarterIndx.B)
             {
                 return QuarterIndx.A;
             }
