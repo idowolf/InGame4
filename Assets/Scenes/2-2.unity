@@ -2100,29 +2100,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patternList:
-  - pattern: {fileID: 1002037921571692, guid: 8ae2295a65ef76743a82bcd602003c4c, type: 2}
+  - pattern: {fileID: 1225702006578320, guid: 8ae2295a65ef76743a82bcd602003c4c, type: 2}
     rotatingLeft: 0
-  - pattern: {fileID: 1335141191589100, guid: 5f555f746e761364185c469bfc4857ff, type: 2}
+  - pattern: {fileID: 1327452618726840, guid: 5f555f746e761364185c469bfc4857ff, type: 2}
     rotatingLeft: 0
-  - pattern: {fileID: 1341869177659218, guid: c45d022afe165ba409e3c935aa606fae, type: 2}
+  - pattern: {fileID: 1977145952990004, guid: c45d022afe165ba409e3c935aa606fae, type: 2}
     rotatingLeft: 0
-  - pattern: {fileID: 1031023077113872, guid: e132f184570f40545ad6f1546d6cd29a, type: 2}
+  - pattern: {fileID: 1281914361472562, guid: e132f184570f40545ad6f1546d6cd29a, type: 2}
     rotatingLeft: 0
-  - pattern: {fileID: 1312837958468698, guid: ed350747acd39fd4fabbd8897103b247, type: 2}
+  - pattern: {fileID: 1391278228239772, guid: ed350747acd39fd4fabbd8897103b247, type: 2}
     rotatingLeft: 0
-  - pattern: {fileID: 1015673111873596, guid: 44aa595fa3cff944997854167a60db78, type: 2}
+  - pattern: {fileID: 1478775093437340, guid: 44aa595fa3cff944997854167a60db78, type: 2}
     rotatingLeft: 0
-  - pattern: {fileID: 1015673111873596, guid: 44aa595fa3cff944997854167a60db78, type: 2}
+  - pattern: {fileID: 1478775093437340, guid: 44aa595fa3cff944997854167a60db78, type: 2}
     rotatingLeft: 1
-  - pattern: {fileID: 1723684529558768, guid: 82af2a7ba04b2c54db57a9962f6f5b0a, type: 2}
+  - pattern: {fileID: 1213149264377358, guid: 82af2a7ba04b2c54db57a9962f6f5b0a, type: 2}
     rotatingLeft: 1
-  - pattern: {fileID: 1031023077113872, guid: e132f184570f40545ad6f1546d6cd29a, type: 2}
+  - pattern: {fileID: 1281914361472562, guid: e132f184570f40545ad6f1546d6cd29a, type: 2}
     rotatingLeft: 1
-  - pattern: {fileID: 1015673111873596, guid: 44aa595fa3cff944997854167a60db78, type: 2}
+  - pattern: {fileID: 1478775093437340, guid: 44aa595fa3cff944997854167a60db78, type: 2}
     rotatingLeft: 1
-  - pattern: {fileID: 1312837958468698, guid: ed350747acd39fd4fabbd8897103b247, type: 2}
+  - pattern: {fileID: 1391278228239772, guid: ed350747acd39fd4fabbd8897103b247, type: 2}
     rotatingLeft: 1
-  - pattern: {fileID: 1313804092331862, guid: 5d60d26531d838548910918a11a926dc, type: 2}
+  - pattern: {fileID: 1623082299890572, guid: 5d60d26531d838548910918a11a926dc, type: 2}
     rotatingLeft: 1
 --- !u!4 &1302434605 stripped
 Transform:
@@ -2243,6 +2243,8 @@ MonoBehaviour:
   sphereControler: {fileID: 1302434601}
   explosion: {fileID: 1923038103878798, guid: 6b764d668cf7b8d44be2b48fb21dcf51, type: 2}
   ufo: {fileID: 1302434605}
+  win: {fileID: 0}
+  lose: {fileID: 0}
   first: {fileID: 0}
   second: {fileID: 0}
   third: {fileID: 0}

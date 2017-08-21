@@ -2100,35 +2100,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patternList:
-  - pattern: {fileID: 1633234098360820, guid: 1e38e03a660a4874db88f76aeab0488f, type: 2}
+  - pattern: {fileID: 1897259297884486, guid: 1e38e03a660a4874db88f76aeab0488f, type: 2}
     rotatingLeft: 0
-  - pattern: {fileID: 1465103478678368, guid: 5a04d38c1934051468c8a05354e0b497, type: 2}
+  - pattern: {fileID: 1912520129344316, guid: 5a04d38c1934051468c8a05354e0b497, type: 2}
     rotatingLeft: 0
-  - pattern: {fileID: 1288525886673844, guid: 38a7789bc0552584b941117fa14d3fec, type: 2}
+  - pattern: {fileID: 1656495586648294, guid: 38a7789bc0552584b941117fa14d3fec, type: 2}
     rotatingLeft: 0
-  - pattern: {fileID: 1874369446233880, guid: 8e7efa6b2e291b243badb24aeb9c46e9, type: 2}
+  - pattern: {fileID: 1193716116399998, guid: 8e7efa6b2e291b243badb24aeb9c46e9, type: 2}
     rotatingLeft: 0
-  - pattern: {fileID: 1672586978834022, guid: 5fa6234a9ed1d4048aafd9f77ee958af, type: 2}
+  - pattern: {fileID: 1403580452488836, guid: 5fa6234a9ed1d4048aafd9f77ee958af, type: 2}
     rotatingLeft: 0
-  - pattern: {fileID: 1410811289940158, guid: 9b6107d82b566f546a5785c41e61b09f, type: 2}
+  - pattern: {fileID: 1771537952372960, guid: 9b6107d82b566f546a5785c41e61b09f, type: 2}
     rotatingLeft: 0
   - pattern: {fileID: 1675745967653392, guid: 7427d5abe0964b64c8f7346b1ed87770, type: 2}
     rotatingLeft: 1
-  - pattern: {fileID: 1754539382044556, guid: ea8be74645e47b8479e107dafe20299b, type: 2}
+  - pattern: {fileID: 1467277378727342, guid: ea8be74645e47b8479e107dafe20299b, type: 2}
     rotatingLeft: 1
-  - pattern: {fileID: 1874369446233880, guid: 8e7efa6b2e291b243badb24aeb9c46e9, type: 2}
+  - pattern: {fileID: 1193716116399998, guid: 8e7efa6b2e291b243badb24aeb9c46e9, type: 2}
     rotatingLeft: 1
   - pattern: {fileID: 1675745967653392, guid: 7427d5abe0964b64c8f7346b1ed87770, type: 2}
     rotatingLeft: 1
-  - pattern: {fileID: 1948920128586962, guid: b2e14ce35fe695f42902842a180fdaa9, type: 2}
+  - pattern: {fileID: 1021766576913794, guid: b2e14ce35fe695f42902842a180fdaa9, type: 2}
     rotatingLeft: 1
-  - pattern: {fileID: 1874369446233880, guid: 8e7efa6b2e291b243badb24aeb9c46e9, type: 2}
+  - pattern: {fileID: 1193716116399998, guid: 8e7efa6b2e291b243badb24aeb9c46e9, type: 2}
     rotatingLeft: 1
-  - pattern: {fileID: 1715530250321152, guid: 92b2fd13590e82c4ea8a2e923b477e6a, type: 2}
+  - pattern: {fileID: 1564729232520230, guid: 92b2fd13590e82c4ea8a2e923b477e6a, type: 2}
     rotatingLeft: 0
-  - pattern: {fileID: 1948920128586962, guid: b2e14ce35fe695f42902842a180fdaa9, type: 2}
+  - pattern: {fileID: 1021766576913794, guid: b2e14ce35fe695f42902842a180fdaa9, type: 2}
     rotatingLeft: 0
-  - pattern: {fileID: 1288525886673844, guid: 38a7789bc0552584b941117fa14d3fec, type: 2}
+  - pattern: {fileID: 1656495586648294, guid: 38a7789bc0552584b941117fa14d3fec, type: 2}
     rotatingLeft: 0
 --- !u!4 &1302434605 stripped
 Transform:
@@ -2249,6 +2249,8 @@ MonoBehaviour:
   sphereControler: {fileID: 1302434601}
   explosion: {fileID: 1923038103878798, guid: 6b764d668cf7b8d44be2b48fb21dcf51, type: 2}
   ufo: {fileID: 1302434605}
+  win: {fileID: 0}
+  lose: {fileID: 0}
   first: {fileID: 0}
   second: {fileID: 0}
   third: {fileID: 0}
