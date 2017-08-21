@@ -177,11 +177,11 @@ public class ChooseQuarter : MonoBehaviour {
         currQuarter++;
         currQuarter %= 3;
         nextQuarterIndx = updateQuarterIndex();
-        if (quartersCount == 9 || quartersCount == 18 || quartersCount == 27)
+        if (quartersCount == 3 || quartersCount == 12 || quartersCount == 21)
         {
             increaseDifficulty();
         }
-        if (quartersCount % 15 == 0)
+        if ((quartersCount <= 15 && quartersCount % 15 == 0) || (quartersCount > 15 && quartersCount % 21 == 0))
         {
             changeSide();
             changeSkyBox();
@@ -189,6 +189,8 @@ public class ChooseQuarter : MonoBehaviour {
             nextQuarterIndx = updateQuarterIndex();
         }
         GetComponent<MoveTowardsObject>().SetPattern(currentPattern.transform, rotationSide == RotationSide.right);
+        if (quartersCount == 21)
+            GetComponent<HealthManager>().duration = 3;
 
 
     }
