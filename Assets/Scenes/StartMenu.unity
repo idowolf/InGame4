@@ -125,6 +125,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicPlayer: {fileID: 0}
+  lifeBar: {fileID: 0}
+  sceneArray:
+  - StartMenu
+  - Failure
+  - gameOverScene
+  - intro
+  - openingscene
+  - Success
+  - WorldSelect
 --- !u!4 &34062306 stripped
 Transform:
   m_PrefabParentObject: {fileID: 1820761120, guid: 34c21f523e72f45509a4e37ed0293c3b,
