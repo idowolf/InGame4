@@ -9,7 +9,7 @@ public class MirrorSli : MonoBehaviour {
 	void Start () {
 	}
 	
-	// Update is called once per frame
+	// Update is called once  per frame
 	void Update () {
         GetComponent<Slider>().value = otherSlider.value;
 	}

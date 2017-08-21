@@ -37,6 +37,7 @@ public class MainMenuAudio : MonoBehaviour
     }
     void Update()
     {
+        bool lerped = false;
         currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
         
@@ -44,21 +45,30 @@ public class MainMenuAudio : MonoBehaviour
             lifeBar = GameObject.Find("Slider");
             if (lifeBar)
             {
-                //Debug.Log("SLIDEEERRRRR!! WOOHOO");
-                this.GetComponent<AudioSource>().pitch = (lifeBar.GetComponent<Slider>().value <= 30) ?
-                     1 + (lifeBar.GetComponent<Slider>().value / 500) :
-                     1;
-                this.GetComponent<AudioSource>().volume = (lifeBar.GetComponent<Slider>().value <= 50) ?
-                    0.175f + (lifeBar.GetComponent<Slider>().value / 100) :
-                    0.175f;
-
-
+                if (lifeBar.GetComponent<Slider>().value < 50 )
+                {
+                    if (!lerped)
+                    {
+                        this.GetComponent<AudioSource>().volume = Mathf.Lerp(0.175f, 0.475f,Time.deltaTime * 35);
+                        lerped = true;
+                    }
+                }  else
+                {
+                    this.GetComponent<AudioSource>().volume = 0.175f;
+                    
+                    lerped = false;
+                }                     
             }
             else
             {
-                this.GetComponent<AudioSource>().pitch = 1;
+                
                 this.GetComponent<AudioSource>().volume = .175f;
+                
             }
+        } else
+        {
+            this.GetComponent<AudioSource>().volume = 0.175f;
+            
         }
     }
 }
