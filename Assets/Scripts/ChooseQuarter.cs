@@ -22,7 +22,7 @@ public class ChooseQuarter : MonoBehaviour {
     public Material[] skyBoxes;
     int skyBoxIterator;
     private bool resize;
-
+    public Level1DialogManager dialogObject;
     private float initMovementSpeed;
     public float timeFromStart;
 	// Use this for initialization
@@ -215,6 +215,7 @@ public class ChooseQuarter : MonoBehaviour {
 
     public void ResizeMe()
     {
+        dialogObject.DestroyedShip();
         Vector3 explosionPos = Camera.main.ScreenToWorldPoint(new Vector3(UnityEngine.VR.VRSettings.eyeTextureWidth / 2, UnityEngine.VR.VRSettings.eyeTextureHeight / 2, 13));
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         resize = true;

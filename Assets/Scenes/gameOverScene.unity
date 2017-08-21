@@ -370,6 +370,8 @@ MonoBehaviour:
   sphereControler: {fileID: 0}
   explosion: {fileID: 0}
   ufo: {fileID: 0}
+  win: {fileID: 82854385429353542, guid: d279d2099c6d1a3449a136f973c27c07, type: 2}
+  lose: {fileID: 82854385429353542, guid: 6d5c19d94c627bf4c890f3377be87858, type: 2}
   first: {fileID: 1593818228}
   second: {fileID: 1367662347}
   third: {fileID: 765910623}

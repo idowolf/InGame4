@@ -2200,6 +2200,7 @@ MonoBehaviour:
   explosionPrefab: {fileID: 1923038103878798, guid: 6b764d668cf7b8d44be2b48fb21dcf51,
     type: 2}
   skyBoxes: []
+  dialogObject: {fileID: 1679971061}
   timeFromStart: 0
   myImage: {fileID: 973469789}
   LevelToLoad: 0
@@ -2324,6 +2325,8 @@ MonoBehaviour:
   sphereControler: {fileID: 1302434601}
   explosion: {fileID: 1923038103878798, guid: 6b764d668cf7b8d44be2b48fb21dcf51, type: 2}
   ufo: {fileID: 1302434605}
+  win: {fileID: 0}
+  lose: {fileID: 0}
   first: {fileID: 0}
   second: {fileID: 0}
   third: {fileID: 0}
@@ -2767,6 +2770,10 @@ MonoBehaviour:
   - {fileID: 82854385429353542, guid: 1cb93a34a1eb6d6439292cd3f8769813, type: 2}
   - {fileID: 82854385429353542, guid: 3535f35d65936244480a9d33854bbac6, type: 2}
   - {fileID: 82854385429353542, guid: fe1456a08accb244587a0c019bc21373, type: 2}
+  destroyShipSounds:
+  - {fileID: 82854385429353542, guid: abc51ac87e7bfcc40948f1a9917c1403, type: 2}
+  - {fileID: 82854385429353542, guid: e00a76d3eef37114e9c8d9c7b2ea442d, type: 2}
+  - {fileID: 82854385429353542, guid: 488fa9abd9082dc4e9e6a269ed2f60fa, type: 2}
 --- !u!4 &1679971063
 Transform:
   m_ObjectHideFlags: 0

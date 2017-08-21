@@ -8,7 +8,9 @@ public class Level1DialogManager : MonoBehaviour
     public DialogManager dialogManager;
     public ChooseQuarter quarterManager;
     public AudioSource[] sounds;
+    public AudioSource[] destroyShipSounds;
     float time;
+    int myNum;
     bool flg, flg2, flg3, flg4,flg5,flgnew;
     // Use this for initialization
     void Start()
@@ -56,5 +58,26 @@ public class Level1DialogManager : MonoBehaviour
             dialogManager.ShowText("LEADER 1", "Great shot!", sounds[1].clip.length);
             Instantiate(sounds[1].gameObject);
         }
+    }
+
+    public void DestroyedShip()
+    {
+        switch (myNum)
+        {
+            case 0:
+                dialogManager.ShowText("LEADER 1", "Excellent job!\nAnother UFO is coming on 12th!", destroyShipSounds[0].clip.length);
+                Instantiate(destroyShipSounds[0].gameObject);
+                break;
+            case 1:
+                dialogManager.ShowText("LEADER 1", "One more down!", destroyShipSounds[1].clip.length);
+                Instantiate(destroyShipSounds[1].gameObject);
+                break;
+            default:
+                dialogManager.ShowText("LEADER 1", "Aced it!", destroyShipSounds[2].clip.length);
+                Instantiate(destroyShipSounds[2].gameObject);
+                break;
+        }
+        myNum++;
+        if (myNum == destroyShipSounds.Length) myNum = 0;
     }
 }

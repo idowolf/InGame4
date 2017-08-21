@@ -15,7 +15,9 @@ public class ScoreManager : MonoBehaviour {
     public SphereController sphereControler;
     public GameObject explosion;
     public Transform ufo;
-    private bool myflg;
+    private bool myflg, activated;
+    public AudioSource win;
+    public AudioSource lose;
     public static ArrayList scoreArray = new ArrayList();
     public Text first, second, third, yours;
     
@@ -30,6 +32,21 @@ public class ScoreManager : MonoBehaviour {
             scoreArray.Add(0);
             scoreArray.Add(0);
             scoreArray.Add(0);
+        }
+        if (SceneManager.GetActiveScene().name == "gameOverScene" && !activated)
+        {
+            activated = true;
+            if ((scoreArray[0].ToString() == score.ToString()
+|| scoreArray[1].ToString() == score.ToString() ||
+scoreArray[2].ToString() == score.ToString()))
+            {
+                Instantiate(win.gameObject);
+            }
+            else
+            {
+                Instantiate(lose.gameObject);
+
+            }
         }
 
     }
