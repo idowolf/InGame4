@@ -11,7 +11,6 @@ public class PlayButton : MonoBehaviour {
     public string nextScene = "level1";
     // Use this for initialization
     void Start () {
-		
 	}
 	
 	// Update is called once per frame

@@ -2039,6 +2039,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   degreesPerSecond: 45
   amplitude: 0.1
+  spin: 1
   frequency: 1.5
 --- !u!114 &1302434600
 MonoBehaviour:
@@ -2085,6 +2086,7 @@ MonoBehaviour:
   healthSlider: {fileID: 1970785060}
   timeToGiveOnShot: 0
   duration: 10
+  destroyed: 0
   scoreManager: {fileID: 1410206238}
 --- !u!114 &1302434603
 MonoBehaviour:
@@ -2345,7 +2347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1499060388
 MonoBehaviour:
   m_ObjectHideFlags: 0

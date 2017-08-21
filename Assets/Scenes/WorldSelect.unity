@@ -250,6 +250,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicPlayer: {fileID: 0}
+  lifeBar: {fileID: 0}
+  sceneArray: []
 --- !u!4 &34062306 stripped
 Transform:
   m_PrefabParentObject: {fileID: 1820761120, guid: 34c21f523e72f45509a4e37ed0293c3b,
@@ -896,7 +898,7 @@ MonoBehaviour:
   gazeTime: 2
   lifeBar: {fileID: 1401621563}
   nextScene: 1-1
-  transitionText: Destroy the UFO!
+  transitionText: Complete in 10 seconds!
 --- !u!1001 &141290983
 Prefab:
   m_ObjectHideFlags: 0
@@ -1338,7 +1340,7 @@ MonoBehaviour:
   gazeTime: 2
   lifeBar: {fileID: 1401621563}
   nextScene: 3-1
-  transitionText: Destroy the UFO!
+  transitionText: Complete in 27 seconds!
 --- !u!1 &271036515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1572,7 +1574,7 @@ MonoBehaviour:
   gazeTime: 2
   lifeBar: {fileID: 1401621563}
   nextScene: 2-1
-  transitionText: Destroy the UFO!
+  transitionText: Complete in 22 seconds!
 --- !u!1 &299844329
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,7 +2241,7 @@ MonoBehaviour:
   gazeTime: 2
   lifeBar: {fileID: 1401621563}
   nextScene: 3-3
-  transitionText: Destroy the UFO!
+  transitionText: Complete in 17 seconds!
 --- !u!1 &430493712
 GameObject:
   m_ObjectHideFlags: 0
@@ -3196,7 +3198,7 @@ MonoBehaviour:
   gazeTime: 2
   lifeBar: {fileID: 1401621563}
   nextScene: 1-3
-  transitionText: Destroy the UFO!
+  transitionText: Complete in 20 seconds!
 --- !u!1 &680290483
 GameObject:
   m_ObjectHideFlags: 0
@@ -3479,7 +3481,7 @@ MonoBehaviour:
   gazeTime: 2
   lifeBar: {fileID: 1401621563}
   nextScene: 3-2
-  transitionText: Destroy the UFO!
+  transitionText: Complete in 27 seconds!
 --- !u!1 &786990714
 GameObject:
   m_ObjectHideFlags: 0
@@ -5019,7 +5021,7 @@ MonoBehaviour:
   gazeTime: 2
   lifeBar: {fileID: 1401621563}
   nextScene: 2-2
-  transitionText: Destroy the UFO!
+  transitionText: Complete in 22 seconds!
 --- !u!1001 &1135855349
 Prefab:
   m_ObjectHideFlags: 0
@@ -5633,7 +5635,7 @@ MonoBehaviour:
   gazeTime: 2
   lifeBar: {fileID: 1401621563}
   nextScene: 2-3
-  transitionText: Destroy the UFO!
+  transitionText: Complete in 30 seconds!
 --- !u!4 &1259821880 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4651379767189654, guid: 8bd35a3ee0d9267439d57779a65740d4,
@@ -6992,7 +6994,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1499060388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8382,7 +8384,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 220671212, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -39
       objectReference: {fileID: 0}
     - target: {fileID: 220671212, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_SizeDelta.x
@@ -8390,7 +8392,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 220671212, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 78
       objectReference: {fileID: 0}
     - target: {fileID: 1673994293, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_AnchorMin.y
@@ -8406,7 +8408,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1673994293, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -37.5
       objectReference: {fileID: 0}
     - target: {fileID: 1673994293, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_SizeDelta.x
@@ -8414,7 +8416,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1673994293, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 1150962481, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_AnchorMin.y
@@ -8430,7 +8432,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1150962481, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -37.5
       objectReference: {fileID: 0}
     - target: {fileID: 1150962481, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_SizeDelta.x
@@ -8438,7 +8440,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1150962481, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 269749299, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_AnchorMin.y
@@ -8454,7 +8456,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 269749299, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -39
       objectReference: {fileID: 0}
     - target: {fileID: 269749299, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_SizeDelta.x
@@ -8462,7 +8464,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 269749299, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 78
       objectReference: {fileID: 0}
     - target: {fileID: 611905283, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_SizeDelta.x
@@ -8744,7 +8746,7 @@ MonoBehaviour:
   gazeTime: 2
   lifeBar: {fileID: 1401621563}
   nextScene: 1-2
-  transitionText: Destroy the UFO!
+  transitionText: Complete in 10 seconds!
 --- !u!1 &1877582681
 GameObject:
   m_ObjectHideFlags: 0
