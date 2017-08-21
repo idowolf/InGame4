@@ -8,6 +8,7 @@ public class FloatObject : MonoBehaviour {
     // User Inputs
     public float degreesPerSecond = 45.0f;
     public float amplitude = 0.1f;
+    public bool spin = true;
     public float frequency = .5f;
 
     // Position Storage Variables
@@ -25,7 +26,8 @@ public class FloatObject : MonoBehaviour {
     void Update()
     {
         // Spin object around Y-Axis
-        transform.Rotate(new Vector3(0f, Time.deltaTime * degreesPerSecond, 0f), Space.World);
+        if(spin)
+            transform.Rotate(new Vector3(0f, Time.deltaTime * degreesPerSecond, 0f), Space.World);
 
         // Float up/down with a Sin()
         tempPos = posOffset;
