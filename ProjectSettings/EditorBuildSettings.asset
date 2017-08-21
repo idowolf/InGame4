@@ -27,17 +27,17 @@ EditorBuildSettings:
     path: Assets/Scenes/2-3.unity
     guid: 22c4b685758b8374cad9953ae0a2bd83
   - enabled: 1
-    path: Assets/Scenes/credits.unity
-    guid: 4acb2dd1c09ea6341bd483aa6f1d192c
-  - enabled: 1
     path: Assets/Scenes/3-1.unity
-    guid: 2913fa9f96d02d648b38db8c02a46e85
+    guid: 3f710958354063740b6bd0366098d823
   - enabled: 1
     path: Assets/Scenes/3-2.unity
-    guid: cfbe88e94df5ac34996d4a4248fc3b2a
+    guid: 8b55c936f66972b4886db7be4cfab0a8
   - enabled: 1
     path: Assets/Scenes/3-3.unity
-    guid: d423cf7d9e611de419e4b5b5c8c797bf
+    guid: 3250ccd19343316449c8b41d3dc4f987
+  - enabled: 1
+    path: Assets/Scenes/credits.unity
+    guid: 4acb2dd1c09ea6341bd483aa6f1d192c
   - enabled: 1
     path: Assets/Scenes/Failure.unity
     guid: a0ba8658004675244aa25c0b7f392d41

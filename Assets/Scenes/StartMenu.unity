@@ -134,6 +134,7 @@ MonoBehaviour:
   - openingscene
   - Success
   - WorldSelect
+  - credits
 --- !u!4 &34062306 stripped
 Transform:
   m_PrefabParentObject: {fileID: 1820761120, guid: 34c21f523e72f45509a4e37ed0293c3b,
